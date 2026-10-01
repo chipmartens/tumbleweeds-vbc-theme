@@ -1,0 +1,4 @@
+READY 2026-10-01. Tumbleweeds VBC WordPress theme, local only, nothing pushed or published.
+Eval: round 1 FAIL (10 fixes), round 2 FAIL (7 fixes), round 3 FAIL on a single missing period in the news excerpt seed, fixed after the verdict; critic said PASS on a quick re-check once fixed. Not re-run (3-round cap).
+Run: see README.md. Screenshots: screenshots/ (390 + 1440, report.json). Static preview: preview/index.html.
+Open items: every [bracketed] placeholder is a club fact still to confirm. Photos are TRU Athletics shots (internal example only).
