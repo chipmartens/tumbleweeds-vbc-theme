@@ -376,3 +376,15 @@ a:hover .arrow{transform:translateX(2px)}
 .split .fact{grid-template-columns:150px 1fr auto;gap:16px}
 @media (max-width:1024px){.cards--5{grid-template-columns:1fr 1fr}.cards--5 .card,.cards--5 .card:nth-child(n+4){grid-column:auto}.cards--5 .card:last-child{grid-column:span 2}}
 @media (max-width:860px){.cards--5{grid-template-columns:1fr}.cards--5 .card:last-child{grid-column:auto}.split .fact{grid-template-columns:1fr}}
+
+/* Wide screens: content sits in a fixed 1440 frame; photos and colour bands stay full bleed (Chip, 2026-10-01) */
+@media (min-width:1441px){
+  :root{--gutter:calc((100vw - 1440px) / 2)}
+  .sheet,.statement,.sponsor-wrap,.helpline{max-width:calc(1440px - 2 * var(--inset));margin-left:auto;margin-right:auto}
+  .strip{max-width:1440px;margin-left:auto;margin-right:auto}
+  .nav{padding-left:calc(var(--gutter) + 48px);padding-right:calc(var(--gutter) + 48px)}
+  .hero__inner,.phero__inner{padding-left:calc(var(--gutter) + 120px);padding-right:calc(var(--gutter) + 120px)}
+  .footer{padding-left:calc(var(--gutter) + 120px);padding-right:calc(var(--gutter) + 120px)}
+}
+.event .tag,.event .btn{justify-self:start;width:auto}
+.bio__img img{object-position:50% 0%}
