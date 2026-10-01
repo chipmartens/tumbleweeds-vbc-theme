@@ -55,3 +55,11 @@ function tvbc_ui( $key ) {
 	);
 	return isset( $ui[ $key ] ) ? $ui[ $key ] : '';
 }
+
+/** Placeholder coach posts (no bio) stay out of search. */
+add_filter( 'wp_robots', function ( $r ) {
+	if ( is_singular( 'coach' ) && function_exists( 'get_field' ) && ! get_field( 'bio', false, false ) ) {
+		$r['noindex'] = true;
+	}
+	return $r;
+} );

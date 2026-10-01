@@ -257,7 +257,7 @@ html.nav-open .site-header__nav { display: block; }
 .person__photo { position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--pine-700); border-radius: var(--radius-md); margin-bottom: var(--space-5);
   .person__pattern { color: var(--pine-500); width: 120%; left: -10%; top: 4%; }
 }
-.person__img { position: absolute; left: -15%; bottom: 0; width: 130%; max-width: none; height: auto; }
+.person__img { position: absolute; left: -10%; bottom: 0; width: 120%; max-width: none; height: auto; }
 .person--empty .person__photo { &::after { content: '[Photo TBC]'; position: absolute; left: var(--space-4); bottom: var(--space-4); @include text(eyebrow); color: var(--sage-300); } .person__pattern { width: 90%; left: 5%; top: 5%; } }
 .person__name { @include text(h3); font-size: var(--step-xl); }
 .person__role { @include text(body); font-weight: 600; margin-top: var(--space-1); }

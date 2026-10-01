@@ -147,7 +147,7 @@ if ( function_exists( 'have_rows' ) && have_rows( 'flex_content', $flex_post_id 
 					<?php tvbc_section_head(); ?>
 					<?php if ( $rows ) : ?>
 						<dl class="facts__list">
-							<?php foreach ( $rows as $r ) : ?>
+							<?php foreach ( $rows as $r ) : if ( tvbc_dead( $r['label'] . $r['value'] ) ) { continue; } ?>
 								<div class="facts__row">
 									<dt class="facts__label"><?php echo tvbc_inline( $r['label'] ); ?></dt>
 									<dd class="facts__value">
@@ -171,7 +171,7 @@ if ( function_exists( 'have_rows' ) && have_rows( 'flex_content', $flex_post_id 
 					<?php tvbc_section_head(); ?>
 					<?php if ( $rows ) : ?>
 						<ol class="dates__list">
-							<?php foreach ( $rows as $r ) : ?>
+							<?php foreach ( $rows as $r ) : if ( tvbc_dead( $r['date'] . $r['title'] . $r['text'] ) ) { continue; } ?>
 								<li class="dates__row">
 									<span class="dates__date"><?php echo tvbc_inline( $r['date'] ); ?></span>
 									<div class="dates__body">
@@ -222,7 +222,7 @@ if ( function_exists( 'have_rows' ) && have_rows( 'flex_content', $flex_post_id 
 									<time class="news__date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date( 'M j, Y' ) ); ?></time>
 									<div class="news__body">
 										<h3 class="news__title"><a href="<?php the_permalink(); ?>"><?php echo tvbc_inline( get_the_title() ); // phpcs:ignore ?></a></h3>
-										<p class="news__excerpt"><?php echo tvbc_inline( wp_trim_words( wp_strip_all_tags( get_the_content() ), 28 ) ); ?></p>
+										<p class="news__excerpt"><?php echo tvbc_inline( wp_trim_words( wp_strip_all_tags( str_replace( array( '</p>', '<br>', '<br />' ), ' ', get_the_content() ) ), 28 ) ); ?></p>
 									</div>
 								</li>
 							<?php endwhile; wp_reset_postdata(); ?>

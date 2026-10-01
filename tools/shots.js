@@ -7,7 +7,7 @@ const path = require('path');
 const base = (process.argv[2] || 'http://127.0.0.1:9400').replace(/\/$/, '');
 const out = path.resolve(process.argv[3] || path.join(__dirname, '..', 'screenshots'));
 const CHROME = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
-const pages = ['', 'our-coaches', 'coaches/pat-hennelly', 'programs', 'tryouts', 'fees-and-registration', 'for-parents', 'sponsors', 'news', 'info-session-sunday-october-4', 'contact'];
+const pages = ['', 'our-coaches', 'coaches/pat-hennelly', 'programs', 'tryouts', 'fees-and-registration', 'for-parents', 'sponsors', 'news', 'info-session', 'contact'];
 (async () => {
   fs.mkdirSync(out, { recursive: true });
   const b = await puppeteer.launch({ executablePath: CHROME, headless: 'new' });

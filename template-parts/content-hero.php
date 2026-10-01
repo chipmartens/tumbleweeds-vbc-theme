@@ -10,6 +10,9 @@ $heading = get_field( 'hero_heading', $hero_id ) ?: get_the_title( $hero_id );
 $text    = get_field( 'hero_text', $hero_id );
 $buttons = get_field( 'hero_buttons', $hero_id );
 $note    = get_field( 'hero_note', $hero_id );
+if ( tvbc_dead( $note ) ) {
+	$note = '';
+}
 $photo   = ( 'home' === $style ) ? get_field( 'hero_photo', $hero_id ) : false;
 ?>
 <section class="hero hero--<?php echo esc_attr( $style ); ?>">

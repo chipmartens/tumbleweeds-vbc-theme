@@ -75,15 +75,15 @@
       "title": "[Coach list TBC]",
       "menu_order": 10,
       "fields": {
-        "role": "Every team's coach, with their background, will be named here before tryouts.",
+        "role": "Coaches will be named here as the club confirms them.",
         "summary": ""
       }
     }
   ],
   "posts": [
     {
-      "slug": "info-session-sunday-october-4",
-      "title": "Info session: Sunday, October 4",
+      "slug": "info-session",
+      "title": "Info session for new families",
       "date": "2026-09-30 09:00:00",
       "content": "<p>Come meet Pat Hennelly and Iuliia Pakhomenko, and ask anything about coaches, fees, and Safe Sport.</p><p>When: {info_date}, {info_details}</p><p>A Teams link is on our Instagram story, @tumbleweedsvball.</p>"
     },
@@ -91,7 +91,7 @@
       "slug": "what-we-will-publish-before-tryouts",
       "title": "What we will publish before tryouts",
       "date": "2026-10-01 09:00:00",
-      "content": "<p>A new club owes parents straight answers. Before tryouts we will post who coaches each team, the full fee list and what it includes, practice nights and location, the refund policy, and who to call if something goes wrong.</p><p>[Date the full list is posted: TBC]</p>"
+      "content": "<p>A new club owes parents straight answers. As the club confirms them, we will post who coaches, the full fee list and what it includes, practice nights and location, the refund policy, and who to call if something goes wrong.</p><p>[Date the full list is posted: TBC]</p>"
     }
   ],
   "pages": [
@@ -127,7 +127,7 @@
           "items": [
             {
               "title": "Who coaches your kid",
-              "text": "Pat Hennelly is our President. Iuliia Pakhomenko runs operations. Every team will have a named coach with their background, announced before tryouts. [Coach list TBC]",
+              "text": "Pat Hennelly is our President. Iuliia Pakhomenko runs operations. Coaches will be named here, with their background, as the club confirms them. [Coach list TBC]",
               "link_label": "Meet the coaches",
               "link": "{home}our-coaches/"
             },
@@ -139,7 +139,7 @@
             },
             {
               "title": "What you are signing up for",
-              "text": "Before tryouts we will post every coach, the total cost with coach and travel fees, the schedule, who to call outside the club, and how Safe Sport works. [Season total: $TBC]",
+              "text": "We will post every coach, the total cost with coach and travel fees, the schedule, who to call outside the club, and how Safe Sport works as the club confirms them. [Season total: $TBC]",
               "link_label": "Fees and registration",
               "link": "{home}fees-and-registration/"
             }
@@ -171,7 +171,7 @@
             {
               "date": "[Date TBC]",
               "title": "Coach list posted",
-              "text": "Every team's coach, before tryouts."
+              "text": "[Club to confirm: a named coach for every team]"
             },
             {
               "date": "[Date TBC]",
@@ -183,7 +183,7 @@
         {
           "acf_fc_layout": "callout",
           "style": "dark",
-          "heading": "Before tryouts we will post the whole season.",
+          "heading": "Season details will be posted here as they are confirmed.",
           "text": "Coaches, total cost, schedule, who to call, and Safe Sport. [Date TBC]",
           "button_label": "Fees and registration",
           "button_link": "{home}fees-and-registration/"
@@ -198,7 +198,7 @@
         "hero_style": "page",
         "hero_eyebrow": "The club",
         "hero_heading": "Our coaches",
-        "hero_text": "Every team will have a named coach, announced before tryouts. Here is who runs the club now, and the coaching staff as it is confirmed."
+        "hero_text": "Here is who runs the club now. Coaches will be named here as the club confirms them. [Coach list TBC]"
       },
       "flex": [
         {
@@ -311,9 +311,9 @@
           "acf_fc_layout": "callout",
           "style": "dark",
           "heading": "Questions about a team?",
-          "text": "Ask at the info session on {info_date}, or email us.",
-          "button_label": "Tryout details",
-          "button_link": "{home}tryouts/"
+          "text": "Ask us anything about age groups and teams.",
+          "button_label": "Email the club",
+          "button_link": "mailto:info@tumbleweedsvolleyball.com"
         }
       ]
     },
@@ -349,17 +349,12 @@
             {
               "date": "[Date TBC]",
               "title": "Coach list posted",
-              "text": "Every team's coach, before tryouts."
+              "text": "[Club to confirm: a named coach for every team]"
             },
             {
               "date": "[Date TBC]",
-              "title": "Tryouts, 12U to 14U",
-              "text": "[Location TBC]"
-            },
-            {
-              "date": "[Date TBC]",
-              "title": "Tryouts, 15U to 18U",
-              "text": "[Location TBC]"
+              "title": "Tryouts",
+              "text": "[Age groups, dates, and location TBC]"
             },
             {
               "date": "[Date TBC]",
@@ -376,7 +371,7 @@
           "rows": [
             {
               "label": "Who can try out",
-              "value": "Athletes aged 12 to 18. [Age groups and genders for the first season: TBC]"
+              "value": "[Age groups and genders for this season: TBC]"
             },
             {
               "label": "Where",
@@ -483,12 +478,11 @@
           "rows": [
             {
               "label": "Coaching approach",
-              "value": "Fundamentals first, in a set order. Every athlete gets direct feedback at every practice.",
-              "note": "Draft wording. [Club to confirm before this page goes live]"
+              "value": "[Coaching approach: club to confirm wording]"
             },
             {
               "label": "Who coaches each team",
-              "value": "A named coach for every team, announced before tryouts. [Coach list TBC]"
+              "value": "[Club to confirm: a named coach for every team] [Coach list TBC]"
             },
             {
               "label": "Practices per week",
@@ -513,8 +507,7 @@
           "rows": [
             {
               "label": "Values",
-              "value": "Fundamentals first. Everyone gets coached. Open book. Safe, always. Played in Kamloops.",
-              "note": "Draft values. [Club leadership to confirm before this page goes live]"
+              "value": "[Club values: to be confirmed by club leadership]"
             },
             {
               "label": "Athletes who come back",
@@ -618,7 +611,7 @@
             },
             {
               "question": "You are brand new. Why risk a season?",
-              "answer": "You are right, this is our first season. Before tryouts we will post who coaches, what the season costs, and how Safe Sport works, so you can decide with everything in front of you. New clubs also serve a one-year probation with Volleyball BC. [Date the coach list and fees are posted: TBC]"
+              "answer": "You are right, this is our first season. As the club confirms them, we will post who coaches, what the season costs, and how Safe Sport works, so you can decide with everything in front of you. New clubs also serve a one-year probation with Volleyball BC. [Date the coach list and fees are posted: TBC]"
             },
             {
               "question": "What does it cost, really?",

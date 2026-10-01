@@ -56,15 +56,14 @@
             "name": "info_session_date",
             "aria-label": "",
             "type": "text",
-            "instructions": "Shown wherever a page says {info_date}. Clear this box and the one below after the session is over.",
+            "instructions": "Shown wherever a page says {info_date}. Clear this box and the one below after the session is over: the lines that mention it disappear from every page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "default_value": "Sunday, October 4"
+            }
         },
         {
             "key": "field_tvbc_set_info_session_details",
@@ -79,8 +78,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "default_value": "7:00 to 8:30 pm, TRU Science Building S337"
+            }
         },
         {
             "key": "field_tvbc_set_status_line",
@@ -253,5 +251,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1790867066
+    "modified": 1790867484
 }

@@ -13,11 +13,16 @@ function tvbc_tokens( $s ) {
 		return $s;
 	}
 	return strtr( $s, array(
-		'{info_date}'    => tvbc_opt( 'info_session_date' ) ?: '[Info session date TBC]',
-		'{info_details}' => tvbc_opt( 'info_session_details' ) ?: '[Info session details TBC]',
+		'{info_date}'    => (string) tvbc_opt( 'info_session_date' ),
+		'{info_details}' => (string) tvbc_opt( 'info_session_details' ),
 	) );
 }
 add_filter( 'the_content', 'tvbc_tokens', 9 );
+
+/** True when a string uses an info-session token but the Club settings boxes are empty (the line should not show). */
+function tvbc_dead( $s ) {
+	return false !== strpos( (string) $s, '{info_' ) && ! tvbc_opt( 'info_session_date' );
+}
 
 /** One line of plain text, escaped, placeholders highlighted. */
 function tvbc_inline( $s ) {
@@ -68,8 +73,6 @@ function tvbc_opt( $name ) {
 		'complaints_contact' => '[Complaints contact TBC]',
 		'practice_location'  => '[Practice location TBC]',
 		'footer_blurb'       => '',
-		'info_session_date'    => 'Sunday, October 4',
-		'info_session_details' => '7:00 to 8:30 pm, TRU Science Building S337',
 		'status_line'          => 'A Volleyball BC member club in good standing (new club), Zone 2 Thompson-Okanagan.',
 		'location_line'        => 'Kamloops, BC',
 	);
