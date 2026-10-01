@@ -2,7 +2,7 @@
 Theme Name: Tumbleweeds Volleyball Club
 Theme URI: https://tumbleweedsvolleyball.com
 Author: Tumbleweeds Volleyball Club
-Description: Club site theme. ACF flexible content (works with ACF Pro or Secure Custom Fields), BEM, SCSS compiled with gulp. All page content lives in fields. Styles are in assets/css/app.min.css.
-Version: 0.1.0
+Description: Club site theme, built the Chez Koop way: ACF flexible content (Secure Custom Fields or ACF Pro), BEM, SCSS compiled with gulp, webpack bundle. All page content lives in fields. Compiled assets are committed (assets/css/app.min.css, dist/js/app.bundle.js).
+Version: 0.2.0
 Text Domain: tvbc
 */

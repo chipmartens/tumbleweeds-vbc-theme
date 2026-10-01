@@ -1,0 +1,9 @@
+@keyframes heroIn {
+	to { transform: scale(1); }
+}
+@keyframes spin {
+	to { transform: rotate(360deg); }
+}
+@keyframes tick {
+	to { transform: translateX(-50%); }
+}

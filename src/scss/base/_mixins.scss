@@ -1,0 +1,24 @@
+@use "sass:math";
+@import 'variables';
+
+// Mixins
+// Applies the paired font-size + line-height tokens (--global--font-size-<name> / --global--line-height-<name>).
+@mixin text($size) {
+	font-size: var(--global--font-size-#{$size});
+	line-height: var(--global--line-height-#{$size});
+}
+
+// Generates --global--color-<token> and opacity steps --global--color-<token>-<pct> from one colour.
+@mixin global-color-with-opacities($token, $color, $opacities: (80, 60, 40, 20, 10, 5), $prefix: global) {
+	--#{$prefix}--color-#{$token}: #{$color};
+	@each $pct in $opacities {
+		--#{$prefix}--color-#{$token}-#{$pct}: #{rgba($color, math.div($pct, 100))};
+	}
+}
+
+@mixin media-down($bp) {
+	@media (max-width: $bp) { @content; }
+}
+@mixin media-up($bp) {
+	@media (min-width: $bp) { @content; }
+}

@@ -1,0 +1,129 @@
+{
+    "key": "group_tvbc_band",
+    "title": "Closing Banner",
+    "fields": [
+        {
+            "key": "field_tvbc_band_band_image",
+            "label": "Photo",
+            "name": "band_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "A wide photo at the bottom of the page. A dark tint is added so the words can be read.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_tvbc_band_band_heading",
+            "label": "Heading",
+            "name": "band_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "One short line. Example: Come meet us",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_band_band_heading_accent",
+            "label": "Last words in italic",
+            "name": "band_heading_accent",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown in the italic style. Example: before tryouts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_band_band_button_1",
+            "label": "Main button (yellow)",
+            "name": "band_button_1",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Pick the page or paste a web address, then write the words on the button.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_tvbc_band_band_button_2",
+            "label": "Second button (outline)",
+            "name": "band_button_2",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Optional.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "coach"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 20,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790000000
+}

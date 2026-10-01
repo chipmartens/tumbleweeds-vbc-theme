@@ -1,13 +1,13 @@
 {
     "key": "group_tvbc_settings",
-    "title": "Club settings",
+    "title": "Club Settings",
     "fields": [
         {
-            "key": "field_tvbc_set_contact_email",
-            "label": "Club email",
-            "name": "contact_email",
+            "key": "field_tvbc_set_tab_top",
+            "label": "Top of every page",
+            "name": "tab_top",
             "aria-label": "",
-            "type": "text",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,15 +16,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "info@tumbleweedsvolleyball.com"
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "key": "field_tvbc_set_instagram_handle",
-            "label": "Instagram handle",
-            "name": "instagram_handle",
+            "key": "field_tvbc_set_announcement_show",
+            "label": "Show the bar at the very top",
+            "name": "announcement_show",
             "aria-label": "",
-            "type": "text",
-            "instructions": "",
+            "type": "true_false",
+            "instructions": "The thin bar above the menu. Switch it off when there is nothing to announce.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -32,109 +33,193 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "@tumbleweedsvball"
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
         },
         {
-            "key": "field_tvbc_set_instagram_url",
-            "label": "Instagram link",
-            "name": "instagram_url",
+            "key": "field_tvbc_set_announcement_text",
+            "label": "What the bar says",
+            "name": "announcement_text",
             "aria-label": "",
-            "type": "url",
-            "instructions": "",
+            "type": "text",
+            "instructions": "One sentence.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_set_announcement_show",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "https://www.instagram.com/tumbleweedsvball/"
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_tvbc_set_info_session_date",
-            "label": "Info session date",
-            "name": "info_session_date",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Shown wherever a page says {info_date}. Clear this box and the one below after the session is over: the lines that mention it disappear from every page.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "key": "field_tvbc_set_info_session_details",
-            "label": "Info session time and place",
-            "name": "info_session_details",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Shown wherever a page says {info_details}.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "key": "field_tvbc_set_status_line",
-            "label": "Footer status line",
-            "name": "status_line",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Appears at the very bottom of every page.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "A Volleyball BC member club in good standing (new club), Zone 2 Thompson-Okanagan."
-        },
-        {
-            "key": "field_tvbc_set_location_line",
-            "label": "Footer location",
-            "name": "location_line",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Kamloops, BC"
-        },
-        {
-            "key": "field_tvbc_set_header_cta_label",
-            "label": "Header button text",
-            "name": "header_cta_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Tryouts"
-        },
-        {
-            "key": "field_tvbc_set_header_cta_link",
-            "label": "Header button goes to",
-            "name": "header_cta_link",
+            "key": "field_tvbc_set_announcement_link",
+            "label": "Link in the bar",
+            "name": "announcement_link",
             "aria-label": "",
             "type": "link",
-            "instructions": "",
+            "instructions": "Optional. Pick the page, then write the words people click, for example Details.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_set_announcement_show",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_tvbc_set_announcement_from",
+            "label": "Start showing on",
+            "name": "announcement_from",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "Optional. The bar stays hidden until this day.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_set_announcement_show",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "Ymd",
+            "first_day": 0
+        },
+        {
+            "key": "field_tvbc_set_announcement_until",
+            "label": "Stop showing after",
+            "name": "announcement_until",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "Optional. The bar disappears by itself after this day.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_set_announcement_show",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "Ymd",
+            "first_day": 0
+        },
+        {
+            "key": "field_tvbc_set_logo_text",
+            "label": "Name next to the logo",
+            "name": "logo_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The word beside the round logo in the menu.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Tumbleweeds",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_logo_mark",
+            "label": "Logo (optional)",
+            "name": "logo_mark",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Leave empty to use the club's tumbleweed mark. To change it, upload a one-colour logo with a transparent background (SVG or PNG).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_tvbc_set_favicon",
+            "label": "Tab icon (optional)",
+            "name": "favicon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "The tiny icon in the browser tab. Leave empty to use the tumbleweed mark. A square PNG, at least 64 by 64.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_tvbc_set_header_cta",
+            "label": "Yellow button in the menu",
+            "name": "header_cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Pick the page, then write the words on the button, for example Tryouts.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -145,12 +230,12 @@
             "return_format": "array"
         },
         {
-            "key": "field_tvbc_set_footer_blurb",
-            "label": "Footer line",
-            "name": "footer_blurb",
+            "key": "field_tvbc_set_phone_menu_link",
+            "label": "Extra link on the phone menu only",
+            "name": "phone_menu_link",
             "aria-label": "",
-            "type": "textarea",
-            "instructions": "One or two sentences about the club.",
+            "type": "link",
+            "instructions": "Optional. A page that shows in the full-screen menu on phones but not in the bar on a computer, for example News.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -158,8 +243,439 @@
                 "class": "",
                 "id": ""
             },
+            "return_format": "array"
+        },
+        {
+            "key": "field_tvbc_set_coaches_page",
+            "label": "Page that lists the coaches",
+            "name": "coaches_page",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "So Coaches stays lit in the menu on a coach's page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_tvbc_set_menu_note",
+            "label": "The menu links",
+            "name": "menu_note",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The links in the menu and in the footer are set under <strong>Appearance, Menus</strong> (Header Menu and Footer Menu).",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_tvbc_set_tab_info",
+            "label": "Info session",
+            "name": "tab_info",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_tvbc_set_info_title",
+            "label": "Name of the event",
+            "name": "info_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "For example Parent info session.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Parent info session",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_info_date",
+            "label": "Date",
+            "name": "info_date",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "When it happens. After this day, every place that shows the info session hides it by itself. Clear the date to hide it now.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "Ymd",
+            "first_day": 0
+        },
+        {
+            "key": "field_tvbc_set_info_time",
+            "label": "Time",
+            "name": "info_time",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "For example 7:00 to 8:30 pm.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_info_place",
+            "label": "Place",
+            "name": "info_place",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "For example TRU Science Building S337.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_info_details",
+            "label": "Extra details",
+            "name": "info_details",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Optional. For example parking and how to join online.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
             "rows": 3,
+            "placeholder": "",
             "new_lines": ""
+        },
+        {
+            "key": "field_tvbc_set_tab_ticker",
+            "label": "Scrolling strip",
+            "name": "tab_ticker",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_tvbc_set_ticker_phrases",
+            "label": "Words that scroll across the strip",
+            "name": "ticker_phrases",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Short phrases. They repeat along the strip on the home page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "sub_fields": [
+                {
+                    "key": "field_tvbc_set_ticker_phrase",
+                    "label": "Phrase",
+                    "name": "ticker_phrase",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "A few words.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ],
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add a phrase",
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_tvbc_set_tab_badge",
+            "label": "Round badge",
+            "name": "tab_badge",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_tvbc_set_badge_text",
+            "label": "Words around the round badge",
+            "name": "badge_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The slowly turning badge on the home page photo. Keep it to about 60 characters.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_tab_contact",
+            "label": "Contact and social",
+            "name": "tab_contact",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_tvbc_set_contact_email",
+            "label": "Club email",
+            "name": "contact_email",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Where messages from the contact form go.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_club_location",
+            "label": "Town",
+            "name": "club_location",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "For example Kamloops, BC.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_footer_contact_link",
+            "label": "Link to the contact page",
+            "name": "footer_contact_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Pick the contact page, then write the words, for example Contact page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_tvbc_set_socials",
+            "label": "Social media",
+            "name": "socials",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "One row for each account.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "sub_fields": [
+                {
+                    "key": "field_tvbc_set_social_network",
+                    "label": "Network",
+                    "name": "social_network",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Which site.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "instagram": "Instagram",
+                        "facebook": "Facebook",
+                        "tiktok": "TikTok",
+                        "youtube": "YouTube"
+                    },
+                    "default_value": "instagram",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_tvbc_set_social_label",
+                    "label": "What shows",
+                    "name": "social_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "For example @tumbleweedsvball.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_tvbc_set_social_url",
+                    "label": "Web address",
+                    "name": "social_url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "The full address of the account.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "https://"
+                }
+            ],
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add an account",
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_tvbc_set_tab_helpline",
+            "label": "Helpline",
+            "name": "tab_helpline",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_tvbc_set_helpline_name",
@@ -167,7 +683,7 @@
             "name": "helpline_name",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "For example Abuse-Free Sport Helpline.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -175,15 +691,19 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Abuse-Free Sport Helpline"
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_tvbc_set_helpline_phone",
-            "label": "Helpline phone",
+            "label": "Helpline number",
             "name": "helpline_phone",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "Exactly as it should show, for example 1-888-83SPORT (77678).",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -191,7 +711,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "1-888-83SPORT (77678)"
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_tvbc_set_complaints_contact",
@@ -199,7 +723,7 @@
             "name": "complaints_contact",
             "aria-label": "",
             "type": "text",
-            "instructions": "Someone outside the coaching staff. Keep the brackets until it is confirmed.",
+            "instructions": "A named person outside the club. Until it is decided, leave the words coming soon.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -207,15 +731,19 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "[Complaints contact TBC]"
+            "default_value": "coming soon",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_tvbc_set_practice_location",
-            "label": "Practice location",
-            "name": "practice_location",
+            "key": "field_tvbc_set_tab_footer",
+            "label": "Footer",
+            "name": "tab_footer",
             "aria-label": "",
-            "type": "text",
-            "instructions": "Keep the brackets until it is confirmed.",
+            "type": "tab",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -223,7 +751,108 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "[Practice location TBC]"
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_tvbc_set_footer_blurb",
+            "label": "Short line about the club",
+            "name": "footer_blurb",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Shown under the logo in the footer.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_tvbc_set_footer_signup_title",
+            "label": "Sign-up heading",
+            "name": "footer_signup_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "For example Stay in the loop.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_footer_signup_code",
+            "label": "Sign-up form code (optional)",
+            "name": "footer_signup_code",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "If you have a sign-up form from your email service, paste its embed code here. Leave empty to use the simple form that opens the visitor's email app.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_tvbc_set_footer_status_line",
+            "label": "Line after the copyright",
+            "name": "footer_status_line",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "For example A Volleyball BC member club (new club), Zone 2 Thompson-Okanagan.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_footer_small_print",
+            "label": "Small print",
+            "name": "footer_small_print",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional. For example the photo credit.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -232,13 +861,6 @@
                 "param": "options_page",
                 "operator": "==",
                 "value": "club-settings"
-            }
-        ],
-        [
-            {
-                "param": "page_type",
-                "operator": "==",
-                "value": "front_page"
             }
         ]
     ],
@@ -251,5 +873,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1790867484
+    "modified": 1790000000
 }

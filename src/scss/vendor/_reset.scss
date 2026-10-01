@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body,
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote, dl, dd {
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+}
+ul[class], ol[class] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+img, svg, video {
+	display: block;
+	max-width: 100%;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+button, input, select, textarea {
+	font: inherit;
+	color: inherit;
+}
+button {
+	cursor: pointer;
+}

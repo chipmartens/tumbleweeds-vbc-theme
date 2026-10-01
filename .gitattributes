@@ -1,0 +1,7 @@
+# GitHub's archive zip (what Playground installs) ships only what WordPress needs.
+/v2 export-ignore
+/tools export-ignore
+/.cursor export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/package-lock.json export-ignore

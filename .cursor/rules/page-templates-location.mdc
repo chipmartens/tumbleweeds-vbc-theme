@@ -1,0 +1,20 @@
+---
+description: Keep WordPress page templates in page-templates directory
+alwaysApply: true
+---
+
+# Page Template Location
+
+Store custom WordPress page templates in `page-templates/` instead of the theme root.
+
+## Required conventions
+
+- Create new custom page templates in `page-templates/`.
+- Do not add new `page-*.php` template files at the theme root.
+- When editing existing root-level custom templates, prefer moving them into `page-templates/` in the same change when safe.
+- Preserve the `Template Name:` header and behavior when moving templates.
+
+## Notes
+
+- This rule applies to custom page templates, not core hierarchy files like `page.php`, `single.php`, `single-coach.php`, `404.php`, or `index.php`.
+- This theme has no custom page templates yet: every page is `page.php` plus its Hero Content and Page sections fields.

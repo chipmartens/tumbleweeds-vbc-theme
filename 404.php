@@ -1,13 +1,25 @@
-<?php get_header(); ?>
-<section class="hero hero--page">
-	<?php echo tvbc_pattern( 'hero__pattern' ); // phpcs:ignore ?>
-	<div class="container hero__inner">
-		<div class="hero__copy">
-			<p class="eyebrow">404</p>
-			<h1 class="hero__title"><?php echo esc_html( tvbc_ui( 'e404_title' ) ); ?></h1>
-			<p class="hero__text"><?php echo esc_html( tvbc_ui( 'e404_text' ) ); ?></p>
-			<div class="hero__actions"><a class="btn btn--main" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( tvbc_ui( 'e404_btn' ) ); ?></a></div>
+<?php
+/*
+Theme Name: Tumbleweeds Volleyball Club
+Object: 404 (404.php)
+Text Domain: tvbc
+*/
+
+get_header(); ?>
+
+	<header class="hero hero--page hero--plain">
+		<div class="hero__inner">
+			<div class="container-2xl hero__container">
+				<div class="hero__content">
+					<span class="hero__tag"><span class="dot"></span><?php echo esc_html( tvbc_ui( 'e404_tag' ) ); ?></span>
+					<h1 class="hero__title"><?php echo esc_html( tvbc_ui( 'e404_title' ) ); ?></h1>
+					<p class="hero__lede"><?php echo esc_html( tvbc_ui( 'e404_text' ) ); ?></p>
+					<div class="hero__ctas"><a class="btn btn--light" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( tvbc_ui( 'e404_btn' ) ); ?></a></div>
+				</div>
+			</div>
 		</div>
-	</div>
-</section>
+	</header>
+
+	<main id="main"></main>
+
 <?php get_footer(); ?>

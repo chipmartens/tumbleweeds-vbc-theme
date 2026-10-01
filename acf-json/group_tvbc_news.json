@@ -1,0 +1,67 @@
+{
+    "key": "group_tvbc_news",
+    "title": "News Photo",
+    "fields": [
+        {
+            "key": "field_tvbc_news_hero_focus_x",
+            "label": "Keep this part of the photo in view: left to right",
+            "name": "hero_focus_x",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "The photo at the top is the Featured image. Slide to choose which part stays visible. 0 is the left edge, 100 the right.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "prepend": "",
+            "append": "%"
+        },
+        {
+            "key": "field_tvbc_news_hero_focus_y",
+            "label": "Keep this part of the photo in view: top to bottom",
+            "name": "hero_focus_y",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "0 is the top edge, 100 the bottom.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "prepend": "",
+            "append": "%"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790000000
+}

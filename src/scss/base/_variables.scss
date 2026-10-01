@@ -1,0 +1,21 @@
+// Fonts (loaded by header.php from Google Fonts)
+$font-sans: Figtree, system-ui, sans-serif;
+$font-display: "Barlow Condensed", sans-serif;
+$font-accent: "Instrument Serif", serif;
+
+// Container widths
+$container-width-inner: 1200px;
+$frame-width: 1440px;
+
+// Breakpoints. The first six are the Chez Koop set; the rest are the v2 design's own steps.
+$breakpoint-width-sm: 576px;
+$breakpoint-width-md: 768px;
+$breakpoint-width-lg: 992px;
+$breakpoint-width-xl: 1200px;
+$breakpoint-width-2xl: 1440px;
+$breakpoint-width-3xl: 1600px;
+$bp-wide: 1441px;   // content sits in the 1440 frame from here up
+$bp-large: 1280px;  // hero and surface padding step down
+$bp-nav: 1180px;    // menu tightens
+$bp-tablet: 1024px; // menu becomes the phone sheet, grids go two-up
+$bp-phone: 860px;   // phone layout

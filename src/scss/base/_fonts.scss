@@ -1,0 +1,6 @@
+// Fonts: Figtree (body), Barlow Condensed (numbers and dates), Instrument Serif italic (accent words).
+// They load from Google Fonts in header.php (preconnect + one stylesheet link), so no @font-face here.
+// Fallbacks keep the layout steady while they load.
+html {
+	-webkit-text-size-adjust: 100%;
+}

@@ -1,44 +1,14 @@
 {
     "key": "group_tvbc_coach",
-    "title": "Coach details",
+    "title": "Coach Details",
     "fields": [
         {
-            "key": "field_tvbc_coach_role",
-            "label": "Role at the club",
-            "name": "role",
+            "key": "field_tvbc_coach_coach_role",
+            "label": "Role",
+            "name": "coach_role",
             "aria-label": "",
             "type": "text",
-            "instructions": "For example \"President\" or \"Head coach, 14U girls\".",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "key": "field_tvbc_coach_teams",
-            "label": "Teams",
-            "name": "teams",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Optional. Age groups this person coaches.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "key": "field_tvbc_coach_photo",
-            "label": "Photo",
-            "name": "photo",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "A cut-out (clear background) head and shoulders photo works best.",
+            "instructions": "Shown under the name, for example President.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -46,16 +16,19 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
-            "preview_size": "medium"
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_tvbc_coach_summary",
-            "label": "Short summary",
-            "name": "summary",
+            "key": "field_tvbc_coach_coach_summary",
+            "label": "One line for the cards",
+            "name": "coach_summary",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "Two sentences for the card on the Coaches page.",
+            "instructions": "One sentence that shows on the People section and in search results.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -63,16 +36,19 @@
                 "class": "",
                 "id": ""
             },
-            "rows": 3,
+            "default_value": "",
+            "maxlength": "",
+            "rows": 2,
+            "placeholder": "",
             "new_lines": ""
         },
         {
-            "key": "field_tvbc_coach_bio",
-            "label": "Full bio",
-            "name": "bio",
+            "key": "field_tvbc_coach_coach_photo",
+            "label": "Photo (head and shoulders)",
+            "name": "coach_photo",
             "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "Shown on this coach's own page. Leave empty for a card with no link.",
+            "type": "image",
+            "instructions": "A cut-out photo on a transparent background works best.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -80,17 +56,24 @@
                 "class": "",
                 "id": ""
             },
-            "tabs": "visual",
-            "toolbar": "basic",
-            "media_upload": 0
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
-            "key": "field_tvbc_coach_credentials",
-            "label": "Facts about this coach",
-            "name": "credentials",
+            "key": "field_tvbc_coach_coach_bio",
+            "label": "Bio",
+            "name": "coach_bio",
             "aria-label": "",
-            "type": "repeater",
-            "instructions": "One line each. Only things the club has confirmed.",
+            "type": "wysiwyg",
+            "instructions": "Write the bio. A few short paragraphs is plenty.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -98,25 +81,162 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
-            "button_label": "Add line",
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "minimal",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_tvbc_coach_coach_facts",
+            "label": "Facts",
+            "name": "coach_facts",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Short facts that sit under the bio, like Experience or Award.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "sub_fields": [
                 {
-                    "key": "field_tvbc_coach_c_line",
-                    "label": "Line",
-                    "name": "line",
+                    "key": "field_tvbc_coach_fact_label",
+                    "label": "Label",
+                    "name": "fact_label",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "For example Experience.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
-                    }
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_tvbc_coach_fact_value",
+                    "label": "Answer",
+                    "name": "fact_value",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "One line. Leave empty if it is not decided yet.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_tvbc_coach_fact_tag",
+                    "label": "Status tag",
+                    "name": "fact_tag",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Optional. For something not ready yet, write Coming soon.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
-            ]
+            ],
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add a fact",
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_tvbc_coach_coach_hero_image",
+            "label": "Photo for the top of the page",
+            "name": "coach_hero_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "A wide photo behind the coach's name.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_tvbc_coach_hero_focus_x",
+            "label": "Keep this part in view: left to right",
+            "name": "hero_focus_x",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "Slide to choose which part of the top photo stays visible. 0 is the left edge, 100 the right.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "prepend": "",
+            "append": "%"
+        },
+        {
+            "key": "field_tvbc_coach_hero_focus_y",
+            "label": "Keep this part in view: top to bottom",
+            "name": "hero_focus_y",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "0 is the top edge, 100 the bottom.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "prepend": "",
+            "append": "%"
         }
     ],
     "location": [
@@ -133,12 +253,9 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content",
-        "excerpt"
-    ],
+    "hide_on_screen": [],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1790867484
+    "modified": 1790000000
 }

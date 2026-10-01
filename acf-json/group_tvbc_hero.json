@@ -1,0 +1,303 @@
+{
+    "key": "group_tvbc_hero",
+    "title": "Hero Content",
+    "fields": [
+        {
+            "key": "field_tvbc_hero_hero_layout",
+            "label": "Top of the page",
+            "name": "hero_layout",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Pick the look of the big photo at the top.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "page": "Page hero (photo with the page title)",
+                "home": "Home hero (larger, with the round badge)",
+                "none": "No hero"
+            },
+            "default_value": "page",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_tvbc_hero_hero_image",
+            "label": "Hero photo",
+            "name": "hero_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "A wide photo. A dark tint is added so the words can be read.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_tvbc_hero_hero_focus_x",
+            "label": "Keep this part in view: left to right",
+            "name": "hero_focus_x",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "Slide to choose which part of the photo stays visible when it is cropped. 0 is the left edge, 100 the right.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "prepend": "",
+            "append": "%"
+        },
+        {
+            "key": "field_tvbc_hero_hero_focus_y",
+            "label": "Keep this part in view: top to bottom",
+            "name": "hero_focus_y",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "0 is the top edge, 100 the bottom.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "prepend": "",
+            "append": "%"
+        },
+        {
+            "key": "field_tvbc_hero_hero_tag",
+            "label": "Small label in the pill",
+            "name": "hero_tag",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "A few words above the heading, for example Tryouts, late November.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_hero_hero_heading",
+            "label": "Heading",
+            "name": "hero_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The big line. Leave empty to use the page title.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_hero_hero_heading_accent",
+            "label": "Last words in italic (optional)",
+            "name": "hero_heading_accent",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown in the club's italic style at the end of the heading. Example: heading is Programs by, italic words are age group.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_hero_hero_subhead",
+            "label": "Short text under the heading",
+            "name": "hero_subhead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "One or two sentences. Optional.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_tvbc_hero_hero_button_1",
+            "label": "Main button (white)",
+            "name": "hero_button_1",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Optional. Pick the page or paste a web address, then write the words on the button.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_tvbc_hero_hero_button_2",
+            "label": "Second button (outline)",
+            "name": "hero_button_2",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Optional.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790000000
+}

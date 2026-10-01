@@ -1,835 +1,1764 @@
 {
-  "_about": "Seed content for the Tumbleweeds site. Re-runnable: pages and posts are matched by slug and rewritten. Copy comes from messaging.md and positioning.md. [Square brackets] are visible placeholders for facts the club has not confirmed. Links written as {home}path/ resolve to the site URL. @img:key resolves to the uploaded image id.",
-  "images": {
-    "pat-hennelly": {
-      "file": "assets/img/people/pat-hennelly.png",
-      "alt": "Pat Hennelly, club President"
-    },
-    "iuliia-pakhomenko": {
-      "file": "assets/img/people/iuliia-pakhomenko.png",
-      "alt": "Iuliia Pakhomenko, Manager of Operations"
-    }
+ "images": {
+  "tw-01": {
+   "file": "seed/img/tw-01-celebration-indoor-court.jpg",
+   "alt": "Volleyball players celebrating a point on an indoor court"
   },
-  "settings": {
-    "contact_email": "info@tumbleweedsvolleyball.com",
-    "instagram_handle": "@tumbleweedsvball",
-    "instagram_url": "https://www.instagram.com/tumbleweedsvball/",
-    "header_cta_label": "Tryouts",
-    "header_cta_link": "{home}tryouts/",
-    "footer_blurb": "Kamloops youth volleyball. Developing athletes from the ground up.",
-    "helpline_name": "Abuse-Free Sport Helpline",
-    "helpline_phone": "1-888-83SPORT (77678)",
-    "complaints_contact": "[Complaints contact TBC]",
-    "practice_location": "[Practice location TBC]",
-    "info_session_date": "Sunday, October 4",
-    "info_session_details": "7:00 to 8:30 pm, TRU Science Building S337",
-    "status_line": "A Volleyball BC member club in good standing (new club), Zone 2 Thompson-Okanagan.",
-    "location_line": "Kamloops, BC"
+  "tw-02": {
+   "file": "seed/img/tw-02-club-match-net-action.jpg",
+   "alt": "Club match at the net"
   },
-  "coaches": [
-    {
-      "slug": "pat-hennelly",
-      "title": "Pat Hennelly",
-      "menu_order": 1,
-      "fields": {
-        "role": "President",
-        "teams": "[Coaching role TBC]",
-        "photo": "@img:pat-hennelly",
-        "summary": "TRU men's volleyball head coach since 2005. 2024 U Sports Men's Volleyball Coach of the Year.",
-        "bio": "<p>Pat Hennelly is the President of Tumbleweeds Volleyball Club.</p><p>He has coached university volleyball since 1995: at UBC, as an assistant at Northern Arizona University, and as head coach of the TRU men's team since 2005. He was named 2024 U Sports Men's Volleyball Coach of the Year. He was also named 2024 Canada West Men's Volleyball Coach of the Year.</p><p>[Pat's coaching role with Tumbleweeds teams: TBC]</p>",
-        "credentials": [
-          {
-            "line": "University coach since 1995"
-          },
-          {
-            "line": "TRU men's volleyball head coach since 2005"
-          },
-          {
-            "line": "2024 U Sports Men's Volleyball Coach of the Year"
-          }
-        ]
-      }
+  "tw-03": {
+   "file": "seed/img/tw-03-club-match-spike.jpg",
+   "alt": "Club match, attack and block at the net"
+  },
+  "tw-04": {
+   "file": "seed/img/tw-04-gym-spike-wide.jpg",
+   "alt": "Players at the net in a large indoor gym"
+  },
+  "tw-09": {
+   "file": "seed/img/tw-09-low-light-ready-position.jpg",
+   "alt": "Players in ready position"
+  },
+  "tw-10": {
+   "file": "seed/img/tw-10-wood-court-sunbeam.jpg",
+   "alt": "Players running a passing drill on a wooden court"
+  },
+  "tw-11": {
+   "file": "seed/img/tw-11-bump-wood-floor.jpg",
+   "alt": "Player passing on a wood court"
+  },
+  "tw-12": {
+   "file": "seed/img/tw-12-sports-hall-wide.jpg",
+   "alt": "Rally in an indoor sports hall"
+  },
+  "tw-13": {
+   "file": "seed/img/tw-13-ball-on-floor-detail.jpg",
+   "alt": "Volleyball resting on a gym floor"
+  },
+  "tw-14": {
+   "file": "seed/img/tw-14-net-texture-detail.jpg",
+   "alt": "Volleyball net close up"
+  },
+  "tw-15": {
+   "file": "seed/img/tw-15-silhouette-gym-ball.jpg",
+   "alt": "Player holding a volleyball in a dim gym"
+  },
+  "pat": {
+   "file": "seed/img/pat-hennelly-headshoulders.png",
+   "alt": "Pat Hennelly"
+  },
+  "iuliia": {
+   "file": "seed/img/iuliia-pakhomenko-headshoulders.png",
+   "alt": "Iuliia Pakhomenko"
+  }
+ },
+ "pages": [
+  {
+   "slug": "home",
+   "title": "Home",
+   "front_page": true,
+   "hero": {
+    "hero_layout": "home",
+    "hero_image": "@img:tw-01",
+    "hero_focus_x": 50,
+    "hero_focus_y": 35,
+    "hero_tag": "Kamloops youth volleyball",
+    "hero_heading": "Developing athletes from the",
+    "hero_heading_accent": "ground up.",
+    "hero_subhead": "A new Kamloops club, led by Pat Hennelly, 2024 U Sports Men's Volleyball Coach of the Year.",
+    "hero_button_1": {
+     "title": "Tryout details",
+     "url": "{home}tryouts/"
     },
-    {
-      "slug": "iuliia-pakhomenko",
-      "title": "Iuliia Pakhomenko",
-      "menu_order": 2,
-      "fields": {
-        "role": "Manager of Operations",
-        "teams": "[Coaching role TBC]",
-        "photo": "@img:iuliia-pakhomenko",
-        "summary": "Played professionally in Ukraine, then played and coached for the TRU WolfPack.",
-        "bio": "<p>Iuliia Pakhomenko is the club's Manager of Operations.</p><p>She played professionally in Ukraine, then played and coached for the TRU WolfPack.</p><p>[Iuliia's coaching role with Tumbleweeds teams: TBC]</p>",
-        "credentials": [
-          {
-            "line": "Former professional player in Ukraine"
-          },
-          {
-            "line": "Former TRU WolfPack athlete and coach"
-          }
-        ]
-      }
-    },
-    {
-      "slug": "coach-list",
-      "title": "[Coach list TBC]",
-      "menu_order": 10,
-      "fields": {
-        "role": "Coaches will be named here as the club confirms them.",
-        "summary": ""
-      }
+    "hero_button_2": {
+     "title": "Meet the club",
+     "url": "{home}our-coaches/"
     }
+   },
+   "flex": [
+    {
+     "acf_fc_layout": "section_ticker"
+    },
+    {
+     "acf_fc_layout": "section_cards",
+     "section_anchor": "",
+     "section_eyebrow": "What parents ask",
+     "show_number": 1,
+     "section_heading": "Who coaches. How they coach.",
+     "section_heading_accent": "What it costs.",
+     "section_bg_color": "",
+     "section_side": "link",
+     "section_side_link": {
+      "title": "Read the parent questions",
+      "url": "{home}for-parents/"
+     },
+     "show_card_numbers": 1,
+     "cards": [
+      {
+       "card_colour": "sage",
+       "card_image": "@img:tw-03",
+       "card_title": "Who coaches your kid",
+       "card_text": "Every team will have a named coach, posted with their background before tryouts. Pat Hennelly is our President. Iuliia Pakhomenko runs operations.",
+       "card_foot": "tag",
+       "card_foot_tag": "Coach list coming soon",
+       "card_foot_link": ""
+      },
+      {
+       "card_colour": "sun",
+       "card_image": "@img:tw-10",
+       "card_title": "How we coach",
+       "card_text": "Fundamentals first. The basics, taught in a set order, until they're automatic. Then we build on them.",
+       "card_foot": "link",
+       "card_foot_tag": "",
+       "card_foot_link": {
+        "title": "See the programs",
+        "url": "{home}programs/"
+       }
+      },
+      {
+       "card_colour": "sand",
+       "card_image": "@img:tw-13",
+       "card_title": "What you're signing up for",
+       "card_text": "The whole season on one page: the total cost with coach and travel fees, the schedule, and who to call outside the club.",
+       "card_foot": "tag",
+       "card_foot_tag": "Posting before tryouts",
+       "card_foot_link": ""
+      }
+     ],
+     "cards_dates": 1,
+     "dates": [
+      {
+       "date_kind": "info_session",
+       "date_link": {
+        "title": "Parent info session",
+        "url": "{home}tryouts/"
+       }
+      },
+      {
+       "date_kind": "custom",
+       "date_label": "Before tryouts",
+       "date_title": "Coaches announced",
+       "date_line": "A named coach for every team",
+       "date_link": {
+        "title": "Coaches announced",
+        "url": "{home}tryouts/"
+       }
+      },
+      {
+       "date_kind": "custom",
+       "date_label": "Late November",
+       "date_title": "Tryouts",
+       "date_line": "In the Volleyball BC tryout window",
+       "date_link": {
+        "title": "Tryouts",
+        "url": "{home}tryouts/"
+       }
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_strip",
+     "strip_photos": [
+      {
+       "strip_image": "@img:tw-02",
+       "focus_x": 50,
+       "focus_y": 50
+      },
+      {
+       "strip_image": "@img:tw-11",
+       "focus_x": 30,
+       "focus_y": 50
+      },
+      {
+       "strip_image": "@img:tw-12",
+       "focus_x": 50,
+       "focus_y": 50
+      },
+      {
+       "strip_image": "@img:tw-09",
+       "focus_x": 55,
+       "focus_y": 50
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_people",
+     "section_anchor": "people",
+     "section_eyebrow": "The club",
+     "show_number": 1,
+     "section_heading": "The people who run the club.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "text",
+     "section_side_text": "Coaches for each team are announced before tryouts."
+    },
+    {
+     "acf_fc_layout": "section_statement",
+     "section_heading": "Your kid's first club season starts",
+     "section_heading_accent": "here."
+    },
+    {
+     "acf_fc_layout": "section_events",
+     "section_anchor": "coming-up",
+     "section_eyebrow": "Coming up",
+     "show_number": 1,
+     "section_heading": "Come meet us before tryouts.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "events": [
+      {
+       "event_kind": "info_session",
+       "event_side": "button",
+       "event_side_link": {
+        "title": "Follow on Instagram",
+        "url": "https://www.instagram.com/tumbleweedsvball/"
+       }
+      },
+      {
+       "event_kind": "other",
+       "event_date": "Before tryouts",
+       "event_title": "Coaches announced",
+       "event_text": "Every team's coach, with their background.",
+       "event_side": "tag",
+       "event_side_tag": "Coming soon",
+       "event_side_link": ""
+      },
+      {
+       "event_kind": "other",
+       "event_date": "Late Nov",
+       "event_title": "Tryouts",
+       "event_text": "Held in the Volleyball BC tryout window. Dates and age groups coming soon.",
+       "event_side": "button",
+       "event_side_tag": "",
+       "event_side_link": {
+        "title": "Email the club",
+        "url": "mailto:info@tumbleweedsvolleyball.com"
+       }
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_faq",
+     "section_anchor": "questions",
+     "section_eyebrow": "For parents",
+     "show_number": 1,
+     "section_heading": "The questions every parent should ask.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_lede": "Volleyball BC tells families to ask these before choosing a club. Here's where we stand.",
+     "section_side": "none",
+     "faq_numbered": 0,
+     "faq_open_first": 1,
+     "faq_items": [
+      {
+       "faq_question": "Who actually coaches my kid?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>Every team will have a named coach, posted with their background before tryouts. Pat Hennelly leads the club as President.</p>"
+      },
+      {
+       "faq_question": "What does the season cost, all in?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>We'll post one total that includes coach and travel fees, plus what's included and our refund policy, before tryouts.</p>"
+      },
+      {
+       "faq_question": "How much travel is there?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>The club season runs December to May, with Provincials in April and May. The tournament list for each age group will be posted with the schedule.</p>"
+      },
+      {
+       "faq_question": "How do you keep kids safe?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>Every adult in a position of authority completes a criminal record check, a screening disclosure and Safe Sport training, as Volleyball BC requires. Concerns can go to the Abuse-Free Sport Helpline at 1-888-837-7678.</p>"
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_cta",
+     "cta_style": "banner",
+     "section_anchor": "",
+     "section_eyebrow": "Sponsors",
+     "section_heading": "Put your name behind Kamloops kids.",
+     "section_cta": {
+      "title": "Become a founding sponsor",
+      "url": "{home}sponsors/"
+     }
+    },
+    {
+     "acf_fc_layout": "section_band",
+     "band_size": "tall",
+     "band_image": "@img:tw-04",
+     "band_heading": "See you at",
+     "band_heading_accent": "tryouts.",
+     "band_button_1": {
+      "title": "Tryout details",
+      "url": "{home}#coming-up"
+     },
+     "band_button_2": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "our-coaches",
+   "title": "Our coaches",
+   "menu": "Coaches",
+   "hero": {
+    "hero_layout": "page",
+    "hero_image": "@img:tw-01",
+    "hero_focus_x": 50,
+    "hero_focus_y": 35,
+    "hero_tag": "The club",
+    "hero_heading": "Who runs the club, and who",
+    "hero_heading_accent": "coaches.",
+    "hero_subhead": "Here is who leads the club now. Team coaches will be named here as the club confirms them.",
+    "hero_button_1": "",
+    "hero_button_2": ""
+   },
+   "flex": [
+    {
+     "acf_fc_layout": "section_people",
+     "section_anchor": "",
+     "section_eyebrow": "The club",
+     "show_number": 1,
+     "section_heading": "The people who run the club.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "text",
+     "section_side_text": "Club leadership today. Team coaches are named before tryouts."
+    },
+    {
+     "acf_fc_layout": "section_cards",
+     "section_anchor": "",
+     "section_eyebrow": "Coach list",
+     "show_number": 1,
+     "section_heading": "Who coaches each team.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "show_card_numbers": 1,
+     "cards": [
+      {
+       "card_colour": "sage",
+       "card_image": "",
+       "card_title": "A named coach for every team",
+       "card_text": "Every team will have a named coach, posted here with their background before tryouts. If you want to know who is in the gym with your athlete, this is where you will find out.",
+       "card_foot": "tag",
+       "card_foot_tag": "Coach list coming soon",
+       "card_foot_link": ""
+      },
+      {
+       "card_colour": "sun",
+       "card_image": "",
+       "card_title": "Want to coach with us?",
+       "card_text": "Tell us who you are and what you coach. We read every email.",
+       "card_foot": "button",
+       "card_foot_tag": "",
+       "card_foot_link": {
+        "title": "Email the club",
+        "url": "mailto:info@tumbleweedsvolleyball.com"
+       }
+      }
+     ],
+     "cards_dates": 0
+    },
+    {
+     "acf_fc_layout": "section_facts",
+     "facts_layout": "above",
+     "section_anchor": "",
+     "section_eyebrow": "Safe Sport",
+     "show_number": 1,
+     "section_heading": "Volleyball BC rules for every coach.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "facts_rows": [
+      {
+       "fact_label": "Criminal record check",
+       "fact_value": "Volleyball BC requires one for every person in authority at a club, renewed every 3 years.",
+       "fact_note": "",
+       "fact_tag": ""
+      },
+      {
+       "fact_label": "Screening form",
+       "fact_value": "Every coach and club leader files an annual Screening Disclosure.",
+       "fact_note": "",
+       "fact_tag": ""
+      },
+      {
+       "fact_label": "Safe Sport training",
+       "fact_value": "Every coach and club leader completes Safe Sport training.",
+       "fact_note": "",
+       "fact_tag": ""
+      },
+      {
+       "fact_label": "Tumbleweeds",
+       "fact_value": "We will confirm each coach's checks are on file before the first practice.",
+       "fact_note": "",
+       "fact_tag": "Posting before tryouts"
+      }
+     ],
+     "facts_box": 0
+    },
+    {
+     "acf_fc_layout": "section_cta",
+     "cta_style": "banner",
+     "section_anchor": "",
+     "section_eyebrow": "Talk to us",
+     "section_heading": "Questions about who coaches? Ask us.",
+     "section_cta": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     }
+    },
+    {
+     "acf_fc_layout": "section_band",
+     "band_size": "standard",
+     "band_image": "@img:tw-12",
+     "band_heading": "See you at",
+     "band_heading_accent": "tryouts.",
+     "band_button_1": {
+      "title": "Tryout details",
+      "url": "{home}tryouts/"
+     },
+     "band_button_2": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "programs",
+   "title": "Programs",
+   "menu": "Programs",
+   "hero": {
+    "hero_layout": "page",
+    "hero_image": "@img:tw-10",
+    "hero_focus_x": 50,
+    "hero_focus_y": 60,
+    "hero_tag": "Programs",
+    "hero_heading": "Programs by",
+    "hero_heading_accent": "age group.",
+    "hero_subhead": "Volleyball BC runs club teams from 12U to 18U. We will post which ones we run this season.",
+    "hero_button_1": "",
+    "hero_button_2": ""
+   },
+   "flex": [
+    {
+     "acf_fc_layout": "section_ages",
+     "section_anchor": "",
+     "section_eyebrow": "Age groups",
+     "show_number": 1,
+     "section_heading": "Programs by age group.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "ages": [
+      {
+       "age_label": "12U",
+       "age_caption": "Volleyball BC"
+      },
+      {
+       "age_label": "13U",
+       "age_caption": "Volleyball BC"
+      },
+      {
+       "age_label": "14U",
+       "age_caption": "Volleyball BC"
+      },
+      {
+       "age_label": "15U",
+       "age_caption": "Volleyball BC"
+      },
+      {
+       "age_label": "16U",
+       "age_caption": "Volleyball BC"
+      },
+      {
+       "age_label": "17U",
+       "age_caption": "Volleyball BC"
+      },
+      {
+       "age_label": "18U",
+       "age_caption": "Volleyball BC"
+      }
+     ],
+     "ages_note": "Volleyball BC runs club teams for 12U to 18U. Which of these Tumbleweeds runs this season is still being confirmed.",
+     "ages_note_tag": "Posting before tryouts"
+    },
+    {
+     "acf_fc_layout": "section_strip",
+     "strip_photos": [
+      {
+       "strip_image": "@img:tw-12",
+       "focus_x": 50,
+       "focus_y": 50
+      },
+      {
+       "strip_image": "@img:tw-10",
+       "focus_x": 40,
+       "focus_y": 50
+      },
+      {
+       "strip_image": "@img:tw-01",
+       "focus_x": 50,
+       "focus_y": 50
+      },
+      {
+       "strip_image": "@img:tw-11",
+       "focus_x": 30,
+       "focus_y": 50
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_statement",
+     "section_heading": "Fundamentals",
+     "section_heading_accent": "first."
+    },
+    {
+     "acf_fc_layout": "section_facts",
+     "facts_layout": "left",
+     "section_anchor": "",
+     "section_eyebrow": "How we coach",
+     "show_number": 1,
+     "section_heading": "The basics, in a set order.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_lede": "We teach the basics in a set order until they are automatic. Then we build on them.",
+     "section_side": "none",
+     "facts_rows": [
+      {
+       "fact_label": "Coaching approach",
+       "fact_value": "Fundamentals first, taught in a set order.",
+       "fact_note": "",
+       "fact_tag": ""
+      },
+      {
+       "fact_label": "Practices per week",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "Courts and athletes per team",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_facts",
+     "facts_layout": "above",
+     "section_anchor": "",
+     "section_eyebrow": "The season",
+     "show_number": 1,
+     "section_heading": "Season at a glance.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "facts_rows": [
+      {
+       "fact_label": "Season",
+       "fact_value": "Volleyball BC's club season runs from December to May, with an offseason from August to November.",
+       "fact_note": "",
+       "fact_tag": ""
+      },
+      {
+       "fact_label": "Provincials",
+       "fact_value": "Volleyball BC Provincials run over four weekends in April and May.",
+       "fact_note": "Which Tumbleweeds teams attend is not confirmed yet.",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "Practice location",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "Tournaments and travel",
+       "fact_value": "We will list every tournament and where it is before you sign.",
+       "fact_note": "",
+       "fact_tag": "Posting before tryouts"
+      },
+      {
+       "fact_label": "Girls and boys teams",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      }
+     ],
+     "facts_box": 0
+    },
+    {
+     "acf_fc_layout": "section_cta",
+     "cta_style": "banner",
+     "section_anchor": "",
+     "section_eyebrow": "Talk to us",
+     "section_heading": "Questions about a team? Ask us.",
+     "section_cta": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     }
+    },
+    {
+     "acf_fc_layout": "section_band",
+     "band_size": "standard",
+     "band_image": "@img:tw-04",
+     "band_heading": "See you at",
+     "band_heading_accent": "tryouts.",
+     "band_button_1": {
+      "title": "Tryout details",
+      "url": "{home}tryouts/"
+     },
+     "band_button_2": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "tryouts",
+   "title": "Tryouts",
+   "menu": "Tryouts",
+   "hero": {
+    "hero_layout": "page",
+    "hero_image": "@img:tw-04",
+    "hero_focus_x": 50,
+    "hero_focus_y": 50,
+    "hero_tag": "Tryouts, late November",
+    "hero_heading": "Tryouts,",
+    "hero_heading_accent": "when and where.",
+    "hero_subhead": "Dates, location and what to bring get posted here as we confirm them.",
+    "hero_button_1": {
+     "title": "Email the club",
+     "url": "mailto:info@tumbleweedsvolleyball.com"
+    },
+    "hero_button_2": {
+     "title": "Meet the coaches",
+     "url": "{home}our-coaches/"
+    }
+   },
+   "flex": [
+    {
+     "acf_fc_layout": "section_events",
+     "section_anchor": "",
+     "section_eyebrow": "Dates",
+     "show_number": 1,
+     "section_heading": "What happens, and when.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "events": [
+      {
+       "event_kind": "info_session",
+       "event_side": "button",
+       "event_side_link": {
+        "title": "Follow on Instagram",
+        "url": "https://www.instagram.com/tumbleweedsvball/"
+       }
+      },
+      {
+       "event_kind": "other",
+       "event_date": "Before tryouts",
+       "event_title": "Coaches announced",
+       "event_text": "A named coach for every team, with their background.",
+       "event_side": "tag",
+       "event_side_tag": "Coming soon",
+       "event_side_link": ""
+      },
+      {
+       "event_kind": "other",
+       "event_date": "Late Nov",
+       "event_title": "Tryouts",
+       "event_text": "Held in the Volleyball BC tryout window. Dates and age groups coming soon.",
+       "event_side": "button",
+       "event_side_tag": "",
+       "event_side_link": {
+        "title": "Email the club",
+        "url": "mailto:info@tumbleweedsvolleyball.com"
+       }
+      },
+      {
+       "event_kind": "other",
+       "event_date": "After tryouts",
+       "event_title": "Signing",
+       "event_text": "Volleyball BC sets the signing dates for each age group.",
+       "event_side": "tag",
+       "event_side_tag": "Dates coming soon",
+       "event_side_link": ""
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_facts",
+     "facts_layout": "left",
+     "section_anchor": "",
+     "section_eyebrow": "Before you come",
+     "show_number": 1,
+     "section_heading": "What to know.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_lede": "Nothing here is final until we say so. Each item gets posted as the club confirms it.",
+     "section_side": "none",
+     "facts_rows": [
+      {
+       "fact_label": "Who can try out",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "Where",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "What to bring",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "Cost to try out",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "Registration",
+       "fact_value": "Registration opens before tryouts. We will post the link here and on Instagram.",
+       "fact_note": "",
+       "fact_tag": ""
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_faq",
+     "section_anchor": "",
+     "section_eyebrow": "Tryout questions",
+     "show_number": 1,
+     "section_heading": "Things parents ask.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "faq_numbered": 0,
+     "faq_open_first": 1,
+     "faq_items": [
+      {
+       "faq_question": "Can my athlete try out if they signed with another club early?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>Volleyball BC runs an Early Signing Period from September 1 to October 15, 2026 for 15U to 18U athletes returning to their previous club. An athlete who signed early cannot try out elsewhere. Not sure? Ask Volleyball BC before you register.</p>"
+      },
+      {
+       "faq_question": "Does my athlete need club experience?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>We will say how tryouts work for athletes new to club volleyball before tryouts. Questions now? <a href=\"mailto:info@tumbleweedsvolleyball.com\">Email the club</a>.</p>"
+      },
+      {
+       "faq_question": "When will we hear back?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>We will post the timeline with the tryout dates.</p>"
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_band",
+     "band_size": "standard",
+     "band_image": "@img:tw-12",
+     "band_heading": "Come meet us",
+     "band_heading_accent": "first.",
+     "band_button_1": {
+      "title": "Info session details",
+      "url": "{home}#coming-up"
+     },
+     "band_button_2": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "fees-and-registration",
+   "title": "Fees and registration",
+   "menu": "Fees",
+   "footer_menu": "Fees and registration",
+   "hero": {
+    "hero_layout": "page",
+    "hero_image": "@img:tw-13",
+    "hero_focus_x": 50,
+    "hero_focus_y": 60,
+    "hero_tag": "Fees and registration",
+    "hero_heading": "What the season costs,",
+    "hero_heading_accent": "in total.",
+    "hero_subhead": "Club fee, coach and travel fees, what is included, and the refund policy, all in one place.",
+    "hero_button_1": {
+     "title": "Email the club",
+     "url": "mailto:info@tumbleweedsvolleyball.com"
+    },
+    "hero_button_2": ""
+   },
+   "flex": [
+    {
+     "acf_fc_layout": "section_facts",
+     "facts_layout": "above",
+     "section_anchor": "fees",
+     "section_eyebrow": "Fees and registration",
+     "show_number": 1,
+     "section_heading": "Every cost, line by line.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "facts_rows": [
+      {
+       "fact_label": "Club fee",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "Coach and travel fees",
+       "fact_value": "Shown here with the rest, so the total is not a surprise.",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "Estimated season total",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "Payment plan",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "What the fee includes",
+       "fact_value": "Coaching, tournament entry, uniform, hotels and transportation. We will say which are in and which are out.",
+       "fact_note": "",
+       "fact_tag": "Posting before tryouts"
+      },
+      {
+       "fact_label": "Refund policy",
+       "fact_value": "Volleyball BC requires every club to publish one.",
+       "fact_note": "",
+       "fact_tag": "Posting before tryouts"
+      },
+      {
+       "fact_label": "Fundraising and volunteering",
+       "fact_value": "What families are asked to do.",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      }
+     ],
+     "facts_box": 1,
+     "box_eyebrow": "Season total",
+     "box_heading": "One total, with everything in it.",
+     "box_text": "We will post one number that includes coach and travel fees, so the total is not a surprise.",
+     "box_tag": "Posting before tryouts",
+     "box_chips": [
+      {
+       "chip_text": "Club fee"
+      },
+      {
+       "chip_text": "Coach and travel fees"
+      },
+      {
+       "chip_text": "What is included"
+      },
+      {
+       "chip_text": "Payment plan"
+      },
+      {
+       "chip_text": "Refund policy"
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_faq",
+     "section_anchor": "",
+     "section_eyebrow": "The rest of the answers",
+     "show_number": 1,
+     "section_heading": "Who coaches, who runs the club, how we keep kids safe.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_lede": "The five things Volleyball BC tells families to ask any club. Ours, in one place.",
+     "section_side": "none",
+     "faq_numbered": 1,
+     "faq_open_first": 1,
+     "faq_items": [
+      {
+       "faq_question": "Training",
+       "faq_anchor": "training",
+       "answer_kind": "facts",
+       "answer_facts": [
+        {
+         "fact_label": "Coaching approach",
+         "fact_value": "Fundamentals first, taught in a set order.",
+         "fact_note": "",
+         "fact_tag": ""
+        },
+        {
+         "fact_label": "Who coaches each team",
+         "fact_value": "A named coach for every team, posted with their background before tryouts.",
+         "fact_note": "",
+         "fact_tag": ""
+        },
+        {
+         "fact_label": "Practices per week",
+         "fact_value": "",
+         "fact_note": "",
+         "fact_tag": "Coming soon"
+        },
+        {
+         "fact_label": "Courts and athletes per team",
+         "fact_value": "",
+         "fact_note": "",
+         "fact_tag": "Coming soon"
+        },
+        {
+         "fact_label": "Sport science and strength",
+         "fact_value": "",
+         "fact_note": "",
+         "fact_tag": "Coming soon"
+        }
+       ]
+      },
+      {
+       "faq_question": "Culture",
+       "faq_anchor": "culture",
+       "answer_kind": "facts",
+       "answer_facts": [
+        {
+         "fact_label": "Values",
+         "fact_value": "",
+         "fact_note": "",
+         "fact_tag": "Coming soon"
+        },
+        {
+         "fact_label": "Athletes who come back",
+         "fact_value": "This is the club's first season, so there are no returning athletes yet.",
+         "fact_note": "",
+         "fact_tag": ""
+        },
+        {
+         "fact_label": "Playing time",
+         "fact_value": "How playing time works for each age group.",
+         "fact_note": "",
+         "fact_tag": "Posting before tryouts"
+        }
+       ]
+      },
+      {
+       "faq_question": "Organisation",
+       "faq_anchor": "organisation",
+       "answer_kind": "facts",
+       "answer_facts": [
+        {
+         "fact_label": "Status",
+         "fact_value": "Registered non-profit. Volleyball BC member club, in good standing (new club), Zone 2 Thompson-Okanagan.",
+         "fact_note": "",
+         "fact_tag": ""
+        },
+        {
+         "fact_label": "Year started",
+         "fact_value": "2026. New Volleyball BC clubs serve a one-year probation.",
+         "fact_note": "",
+         "fact_tag": ""
+        },
+        {
+         "fact_label": "Board",
+         "fact_value": "",
+         "fact_note": "",
+         "fact_tag": "Coming soon"
+        },
+        {
+         "fact_label": "Policies",
+         "fact_value": "Codes of conduct for parents, athletes and coaches, a complaint and dispute process, and a conflict of interest policy. Volleyball BC requires every club to publish them.",
+         "fact_note": "",
+         "fact_tag": "Links coming soon"
+        },
+        {
+         "fact_label": "Complaints contact",
+         "fact_value": "A named person outside the club.",
+         "fact_note": "",
+         "fact_tag": "Coming soon"
+        }
+       ]
+      },
+      {
+       "faq_question": "Safe Sport",
+       "faq_anchor": "safe-sport",
+       "answer_kind": "facts",
+       "answer_facts": [
+        {
+         "fact_label": "Screening",
+         "fact_value": "Volleyball BC requires every person in authority to pass a criminal record check every 3 years, file an annual Screening Disclosure, and complete Safe Sport training.",
+         "fact_note": "",
+         "fact_tag": ""
+        },
+        {
+         "fact_label": "Open and Observable",
+         "fact_value": "",
+         "fact_note": "",
+         "fact_tag": "Coming soon"
+        },
+        {
+         "fact_label": "Boundaries",
+         "fact_value": "One-on-one time and boundaries policy.",
+         "fact_note": "",
+         "fact_tag": "Coming soon"
+        },
+        {
+         "fact_label": "Overnight travel",
+         "fact_value": "",
+         "fact_note": "",
+         "fact_tag": "Coming soon"
+        },
+        {
+         "fact_label": "Helpline",
+         "fact_value": "Abuse-Free Sport Helpline: 1-888-83SPORT (77678)",
+         "fact_note": "",
+         "fact_tag": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_cta",
+     "cta_style": "highlight",
+     "section_anchor": "registration",
+     "section_eyebrow": "Registration",
+     "show_number": 1,
+     "section_heading": "Register for tryouts.",
+     "section_lede": "Registration opens before tryouts. We will post the link and opening date here.",
+     "cta_tag": "Coming soon",
+     "section_cta": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     }
+    },
+    {
+     "acf_fc_layout": "section_band",
+     "band_size": "standard",
+     "band_image": "@img:tw-10",
+     "band_heading": "Questions before you",
+     "band_heading_accent": "register?",
+     "band_button_1": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     },
+     "band_button_2": {
+      "title": "For parents",
+      "url": "{home}for-parents/"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "for-parents",
+   "title": "For parents",
+   "menu": "For parents",
+   "hero": {
+    "hero_layout": "page",
+    "hero_image": "@img:tw-11",
+    "hero_focus_x": 40,
+    "hero_focus_y": 60,
+    "hero_tag": "For parents",
+    "hero_heading": "Straight answers,",
+    "hero_heading_accent": "including the hard ones.",
+    "hero_subhead": "We are a new club. Here is what you are probably wondering, answered plainly.",
+    "hero_button_1": "",
+    "hero_button_2": ""
+   },
+   "flex": [
+    {
+     "acf_fc_layout": "section_faq",
+     "section_anchor": "",
+     "section_eyebrow": "Before you sign up",
+     "show_number": 1,
+     "section_heading": "Questions parents ask.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_lede": "We are a new club. Here is what you are probably wondering, answered plainly.",
+     "section_side": "none",
+     "faq_numbered": 0,
+     "faq_open_first": 1,
+     "faq_items": [
+      {
+       "faq_question": "Pat coaches the university team. Is he coaching my kid?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>We will state Pat's exact role plainly here before tryouts, so you know who is in the gym with your athlete.</p>"
+      },
+      {
+       "faq_question": "You are brand new. Why risk a season?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>You are right, this is our first season. As the club confirms them, we will post who coaches, what the season costs, and how Safe Sport works, so you can decide with everything in front of you. New clubs also serve a one-year probation with Volleyball BC.</p>"
+      },
+      {
+       "faq_question": "What does it cost, really?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>We will show the club fee, coach and travel fees, and the season total, plus what is included and what is not, and the refund policy. All of it before tryouts.</p>"
+      },
+      {
+       "faq_question": "How much travel is there?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>The club season runs December to May, with Provincials in April and May. We will list every tournament, where it is, and whether hotels are included before you sign.</p>"
+      },
+      {
+       "faq_question": "Will my kid play?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>We will write down how playing time works for each age group before tryouts.</p>"
+      },
+      {
+       "faq_question": "Who do I call if something goes wrong?",
+       "faq_anchor": "",
+       "answer_kind": "text",
+       "answer_text": "<p>Talk to your coach first. If you need someone outside the club, we will post a named contact before tryouts. For concerns about abuse or maltreatment, anyone in Canada can call the Abuse-Free Sport Helpline at 1-888-83SPORT (77678).</p>"
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_cards",
+     "section_anchor": "",
+     "section_eyebrow": "What Volleyball BC tells parents to ask",
+     "show_number": 1,
+     "section_heading": "What to ask any club, ours included.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "show_card_numbers": 1,
+     "cards": [
+      {
+       "card_colour": "sage",
+       "card_image": "",
+       "card_title": "Culture",
+       "card_text": "What are the club's values, and do actions match?",
+       "card_foot": "link",
+       "card_foot_tag": "",
+       "card_foot_link": {
+        "title": "Our answers",
+        "url": "{home}fees-and-registration/#culture"
+       }
+      },
+      {
+       "card_colour": "sun",
+       "card_image": "",
+       "card_title": "Organisation",
+       "card_text": "How long established, who is on the board, which policies are posted?",
+       "card_foot": "link",
+       "card_foot_tag": "",
+       "card_foot_link": {
+        "title": "Our answers",
+        "url": "{home}fees-and-registration/#organisation"
+       }
+      },
+      {
+       "card_colour": "sand",
+       "card_image": "",
+       "card_title": "Training",
+       "card_text": "Who coaches, what is the approach, how many practices a week?",
+       "card_foot": "link",
+       "card_foot_tag": "",
+       "card_foot_link": {
+        "title": "Our answers",
+        "url": "{home}fees-and-registration/#training"
+       }
+      },
+      {
+       "card_colour": "sage",
+       "card_image": "",
+       "card_title": "Fees",
+       "card_text": "What is included, and what is the refund policy?",
+       "card_foot": "link",
+       "card_foot_tag": "",
+       "card_foot_link": {
+        "title": "Our answers",
+        "url": "{home}fees-and-registration/#fees"
+       }
+      },
+      {
+       "card_colour": "sun",
+       "card_image": "",
+       "card_title": "Safe Sport",
+       "card_text": "How are coaches screened, and what are the rules on one-on-one time and travel?",
+       "card_foot": "link",
+       "card_foot_tag": "",
+       "card_foot_link": {
+        "title": "Our answers",
+        "url": "{home}fees-and-registration/#safe-sport"
+       }
+      }
+     ],
+     "cards_dates": 0
+    },
+    {
+     "acf_fc_layout": "section_helpline",
+     "section_anchor": "",
+     "section_eyebrow": "Safe Sport",
+     "show_number": 1,
+     "section_heading": "If something feels wrong, call.",
+     "section_lede": "For concerns about abuse or maltreatment, anyone in Canada can call the Abuse-Free Sport Helpline. It is free and confidential."
+    },
+    {
+     "acf_fc_layout": "section_band",
+     "band_size": "standard",
+     "band_image": "@img:tw-12",
+     "band_heading": "Still have a",
+     "band_heading_accent": "question?",
+     "band_button_1": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     },
+     "band_button_2": {
+      "title": "Info session",
+      "url": "{home}#coming-up"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "sponsors",
+   "title": "Sponsors",
+   "menu": "Sponsors",
+   "hero": {
+    "hero_layout": "page",
+    "hero_image": "@img:tw-12",
+    "hero_focus_x": 50,
+    "hero_focus_y": 50,
+    "hero_tag": "Sponsors",
+    "hero_heading": "Put your name behind",
+    "hero_heading_accent": "Kamloops kids.",
+    "hero_subhead": "Tumbleweeds is a Kamloops club for Kamloops families. Sponsors put their name in front of those families.",
+    "hero_button_1": {
+     "title": "Become a sponsor",
+     "url": "mailto:info@tumbleweedsvolleyball.com"
+    },
+    "hero_button_2": ""
+   },
+   "flex": [
+    {
+     "acf_fc_layout": "section_cards",
+     "section_anchor": "",
+     "section_eyebrow": "Where you show up",
+     "show_number": 1,
+     "section_heading": "Your name, where families look.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "show_card_numbers": 1,
+     "cards": [
+      {
+       "card_colour": "sage",
+       "card_image": "",
+       "card_title": "On the jersey",
+       "card_text": "Your name on the uniform families see every weekend.",
+       "card_foot": "tag",
+       "card_foot_tag": "Placement coming soon",
+       "card_foot_link": ""
+      },
+      {
+       "card_colour": "sun",
+       "card_image": "",
+       "card_title": "On the website",
+       "card_text": "Your name and a link on the page parents check before they sign.",
+       "card_foot": "tag",
+       "card_foot_tag": "Placement coming soon",
+       "card_foot_link": ""
+      },
+      {
+       "card_colour": "sand",
+       "card_image": "",
+       "card_title": "In the gym",
+       "card_text": "Your banner where athletes and families are in the room.",
+       "card_foot": "tag",
+       "card_foot_tag": "Placement coming soon",
+       "card_foot_link": ""
+      }
+     ],
+     "cards_dates": 0
+    },
+    {
+     "acf_fc_layout": "section_facts",
+     "facts_layout": "above",
+     "section_anchor": "",
+     "section_eyebrow": "",
+     "show_number": 0,
+     "section_heading": "",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "facts_rows": [],
+     "facts_box": 1,
+     "box_eyebrow": "Sponsor levels",
+     "box_heading": "What each level includes.",
+     "box_text": "Email the club and we will send the sponsor details when they are final.",
+     "box_tag": "Levels coming soon",
+     "box_chips": [
+      {
+       "chip_text": "Levels"
+      },
+      {
+       "chip_text": "Amounts"
+      },
+      {
+       "chip_text": "What each includes"
+      }
+     ]
+    },
+    {
+     "acf_fc_layout": "section_facts",
+     "facts_layout": "above",
+     "section_anchor": "",
+     "section_eyebrow": "Who you would back",
+     "show_number": 1,
+     "section_heading": "The families behind the logo.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "facts_rows": [
+      {
+       "fact_label": "Athletes and families",
+       "fact_value": "Known after tryouts.",
+       "fact_note": "",
+       "fact_tag": ""
+      },
+      {
+       "fact_label": "Where we play",
+       "fact_value": "Kamloops, BC. Practice location posted before tryouts.",
+       "fact_note": "",
+       "fact_tag": ""
+      }
+     ],
+     "facts_box": 0
+    },
+    {
+     "acf_fc_layout": "section_band",
+     "band_size": "standard",
+     "band_image": "@img:tw-10",
+     "band_heading": "Talk to",
+     "band_heading_accent": "us.",
+     "band_button_1": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     },
+     "band_button_2": {
+      "title": "Meet the club",
+      "url": "{home}our-coaches/"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "news",
+   "title": "News",
+   "posts_page": true,
+   "footer_menu": "News",
+   "hero": {
+    "hero_layout": "page",
+    "hero_image": "@img:tw-11",
+    "hero_focus_x": 40,
+    "hero_focus_y": 60,
+    "hero_tag": "News",
+    "hero_heading": "Club news, dates and",
+    "hero_heading_accent": "announcements.",
+    "hero_subhead": "",
+    "hero_button_1": "",
+    "hero_button_2": ""
+   },
+   "flex": [
+    {
+     "acf_fc_layout": "section_news",
+     "section_anchor": "",
+     "section_eyebrow": "Latest",
+     "show_number": 1,
+     "section_heading": "From the club.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "link",
+     "section_side_link": {
+      "title": "Follow on Instagram",
+      "url": "https://www.instagram.com/tumbleweedsvball/"
+     },
+     "news_count": 12
+    },
+    {
+     "acf_fc_layout": "section_cta",
+     "cta_style": "banner",
+     "section_anchor": "",
+     "section_eyebrow": "Talk to us",
+     "section_heading": "Want updates in your inbox?",
+     "section_cta": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     }
+    },
+    {
+     "acf_fc_layout": "section_band",
+     "band_size": "standard",
+     "band_image": "@img:tw-04",
+     "band_heading": "See you at",
+     "band_heading_accent": "tryouts.",
+     "band_button_1": {
+      "title": "Tryout details",
+      "url": "{home}tryouts/"
+     },
+     "band_button_2": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "contact",
+   "title": "Contact",
+   "menu": "Contact",
+   "footer_menu": "",
+   "hero": {
+    "hero_layout": "page",
+    "hero_image": "@img:tw-14",
+    "hero_focus_x": 50,
+    "hero_focus_y": 50,
+    "hero_tag": "Contact",
+    "hero_heading": "Questions?",
+    "hero_heading_accent": "Ask us.",
+    "hero_subhead": "Coaches, fees, tryouts or sponsoring. Email us.",
+    "hero_button_1": "",
+    "hero_button_2": ""
+   },
+   "flex": [
+    {
+     "acf_fc_layout": "section_contact",
+     "section_anchor": "",
+     "section_eyebrow": "Reach the club",
+     "show_number": 1,
+     "section_heading": "How to find us.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_lede": "Questions about coaches, fees, tryouts or sponsoring? Email us and we will point you to the right person.",
+     "section_side": "none",
+     "contact_rows": [
+      {
+       "fact_label": "Email",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "",
+       "fact_link": {
+        "title": "info@tumbleweedsvolleyball.com",
+        "url": "mailto:info@tumbleweedsvolleyball.com"
+       }
+      },
+      {
+       "fact_label": "Instagram",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "",
+       "fact_link": {
+        "title": "@tumbleweedsvball",
+        "url": "https://www.instagram.com/tumbleweedsvball/"
+       }
+      },
+      {
+       "fact_label": "Info session",
+       "fact_value": "Sunday, October 4, 7:00 to 8:30 pm, TRU Science Building S337",
+       "fact_note": "",
+       "fact_tag": ""
+      },
+      {
+       "fact_label": "Practice location",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "Club complaints contact",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "Coming soon"
+      },
+      {
+       "fact_label": "Abuse-Free Sport Helpline",
+       "fact_value": "",
+       "fact_note": "",
+       "fact_tag": "",
+       "fact_link": {
+        "title": "1-888-83SPORT (77678)",
+        "url": "tel:+18888377678"
+       }
+      }
+     ],
+     "form_heading": "Send a message.",
+     "form_topics": [
+      {
+       "topic_text": "Coaches"
+      },
+      {
+       "topic_text": "Fees"
+      },
+      {
+       "topic_text": "Tryouts"
+      },
+      {
+       "topic_text": "Sponsoring"
+      },
+      {
+       "topic_text": "Something else"
+      }
+     ],
+     "form_note": "This opens your email app with the message ready to send to the club."
+    },
+    {
+     "acf_fc_layout": "section_band",
+     "band_size": "standard",
+     "band_image": "@img:tw-12",
+     "band_heading": "See you at",
+     "band_heading_accent": "tryouts.",
+     "band_button_1": {
+      "title": "Tryout details",
+      "url": "{home}tryouts/"
+     },
+     "band_button_2": {
+      "title": "Email the club",
+      "url": "mailto:info@tumbleweedsvolleyball.com"
+     }
+    }
+   ]
+  }
+ ],
+ "coaches": [
+  {
+   "slug": "pat-hennelly",
+   "title": "Pat Hennelly",
+   "menu_order": 1,
+   "fields": {
+    "coach_role": "President",
+    "coach_summary": "TRU WolfPack men's head coach since 2005. 2024 U Sports Men's Volleyball Coach of the Year.",
+    "coach_photo": "@img:pat",
+    "coach_bio": "<p>Pat Hennelly is the President of Tumbleweeds Volleyball Club.</p><p>He has coached university volleyball since 1995: at UBC, as an assistant at Northern Arizona University, and as head coach of the TRU WolfPack men's team since 2005.</p><p>In 2024 he was named U Sports Men's Volleyball Coach of the Year. He was also named 2024 Canada West Men's Volleyball Coach of the Year.</p>",
+    "coach_facts": [
+     {
+      "fact_label": "Experience",
+      "fact_value": "University coach since 1995",
+      "fact_tag": ""
+     },
+     {
+      "fact_label": "Current post",
+      "fact_value": "TRU WolfPack men's volleyball head coach since 2005",
+      "fact_tag": ""
+     },
+     {
+      "fact_label": "Award",
+      "fact_value": "2024 U Sports Men's Volleyball Coach of the Year",
+      "fact_tag": ""
+     },
+     {
+      "fact_label": "Coaching role with Tumbleweeds teams",
+      "fact_value": "Team assignments are named before tryouts.",
+      "fact_tag": "Coming soon"
+     }
+    ],
+    "coach_hero_image": "@img:tw-12",
+    "hero_focus_x": 50,
+    "hero_focus_y": 40,
+    "band_image": "@img:tw-10",
+    "band_heading": "Come meet us",
+    "band_heading_accent": "before tryouts.",
+    "band_button_1": {
+     "title": "Info session details",
+     "url": "{home}#coming-up"
+    },
+    "band_button_2": {
+     "title": "Email the club",
+     "url": "mailto:info@tumbleweedsvolleyball.com"
+    }
+   }
+  },
+  {
+   "slug": "iuliia-pakhomenko",
+   "title": "Iuliia Pakhomenko",
+   "menu_order": 2,
+   "fields": {
+    "coach_role": "Manager of Operations",
+    "coach_summary": "Played professionally in Ukraine, then played and coached for the TRU WolfPack.",
+    "coach_photo": "@img:iuliia",
+    "coach_bio": "<p>Iuliia Pakhomenko is the club's Manager of Operations.</p><p>She played professionally in Ukraine, then played and coached for the TRU WolfPack.</p><p>She is the club's contact on the Volleyball BC registry, so questions about the club's status and paperwork come to her.</p>",
+    "coach_facts": [
+     {
+      "fact_label": "Playing",
+      "fact_value": "Former professional player in Ukraine",
+      "fact_tag": ""
+     },
+     {
+      "fact_label": "Coaching",
+      "fact_value": "Former TRU WolfPack athlete and coach",
+      "fact_tag": ""
+     },
+     {
+      "fact_label": "Coaching role with Tumbleweeds teams",
+      "fact_value": "Team assignments are named before tryouts.",
+      "fact_tag": "Coming soon"
+     }
+    ],
+    "coach_hero_image": "@img:tw-15",
+    "hero_focus_x": 50,
+    "hero_focus_y": 40,
+    "band_image": "@img:tw-04",
+    "band_heading": "Come meet us",
+    "band_heading_accent": "before tryouts.",
+    "band_button_1": {
+     "title": "Info session details",
+     "url": "{home}#coming-up"
+    },
+    "band_button_2": {
+     "title": "Email the club",
+     "url": "mailto:info@tumbleweedsvolleyball.com"
+    }
+   }
+  }
+ ],
+ "posts": [
+  {
+   "slug": "info-session",
+   "title": "Info session for new families",
+   "date": "2026-09-30 09:00:00",
+   "excerpt": "Come meet Pat Hennelly and Iuliia Pakhomenko, and ask anything about coaches, fees, and Safe Sport.",
+   "thumb": "tw-12",
+   "content": "<p>Come meet Pat Hennelly and Iuliia Pakhomenko, and ask anything about coaches, fees, and Safe Sport.</p>\n\n<p><strong>When:</strong> Sunday, October 4, 7:00 to 8:30 pm.<br><strong>Where:</strong> TRU Science Building, room S337. Free parking in S Lot.</p>\n\n<p>Can't make it? A Teams link goes up on our Instagram story that day, <a href=\"https://www.instagram.com/tumbleweedsvball/\">@tumbleweedsvball</a>.</p>",
+   "fields": {
+    "hero_focus_x": 50,
+    "hero_focus_y": 55,
+    "band_image": "@img:tw-10",
+    "band_heading": "Come meet us",
+    "band_heading_accent": "before tryouts.",
+    "band_button_1": {
+     "title": "Info session details",
+     "url": "{home}#coming-up"
+    },
+    "band_button_2": {
+     "title": "Email the club",
+     "url": "mailto:info@tumbleweedsvolleyball.com"
+    }
+   }
+  },
+  {
+   "slug": "what-we-will-publish-before-tryouts",
+   "title": "What we will publish before tryouts",
+   "date": "2026-10-01 09:00:00",
+   "excerpt": "A new club owes parents straight answers. Here is what we will post, and when.",
+   "thumb": "tw-13",
+   "content": "<p>A new club owes parents straight answers. As the club confirms them, we will post:</p>\n\n<p>Who coaches each team, with their background.<br>The full fee list, and what it includes.<br>Practice nights and location.<br>The refund policy.<br>Who to call if something goes wrong.</p>\n\n<p>Each item goes on this site as soon as it is confirmed, and we will say so on Instagram.</p>",
+   "fields": {
+    "hero_focus_x": 50,
+    "hero_focus_y": 55,
+    "band_image": "@img:tw-10",
+    "band_heading": "Come meet us",
+    "band_heading_accent": "before tryouts.",
+    "band_button_1": {
+     "title": "Info session details",
+     "url": "{home}#coming-up"
+    },
+    "band_button_2": {
+     "title": "Email the club",
+     "url": "mailto:info@tumbleweedsvolleyball.com"
+    }
+   }
+  }
+ ],
+ "settings": {
+  "announcement_show": 1,
+  "announcement_text": "Info session for parents: Sunday, October 4, 7:00 to 8:30 pm, TRU Science Building S337.",
+  "announcement_link": {
+   "title": "Details",
+   "url": "{home}#coming-up"
+  },
+  "announcement_until": "20261004",
+  "logo_text": "Tumbleweeds",
+  "header_cta": {
+   "title": "Tryouts",
+   "url": "{home}tryouts/"
+  },
+  "phone_menu_link": {
+   "title": "News",
+   "url": "{home}news/"
+  },
+  "coaches_page": "@page:our-coaches",
+  "info_title": "Parent info session",
+  "info_date": "20261004",
+  "info_time": "7:00 to 8:30 pm",
+  "info_place": "TRU Science Building S337",
+  "info_details": "Free parking in S Lot. Can't make it? A Teams link goes up on our Instagram story that day.",
+  "ticker_phrases": [
+   {
+    "ticker_phrase": "Developing athletes from the ground up"
+   },
+   {
+    "ticker_phrase": "Kamloops, BC"
+   },
+   {
+    "ticker_phrase": "Tryouts late November"
+   },
+   {
+    "ticker_phrase": "Info session Sun, Oct 4"
+   },
+   {
+    "ticker_phrase": "Est. 2026"
+   }
   ],
-  "posts": [
-    {
-      "slug": "info-session",
-      "title": "Info session for new families",
-      "date": "2026-09-30 09:00:00",
-      "content": "<p>Come meet Pat Hennelly and Iuliia Pakhomenko, and ask anything about coaches, fees, and Safe Sport.</p><p>When: {info_date}, {info_details}.</p><p>A Teams link is on our Instagram story, @tumbleweedsvball.</p>"
-    },
-    {
-      "slug": "what-we-will-publish-before-tryouts",
-      "title": "What we will publish before tryouts",
-      "date": "2026-10-01 09:00:00",
-      "content": "<p>A new club owes parents straight answers. As the club confirms them, we will post who coaches, the full fee list and what it includes, practice nights and location, the refund policy, and who to call if something goes wrong.</p><p>[Date the full list is posted: TBC]</p>"
-    }
+  "badge_text": "Tumbleweeds · Kamloops, BC · Est. 2026 · Volleyball club ·",
+  "contact_email": "info@tumbleweedsvolleyball.com",
+  "club_location": "Kamloops, BC",
+  "footer_contact_link": {
+   "title": "Contact page",
+   "url": "{home}contact/"
+  },
+  "socials": [
+   {
+    "social_network": "instagram",
+    "social_label": "@tumbleweedsvball",
+    "social_url": "https://www.instagram.com/tumbleweedsvball/"
+   }
   ],
-  "pages": [
-    {
-      "slug": "home",
-      "title": "Home",
-      "front_page": true,
-      "menu": false,
-      "hero": {
-        "hero_style": "home",
-        "hero_eyebrow": "Kamloops youth volleyball",
-        "hero_heading": "Developing athletes from the ground up.",
-        "hero_text": "A new Kamloops volleyball club. Our President, Pat Hennelly, is the 2024 U Sports Men's Volleyball Coach of the Year.",
-        "hero_buttons": [
-          {
-            "label": "Tryout details",
-            "link": "{home}tryouts/"
-          },
-          {
-            "label": "Meet the coaches",
-            "link": "{home}our-coaches/"
-          }
-        ],
-        "hero_note": "Info session: {info_date}, {info_details}.",
-        "hero_photo": "@img:pat-hennelly"
-      },
-      "flex": [
-        {
-          "acf_fc_layout": "numbered_list",
-          "bg": "light",
-          "eyebrow": "What parents ask",
-          "heading": "Who coaches. How they coach. What it costs.",
-          "items": [
-            {
-              "title": "Who coaches your kid",
-              "text": "Pat Hennelly is our President. Iuliia Pakhomenko runs operations. Coaches will be named here, with their background, as the club confirms them. [Coach list TBC]",
-              "link_label": "Meet the coaches",
-              "link": "{home}our-coaches/"
-            },
-            {
-              "title": "How we coach",
-              "text": "Developing athletes from the ground up. [Coaching plan: club to confirm wording]",
-              "link_label": "See the programs",
-              "link": "{home}programs/"
-            },
-            {
-              "title": "What you are signing up for",
-              "text": "We will post every coach, the total cost with coach and travel fees, the schedule, who to call outside the club, and how Safe Sport works as the club confirms them. [Season total: $TBC]",
-              "link_label": "Fees and registration",
-              "link": "{home}fees-and-registration/"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "people",
-          "bg": "sand",
-          "eyebrow": "The club",
-          "heading": "Meet the people who run the club.",
-          "intro": "Pat Hennelly is President. Iuliia Pakhomenko is Manager of Operations.",
-          "source": "pick",
-          "pick": [
-            "@coach:pat-hennelly",
-            "@coach:iuliia-pakhomenko"
-          ]
-        },
-        {
-          "acf_fc_layout": "key_dates",
-          "bg": "light",
-          "eyebrow": "Coming up",
-          "heading": "Come meet us before tryouts.",
-          "rows": [
-            {
-              "date": "{info_date}",
-              "title": "Info session",
-              "text": "{info_details}. Ask about coaches, fees, and safety."
-            },
-            {
-              "date": "[Date TBC]",
-              "title": "Coach list posted",
-              "text": "[Club to confirm: a named coach for every team]"
-            },
-            {
-              "date": "[Date TBC]",
-              "title": "Tryouts",
-              "text": "[Age groups and location TBC]"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "callout",
-          "style": "dark",
-          "heading": "Season details will be posted here as they are confirmed.",
-          "text": "Coaches, total cost, schedule, who to call, and Safe Sport. [Date TBC]",
-          "button_label": "Fees and registration",
-          "button_link": "{home}fees-and-registration/"
-        }
-      ]
-    },
-    {
-      "slug": "our-coaches",
-      "title": "Our Coaches",
-      "menu": "Coaches",
-      "hero": {
-        "hero_style": "page",
-        "hero_eyebrow": "The club",
-        "hero_heading": "Our coaches",
-        "hero_text": "Here is who runs the club now. Coaches will be named here as the club confirms them. [Coach list TBC]"
-      },
-      "flex": [
-        {
-          "acf_fc_layout": "people",
-          "bg": "light",
-          "source": "all"
-        },
-        {
-          "acf_fc_layout": "fact_table",
-          "bg": "sand",
-          "eyebrow": "Safe Sport",
-          "heading": "Volleyball BC rules for every coach.",
-          "rows": [
-            {
-              "label": "Criminal record check",
-              "value": "Volleyball BC requires one for every person in authority at a club, renewed every 3 years."
-            },
-            {
-              "label": "Screening form",
-              "value": "Every coach and club leader files an annual Screening Disclosure."
-            },
-            {
-              "label": "Safe Sport training",
-              "value": "Every coach and club leader completes Safe Sport training."
-            },
-            {
-              "label": "Tumbleweeds",
-              "value": "[Club to confirm each coach's checks are on file before the first practice]"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "callout",
-          "style": "dark",
-          "eyebrow": "Coaches and volunteers",
-          "heading": "Want to coach with us?",
-          "text": "Tell us who you are and what you coach. [How to apply: TBC]",
-          "button_label": "Email the club",
-          "button_link": "mailto:info@tumbleweedsvolleyball.com"
-        }
-      ]
-    },
-    {
-      "slug": "programs",
-      "title": "Programs",
-      "menu": "Programs",
-      "hero": {
-        "hero_style": "page",
-        "hero_eyebrow": "Programs",
-        "hero_heading": "Programs by age group",
-        "hero_text": "Volleyball BC runs club teams from 12U to 18U. Which ones Tumbleweeds runs this season is still being confirmed. We will post it here."
-      },
-      "flex": [
-        {
-          "acf_fc_layout": "fact_table",
-          "bg": "light",
-          "eyebrow": "Age groups",
-          "heading": "Which teams run this season",
-          "rows": [
-            {
-              "label": "Age groups",
-              "value": "[Age groups TBC]",
-              "note": "Volleyball BC runs club teams from 12U to 18U."
-            },
-            {
-              "label": "12U",
-              "value": "[12U team offered: TBC]",
-              "note": "Open question. Ask us at the info session."
-            },
-            {
-              "label": "Girls and boys",
-              "value": "[TBC for each age group]"
-            },
-            {
-              "label": "Practice nights",
-              "value": "[TBC for each age group]"
-            },
-            {
-              "label": "Coaches",
-              "value": "[Coach list TBC]"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "fact_table",
-          "bg": "sand",
-          "eyebrow": "The season",
-          "heading": "Season at a glance",
-          "rows": [
-            {
-              "label": "Season",
-              "value": "Volleyball BC's club season runs from December to May, with an offseason from August to November."
-            },
-            {
-              "label": "Provincials",
-              "value": "Volleyball BC provincials run over four weekends in April and May. [Which Tumbleweeds teams attend: TBC]",
-              "note": "Not confirmed yet. Ask us at the info session."
-            },
-            {
-              "label": "Practices",
-              "value": "[Practices per week: TBC]\n[Practice location TBC]"
-            },
-            {
-              "label": "Tournaments and travel",
-              "value": "[Tournament list and travel: TBC]"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "callout",
-          "style": "dark",
-          "heading": "Questions about a team?",
-          "text": "Ask us anything about age groups and teams.",
-          "button_label": "Email the club",
-          "button_link": "mailto:info@tumbleweedsvolleyball.com"
-        }
-      ]
-    },
-    {
-      "slug": "tryouts",
-      "title": "Tryouts",
-      "menu": "Tryouts",
-      "hero": {
-        "hero_style": "page",
-        "hero_eyebrow": "Tryouts",
-        "hero_heading": "Tryouts",
-        "hero_text": "Tryout dates, locations, and what to bring will be posted here. Nothing is final until we say so.",
-        "hero_buttons": [
-          {
-            "label": "Email the club",
-            "link": "mailto:info@tumbleweedsvolleyball.com"
-          }
-        ],
-        "hero_note": "Info session: {info_date}, {info_details}."
-      },
-      "flex": [
-        {
-          "acf_fc_layout": "key_dates",
-          "bg": "light",
-          "eyebrow": "Dates",
-          "heading": "What happens, and when",
-          "rows": [
-            {
-              "date": "{info_date}",
-              "title": "Info session",
-              "text": "{info_details}. A Teams link is on our Instagram story."
-            },
-            {
-              "date": "[Date TBC]",
-              "title": "Coach list posted",
-              "text": "[Club to confirm: a named coach for every team]"
-            },
-            {
-              "date": "[Date TBC]",
-              "title": "Tryouts",
-              "text": "[Age groups, dates, and location TBC]"
-            },
-            {
-              "date": "[Date TBC]",
-              "title": "Signing",
-              "text": "Volleyball BC sets the signing dates for each age group."
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "fact_table",
-          "bg": "sand",
-          "eyebrow": "Before you come",
-          "heading": "What to know",
-          "rows": [
-            {
-              "label": "Who can try out",
-              "value": "[Age groups and genders for this season: TBC]"
-            },
-            {
-              "label": "Where",
-              "value": "[Tryout location TBC]"
-            },
-            {
-              "label": "What to bring",
-              "value": "[What to bring: TBC]"
-            },
-            {
-              "label": "Cost to try out",
-              "value": "[Fee: $TBC]"
-            },
-            {
-              "label": "Registration",
-              "value": "[Registration link TBC]"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "faq",
-          "bg": "light",
-          "eyebrow": "Tryout questions",
-          "heading": "Things parents ask",
-          "items": [
-            {
-              "question": "Can my athlete try out if they signed with another club early?",
-              "answer": "Volleyball BC runs an Early Signing Period from September 1 to October 15, 2026 for 15U to 18U athletes returning to their previous club. An athlete who signed early cannot try out elsewhere. Not sure? Ask Volleyball BC before you register. [Club to confirm wording]"
-            },
-            {
-              "question": "Does my athlete need club experience?",
-              "answer": "[Club to confirm the tryout approach for athletes new to club]"
-            },
-            {
-              "question": "When will we hear back?",
-              "answer": "[Date TBC]"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "slug": "fees-and-registration",
-      "title": "Fees and Registration",
-      "menu": "Fees",
-      "hero": {
-        "hero_style": "page",
-        "hero_eyebrow": "Fees and registration",
-        "hero_heading": "What the season costs, in total.",
-        "hero_text": "Club fee, coach and travel fees, what is included, and the refund policy. Plus who coaches, who to call, and Safe Sport. Anything not confirmed yet is marked like this: [Fee: $TBC]",
-        "hero_buttons": [
-          {
-            "label": "Email the club",
-            "link": "mailto:info@tumbleweedsvolleyball.com"
-          }
-        ]
-      },
-      "flex": [
-        {
-          "acf_fc_layout": "fact_table",
-          "bg": "light",
-          "anchor": "fees",
-          "eyebrow": "Fees",
-          "heading": "What it costs",
-          "rows": [
-            {
-              "label": "Club fee",
-              "value": "[Club fee: $TBC, or a range per age group]"
-            },
-            {
-              "label": "Coach and travel fees",
-              "value": "[About $TBC per athlete]",
-              "note": "Shown here with the rest, so the total is not a surprise."
-            },
-            {
-              "label": "Estimated season total",
-              "value": "[About $TBC for each age group]"
-            },
-            {
-              "label": "Payment plan",
-              "value": "[Payment options: TBC]"
-            },
-            {
-              "label": "What the fee includes",
-              "value": "Coaching: [TBC]\nTournament entry: [TBC]\nUniform: [TBC]\nHotels: [included / not included TBC]\nTransportation: [TBC]"
-            },
-            {
-              "label": "Refund policy",
-              "value": "[Refund policy TBC]",
-              "note": "Volleyball BC requires every club to publish one."
-            },
-            {
-              "label": "Fundraising and volunteering",
-              "value": "[What families are asked to do: TBC]"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "fact_table",
-          "bg": "sand",
-          "anchor": "training",
-          "eyebrow": "Training",
-          "heading": "Who coaches, and how",
-          "rows": [
-            {
-              "label": "Coaching approach",
-              "value": "[Coaching approach: club to confirm wording]"
-            },
-            {
-              "label": "Who coaches each team",
-              "value": "[Club to confirm: a named coach for every team] [Coach list TBC]"
-            },
-            {
-              "label": "Practices per week",
-              "value": "[TBC]"
-            },
-            {
-              "label": "Courts and athletes per team",
-              "value": "[TBC]"
-            },
-            {
-              "label": "Sport science and strength",
-              "value": "[TBC]"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "fact_table",
-          "bg": "light",
-          "anchor": "culture",
-          "eyebrow": "Culture",
-          "heading": "What the club stands for",
-          "rows": [
-            {
-              "label": "Values",
-              "value": "[Club values: to be confirmed by club leadership]"
-            },
-            {
-              "label": "Athletes who come back",
-              "value": "This is the club's first season, so there are no returning athletes yet."
-            },
-            {
-              "label": "Playing time",
-              "value": "[Playing time approach: TBC]"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "fact_table",
-          "bg": "sand",
-          "anchor": "organisation",
-          "eyebrow": "Organisation",
-          "heading": "Who runs the club",
-          "rows": [
-            {
-              "label": "Status",
-              "value": "Registered non-profit. Volleyball BC member club, in good standing (new club), Zone 2 Thompson-Okanagan."
-            },
-            {
-              "label": "Year started",
-              "value": "2026. New Volleyball BC clubs serve a one-year probation."
-            },
-            {
-              "label": "Board",
-              "value": "[Board members TBC]"
-            },
-            {
-              "label": "Policies",
-              "value": "Codes of conduct for parents, athletes, and coaches. Complaint and dispute process. Conflict of interest policy. Volleyball BC requires every club to publish them. [Links TBC]"
-            },
-            {
-              "label": "Complaints contact",
-              "value": "[Third-party complaints contact TBC]"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "fact_table",
-          "bg": "light",
-          "anchor": "safe-sport",
-          "eyebrow": "Safe Sport",
-          "heading": "Safe Sport at the club",
-          "rows": [
-            {
-              "label": "Screening",
-              "value": "Volleyball BC requires every person in authority to pass a criminal record check every 3 years, file an annual Screening Disclosure, and complete Safe Sport training. [Club to confirm all are on file]"
-            },
-            {
-              "label": "Open and Observable",
-              "value": "[Club to confirm its Open and Observable practice policy]"
-            },
-            {
-              "label": "Boundaries",
-              "value": "[One-on-one and boundaries policy TBC]"
-            },
-            {
-              "label": "Overnight travel",
-              "value": "[Overnight travel policy TBC]"
-            },
-            {
-              "label": "Helpline",
-              "value": "Abuse-Free Sport Helpline: 1-888-83SPORT (77678)"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "callout",
-          "style": "dark",
-          "anchor": "registration",
-          "heading": "Register for tryouts",
-          "text": "[Registration link and opening date: TBC]",
-          "button_label": "Email the club",
-          "button_link": "mailto:info@tumbleweedsvolleyball.com"
-        }
-      ]
-    },
-    {
-      "slug": "for-parents",
-      "title": "For Parents",
-      "menu": "For Parents",
-      "hero": {
-        "hero_style": "page",
-        "hero_eyebrow": "For parents",
-        "hero_heading": "Straight answers, including the hard ones.",
-        "hero_text": "We are a new club. Here is what you are probably wondering, answered plainly."
-      },
-      "flex": [
-        {
-          "acf_fc_layout": "faq",
-          "bg": "light",
-          "eyebrow": "Questions parents ask",
-          "heading": "Before you sign up",
-          "items": [
-            {
-              "question": "Pat coaches the university team. Is he coaching my kid?",
-              "answer": "[Pat's exact role on the court: TBC]. We will state it plainly here before tryouts, so you know who is in the gym with your athlete."
-            },
-            {
-              "question": "You are brand new. Why risk a season?",
-              "answer": "You are right, this is our first season. As the club confirms them, we will post who coaches, what the season costs, and how Safe Sport works, so you can decide with everything in front of you. New clubs also serve a one-year probation with Volleyball BC. [Date the coach list and fees are posted: TBC]"
-            },
-            {
-              "question": "What does it cost, really?",
-              "answer": "Club fee [$TBC], coach and travel fees about [$TBC], total about [$TBC] for [age group]. We will show what is included and what is not, and the refund policy: [Refund policy TBC]."
-            },
-            {
-              "question": "How much travel is there?",
-              "answer": "[Number] tournaments, in [places TBC]. Hotels [included / not included TBC]. We will list every tournament and where it is before you sign."
-            },
-            {
-              "question": "Will my kid play?",
-              "answer": "[Club playing-time approach: TBC]. We will write down how playing time works for each age group before tryouts."
-            },
-            {
-              "question": "Who do I call if something goes wrong?",
-              "answer": "Talk to your coach first. If you need someone outside the club, call [named contact TBC]. For concerns about abuse or maltreatment, anyone in Canada can call the Abuse-Free Sport Helpline: 1-888-83SPORT (77678)."
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "numbered_list",
-          "bg": "light",
-          "eyebrow": "What Volleyball BC tells parents to ask",
-          "heading": "What to ask any club, ours included.",
-          "items": [
-            {
-              "title": "Culture",
-              "text": "What are the club's values, and do actions match?",
-              "link_label": "Our answers",
-              "link": "{home}fees-and-registration/#culture"
-            },
-            {
-              "title": "Organisation",
-              "text": "How long established, who is on the board, which policies are posted?",
-              "link_label": "Our answers",
-              "link": "{home}fees-and-registration/#organisation"
-            },
-            {
-              "title": "Training",
-              "text": "Who coaches, what is the approach, how many practices a week?",
-              "link_label": "Our answers",
-              "link": "{home}fees-and-registration/#training"
-            },
-            {
-              "title": "Fees",
-              "text": "What is included, and what is the refund policy?",
-              "link_label": "Our answers",
-              "link": "{home}fees-and-registration/#fees"
-            },
-            {
-              "title": "Safe Sport",
-              "text": "How are coaches screened, and what are the rules on one-on-one time and travel?",
-              "link_label": "Our answers",
-              "link": "{home}fees-and-registration/#safe-sport"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "callout",
-          "style": "helpline",
-          "eyebrow": "Safe Sport",
-          "heading": "If something feels wrong, call.",
-          "text": "For concerns about abuse or maltreatment, anyone in Canada can call the Abuse-Free Sport Helpline. It is free and confidential.",
-          "detail": "1-888-83SPORT (77678)"
-        }
-      ]
-    },
-    {
-      "slug": "sponsors",
-      "title": "Sponsors",
-      "menu": "Sponsors",
-      "hero": {
-        "hero_style": "page",
-        "hero_eyebrow": "Sponsors",
-        "hero_heading": "Put your name behind Kamloops kids.",
-        "hero_text": "Tumbleweeds is a Kamloops club for Kamloops families. Sponsors put their name in front of those families.",
-        "hero_buttons": [
-          {
-            "label": "Become a sponsor",
-            "link": "mailto:info@tumbleweedsvolleyball.com"
-          }
-        ]
-      },
-      "flex": [
-        {
-          "acf_fc_layout": "numbered_list",
-          "bg": "light",
-          "eyebrow": "Where you show up",
-          "heading": "Your name, where families look.",
-          "items": [
-            {
-              "title": "On the jersey",
-              "text": "[Logo placement on jerseys: TBC]"
-            },
-            {
-              "title": "On the website",
-              "text": "[Logo and link placement on this site: TBC]"
-            },
-            {
-              "title": "In the gym",
-              "text": "[Banner locations: TBC]"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "cards",
-          "bg": "sand",
-          "columns": "2",
-          "eyebrow": "Sponsor levels",
-          "heading": "What each level includes",
-          "items": [
-            {
-              "label": "[Levels TBC]",
-              "title": "[Sponsor levels TBC]",
-              "text": "[Amounts TBC]\n[What each level includes: TBC]",
-              "flag": "Not confirmed yet"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "fact_table",
-          "bg": "light",
-          "eyebrow": "Who you would back",
-          "heading": "The families behind the logo",
-          "rows": [
-            {
-              "label": "Athletes and families",
-              "value": "[Number of athletes and families: known after tryouts]"
-            },
-            {
-              "label": "Where we play",
-              "value": "[Practice location TBC]"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "callout",
-          "style": "dark",
-          "heading": "Talk to us.",
-          "text": "Email the club and we will send the sponsor details when they are final. [Sponsor package TBC]",
-          "button_label": "Email the club",
-          "button_link": "mailto:info@tumbleweedsvolleyball.com"
-        }
-      ]
-    },
-    {
-      "slug": "news",
-      "title": "News",
-      "posts_page": true,
-      "menu": "News",
-      "hero": {
-        "hero_style": "page",
-        "hero_eyebrow": "News",
-        "hero_heading": "News",
-        "hero_text": "Club news, dates, and announcements."
-      },
-      "flex": [
-        {
-          "acf_fc_layout": "news_list",
-          "bg": "light",
-          "eyebrow": "Latest",
-          "heading": "From the club",
-          "count": 6
-        }
-      ]
-    },
-    {
-      "slug": "contact",
-      "title": "Contact",
-      "menu": "Contact",
-      "hero": {
-        "hero_style": "page",
-        "hero_eyebrow": "Contact",
-        "hero_heading": "Contact",
-        "hero_text": "Questions about coaches, fees, tryouts, or sponsoring? Email us."
-      },
-      "flex": [
-        {
-          "acf_fc_layout": "fact_table",
-          "bg": "light",
-          "eyebrow": "Reach the club",
-          "heading": "How to find us",
-          "rows": [
-            {
-              "label": "Email",
-              "value": "info@tumbleweedsvolleyball.com"
-            },
-            {
-              "label": "Instagram",
-              "value": "@tumbleweedsvball\nhttps://www.instagram.com/tumbleweedsvball/"
-            },
-            {
-              "label": "Info session",
-              "value": "{info_date}, {info_details}"
-            },
-            {
-              "label": "Practice location",
-              "value": "[Practice location TBC]"
-            },
-            {
-              "label": "Club complaints contact",
-              "value": "[Complaints contact TBC]"
-            },
-            {
-              "label": "Abuse-Free Sport Helpline",
-              "value": "1-888-83SPORT (77678)"
-            }
-          ]
-        },
-        {
-          "acf_fc_layout": "callout",
-          "style": "dark",
-          "heading": "Not sure who to ask?",
-          "text": "Email us and we will point you to the right person.",
-          "button_label": "Email the club",
-          "button_link": "mailto:info@tumbleweedsvolleyball.com"
-        }
-      ]
-    }
-  ]
+  "helpline_name": "Abuse-Free Sport Helpline",
+  "helpline_phone": "1-888-83SPORT (77678)",
+  "complaints_contact": "coming soon",
+  "footer_blurb": "Kamloops youth volleyball. Developing athletes from the ground up.",
+  "footer_signup_title": "Stay in the loop.",
+  "footer_signup_code": "",
+  "footer_status_line": "A Volleyball BC member club (new club), Zone 2 Thompson-Okanagan.",
+  "footer_small_print": "Placeholder photography: Unsplash. Club photo day to come."
+ },
+ "header_menu": [
+  "coaches",
+  "programs",
+  "tryouts",
+  "fees",
+  "parents",
+  "sponsors",
+  "contact"
+ ]
 }
