@@ -498,6 +498,13 @@ html.scrolled .site-header {
 	height: var(--header-h-solid);
 	top: 0;
 }
+/* Logged-in editors: sit below the WordPress admin bar */
+body.admin-bar { --adminbar-h: var(--space-32); }
+@media screen and (max-width: 782px) { body.admin-bar { --adminbar-h: var(--space-48); } }
+.admin-bar .site-header { top: var(--adminbar-h); }
+.admin-bar.has-announcement .site-header { top: calc(var(--ann-h) + var(--adminbar-h)); }
+html.scrolled .admin-bar .site-header { top: var(--adminbar-h); }
+
 .site-logo {
 	align-items: center;
 	display: flex;
