@@ -726,26 +726,14 @@
         {
           "acf_fc_layout": "cards",
           "bg": "sand",
-          "columns": "3",
+          "columns": "2",
           "eyebrow": "Sponsor levels",
           "heading": "What each level includes",
           "items": [
             {
-              "label": "[Level TBC]",
-              "title": "[Level name TBC]",
-              "text": "[Amount TBC]\n[What is included: TBC]",
-              "flag": "Not confirmed yet"
-            },
-            {
-              "label": "[Level TBC]",
-              "title": "[Level name TBC]",
-              "text": "[Amount TBC]\n[What is included: TBC]",
-              "flag": "Not confirmed yet"
-            },
-            {
-              "label": "[Level TBC]",
-              "title": "[Level name TBC]",
-              "text": "[Amount TBC]\n[What is included: TBC]",
+              "label": "[Levels TBC]",
+              "title": "[Sponsor levels TBC]",
+              "text": "[Amounts TBC]\n[What each level includes: TBC]",
               "flag": "Not confirmed yet"
             }
           ]
