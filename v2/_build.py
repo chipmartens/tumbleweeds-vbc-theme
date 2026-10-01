@@ -28,7 +28,7 @@ def shell(page):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(page["title"])}</title>
 <meta name="description" content="{html.escape(page["desc"])}">
-<link rel="icon" type="image/svg+xml" href="{r}img/tumbleweeds-mark-small.svg">
+<link rel="icon" type="image/svg+xml" href="{r}img/tumbleweeds-mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Figtree:wght@300;400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
@@ -39,13 +39,13 @@ def shell(page):
 <div class="ann">Info session for parents: Sunday, October 4, 7:00 to 8:30 pm, TRU Science Building S337. <a href="{ann_href}">Details</a></div>
 
 <nav class="nav" aria-label="Main">
-  <a class="nav__logo" href="{u("")}" aria-label="Tumbleweeds Volleyball Club home"><img src="{r}img/tumbleweeds-mark-small.svg" alt=""><span>Tumbleweeds</span></a>
+  <a class="nav__logo" href="{u("")}" aria-label="Tumbleweeds Volleyball Club home"><img src="{r}img/tumbleweeds-mark.svg" alt=""><span>Tumbleweeds</span></a>
   <div class="nav__links">{navlinks()}</div>
   <a class="btn btn--sun btn--sm" href="{u("tryouts/")}">Tryouts</a>
   <button class="nav__menu" aria-label="Open menu" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h14M2 12h14"/></svg></button>
 </nav>
 <div class="sheetmenu" id="menu" aria-hidden="true">
-  <div class="sheetmenu__top"><span class="nav__logo"><img src="{r}img/tumbleweeds-mark-small-reverse.svg" alt=""><span>Tumbleweeds</span></span><button class="nav__menu" style="display:flex" aria-label="Close menu" data-close><svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.5"><path d="M2 2l12 12M14 2L2 14"/></svg></button></div>
+  <div class="sheetmenu__top"><span class="nav__logo"><img src="{r}img/tumbleweeds-mark-reverse.svg" alt=""><span>Tumbleweeds</span></span><button class="nav__menu" style="display:flex" aria-label="Close menu" data-close><svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.5"><path d="M2 2l12 12M14 2L2 14"/></svg></button></div>
   <nav aria-label="Mobile">{navlinks()}<a href="{u("news/")}"{" aria-current=\"page\"" if active=="news" else ""}>News</a></nav>
   <a class="btn btn--sun" href="{u("tryouts/")}">Tryout details</a>
 </div>
@@ -339,7 +339,7 @@ def fees_body(u, r):
         ("Refund policy", "Volleyball BC requires every club to publish one.", "", "Posting before tryouts"),
         ("Fundraising and volunteering", "What families are asked to do.", "", "Coming soon"),
     ])
-    s1 = sheet("01", "Fees and registration", "What the season costs, in total.", price + fees, id_="fees")
+    s1 = sheet("01", "Fees and registration", "Every cost, line by line.", price + fees, id_="fees")
     acc = faq([
         ("Training", facts([("Coaching approach", "Fundamentals first, taught in a set order.", "", ""), ("Who coaches each team", "A named coach for every team, posted with their background before tryouts.", "", ""), ("Practices per week", "", "", "Coming soon"), ("Courts and athletes per team", "", "", "Coming soon"), ("Sport science and strength", "", "", "Coming soon")]), "training"),
         ("Culture", facts([("Values", "", "", "Coming soon"), ("Athletes who come back", "This is the club's first season, so there are no returning athletes yet.", "", ""), ("Playing time", "How playing time works for each age group.", "", "Posting before tryouts")]), "culture"),
