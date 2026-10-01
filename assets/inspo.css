@@ -1,0 +1,43 @@
+/* Inspiration layer (Lucas, Chez Koop, 2026-10-01): sage + beige, grit texture, Kamloops hills, game-day type, official logo.
+   Layered on v2; nothing structural changes. */
+:root{--sage-600:#566F4F;--sage-700:#4A6247}
+/* sage for buttons and key elements (AA with white text: 5.55:1) */
+.btn--dark{background:var(--sage-600);color:#fff}.btn--dark:hover{background:var(--pine-700)}
+.nav.is-scrolled .btn--sun{background:var(--sage-600);color:#fff}
+.eyebrow b{border-color:var(--sage-600);color:var(--sage-600)}
+.card__num{color:var(--sage-600);opacity:.5}
+/* official mark reads light over photo */
+.nav:not(.is-scrolled) .nav__logo img,.badge img{filter:brightness(0) invert(1)}
+.nav__logo img{height:42px;width:42px}
+/* grit texture lives in the header only: an overlay on the hero photo, strongest at the edges and bottom */
+.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:url(../img/tex-green.jpg) center/cover;mix-blend-mode:multiply;opacity:.9;
+  -webkit-mask-image:linear-gradient(to right,#000 0%,rgba(0,0,0,.55) 30%,transparent 55%),linear-gradient(to top,#000 0%,transparent 30%);-webkit-mask-composite:source-over;mask-image:linear-gradient(to right,#000 0%,rgba(0,0,0,.55) 30%,transparent 55%),linear-gradient(to top,#000 0%,transparent 30%);mask-composite:add}
+.hero__inner,.badge{z-index:2}
+.statement__mark{opacity:.09}
+/* game-day dates: bold condensed bars, like a schedule graphic */
+.events--gameday{border-top:0;display:grid;gap:12px}
+.events--gameday .event{border:0;border-radius:16px;background:var(--pine-900);color:var(--sand-100);padding:24px 28px;grid-template-columns:240px 1fr auto}
+.events--gameday .event .date{font:700 44px/40px "Barlow Condensed",sans-serif;color:var(--sand-100);letter-spacing:.01em}
+.events--gameday .event .h4{font:700 26px/28px "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.02em;color:#fff}
+.events--gameday .event .meta{color:var(--sage-300)}
+.events--gameday .btn--outline{border-color:rgba(243,235,223,.5);color:var(--sand-100)}
+.events--gameday .btn--outline:hover{background:rgba(243,235,223,.1)}
+.events--gameday .tag--soon{background:rgba(243,235,223,.12);color:var(--sand-100)}
+/* Kamloops hills sit on the footer */
+/* the Kamloops hills rise out of the bottom of the closing photo and become the footer */
+.ridge{position:relative;z-index:3;margin-top:24px;height:clamp(60px,9vw,140px);color:var(--pine-900);line-height:0;pointer-events:none}
+.ridge svg{width:100%;height:100%;display:block}
+.ridge + .footer{margin-top:-1px;border-radius:0}
+.band + .ridge{margin-top:calc(-1 * clamp(60px,9vw,140px) + 1px)}
+.footer{background:var(--pine-900)}
+
+@media (max-width:860px){
+  .events--gameday .event{grid-template-columns:1fr;padding:22px 20px}
+  .events--gameday .event .date{font-size:36px;line-height:34px}
+}
+/* grunge on the dark blocks only (Chip, 2026-10-01): subtle, never behind light content */
+.statement{background:var(--pine-900) url(../img/tex-green.jpg) center/cover}
+.events--gameday .event{background:var(--pine-900) url(../img/tex-pine.jpg) center/cover}
+.footer::before{content:"";position:absolute;inset:0;background:url(../img/tex-pine.jpg) center/cover;opacity:.7;pointer-events:none}
+.footer > *:not(.footer__wreath){position:relative}
