@@ -12,7 +12,7 @@ add_filter( 'body_class', 'extra_body_classes' );
 function extra_body_classes( $classes ) {
 	global $post;
 
-	$whitelist = array( 'home', 'blog', 'post', 'page', 'archive', 'single', 'category', 'tax', 'error404' );
+	$whitelist = array( 'home', 'blog', 'post', 'page', 'archive', 'single', 'category', 'tax', 'error404', 'admin-bar', 'customize-support' );
 	$blacklist = array( 'postid' );
 
 	$classes_new = array();
