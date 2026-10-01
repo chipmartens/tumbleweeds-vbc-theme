@@ -1,0 +1,1841 @@
+{
+    "key": "group_tvbc_page",
+    "title": "Page",
+    "fields": [
+        {
+            "key": "field_tvbc_page_tab_hero",
+            "label": "Top of page",
+            "name": "tab_hero",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top"
+        },
+        {
+            "key": "field_tvbc_page_hero_style",
+            "label": "Top of page style",
+            "name": "hero_style",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Pick the look first. Home is the dark green one with a photo.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "page": "Page (light, text only)",
+                "home": "Home (dark green with a photo)"
+            },
+            "default_value": "page",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_tvbc_page_hero_eyebrow",
+            "label": "Small label above the heading",
+            "name": "hero_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "A few words, like \"Kamloops youth volleyball\".",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_tvbc_page_hero_heading",
+            "label": "Heading",
+            "name": "hero_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Keep it to the plain thing the page is about. Under 8 words is best.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_tvbc_page_hero_text",
+            "label": "Intro text",
+            "name": "hero_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "One or two short sentences.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_tvbc_page_hero_buttons",
+            "label": "Buttons",
+            "name": "hero_buttons",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Up to two. The first one is the main button.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 2,
+            "layout": "table",
+            "button_label": "Add button",
+            "sub_fields": [
+                {
+                    "key": "field_tvbc_page_btn_label",
+                    "label": "Button text",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Two to four words.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_tvbc_page_btn_link",
+                    "label": "Where it goes",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_tvbc_page_hero_note",
+            "label": "Small note under the buttons",
+            "name": "hero_note",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional. For example a date and place.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_tvbc_page_hero_photo",
+            "label": "Photo",
+            "name": "hero_photo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "A cut-out (clear background) head and shoulders photo works best. Add a description in the Media Library.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_page_hero_style",
+                        "operator": "==",
+                        "value": "home"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_tvbc_page_tab_sections",
+            "label": "Page sections",
+            "name": "tab_sections",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top"
+        },
+        {
+            "key": "field_tvbc_page_flex_content",
+            "label": "Page sections",
+            "name": "flex_content",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "Add sections, drag to reorder. Each one is a ready-made block.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_tvbc_intro": {
+                    "key": "layout_tvbc_intro",
+                    "name": "intro",
+                    "label": "Heading and text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tvbc_l_intro_anchor",
+                            "label": "Link name",
+                            "name": "anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. Lowercase, no spaces, so a link can jump to this section (example: fees).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_intro_bg",
+                            "label": "Background",
+                            "name": "bg",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Pick a colour band for this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "light": "Light",
+                                "sand": "Sand panel",
+                                "dark": "Dark green"
+                            },
+                            "default_value": "light",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_intro_eyebrow",
+                            "label": "Small label above the heading",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. A few words, like \"Fees\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_intro_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "One plain sentence that says what the reader gets.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_intro_text",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Short paragraphs. Press Enter for a new paragraph.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 6,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_tvbc_l_intro_button_label",
+                            "label": "Button text",
+                            "name": "button_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_intro_button_link",
+                            "label": "Button goes to",
+                            "name": "button_link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "Pick a page or paste a web address.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_tvbc_feature": {
+                    "key": "layout_tvbc_feature",
+                    "name": "feature",
+                    "label": "Text and photo",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tvbc_l_feature_anchor",
+                            "label": "Link name",
+                            "name": "anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. Lowercase, no spaces, so a link can jump to this section (example: fees).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_feature_bg",
+                            "label": "Background",
+                            "name": "bg",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Pick a colour band for this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "light": "Light",
+                                "sand": "Sand panel",
+                                "dark": "Dark green"
+                            },
+                            "default_value": "light",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_feature_eyebrow",
+                            "label": "Small label above the heading",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. A few words, like \"Fees\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_feature_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "One plain sentence that says what the reader gets.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_feature_text",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 5,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_tvbc_l_feature_bullets",
+                            "label": "List",
+                            "name": "bullets",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Optional. One line each.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "button_label": "Add line",
+                            "sub_fields": [
+                                {
+                                    "key": "field_tvbc_l_feature_b_line",
+                                    "label": "Line",
+                                    "name": "line",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_tvbc_l_feature_photo",
+                            "label": "Photo",
+                            "name": "photo",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_tvbc_l_feature_photo_side",
+                            "label": "Photo goes on the",
+                            "name": "photo_side",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "right": "Right",
+                                "left": "Left"
+                            },
+                            "default_value": "right",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_feature_button_label",
+                            "label": "Button text",
+                            "name": "button_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_feature_button_link",
+                            "label": "Button goes to",
+                            "name": "button_link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "Pick a page or paste a web address.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_tvbc_numbered_list": {
+                    "key": "layout_tvbc_numbered_list",
+                    "name": "numbered_list",
+                    "label": "Numbered list",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tvbc_l_numbered_list_anchor",
+                            "label": "Link name",
+                            "name": "anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. Lowercase, no spaces, so a link can jump to this section (example: fees).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_numbered_bg",
+                            "label": "Background",
+                            "name": "bg",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Pick a colour band for this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "light": "Light",
+                                "sand": "Sand panel",
+                                "dark": "Dark green"
+                            },
+                            "default_value": "light",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_numbered_eyebrow",
+                            "label": "Small label above the heading",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. A few words, like \"Fees\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_numbered_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "One plain sentence that says what the reader gets.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_numbered_intro",
+                            "label": "Text under the heading",
+                            "name": "intro",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Optional. One or two short sentences.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_tvbc_l_numbered_items",
+                            "label": "Items",
+                            "name": "items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "The numbers appear on their own.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "button_label": "Add item",
+                            "sub_fields": [
+                                {
+                                    "key": "field_tvbc_l_numbered_i_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                },
+                                {
+                                    "key": "field_tvbc_l_numbered_i_text",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 3,
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_tvbc_l_numbered_i_link_label",
+                                    "label": "Link text",
+                                    "name": "link_label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Optional.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                },
+                                {
+                                    "key": "field_tvbc_l_numbered_i_link",
+                                    "label": "Link goes to",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "Pick a page or paste a web address.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_tvbc_cards": {
+                    "key": "layout_tvbc_cards",
+                    "name": "cards",
+                    "label": "Cards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tvbc_l_cards_anchor",
+                            "label": "Link name",
+                            "name": "anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. Lowercase, no spaces, so a link can jump to this section (example: fees).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_cards_bg",
+                            "label": "Background",
+                            "name": "bg",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Pick a colour band for this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "light": "Light",
+                                "sand": "Sand panel",
+                                "dark": "Dark green"
+                            },
+                            "default_value": "light",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_cards_eyebrow",
+                            "label": "Small label above the heading",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. A few words, like \"Fees\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_cards_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "One plain sentence that says what the reader gets.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_cards_intro",
+                            "label": "Text under the heading",
+                            "name": "intro",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Optional. One or two short sentences.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_tvbc_l_cards_columns",
+                            "label": "Cards per row",
+                            "name": "columns",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "On phones they stack.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "2": "2",
+                                "3": "3",
+                                "4": "4"
+                            },
+                            "default_value": "3",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_cards_items",
+                            "label": "Cards",
+                            "name": "items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "button_label": "Add card",
+                            "sub_fields": [
+                                {
+                                    "key": "field_tvbc_l_cards_i_label",
+                                    "label": "Small label",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Optional. For example \"12U\".",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                },
+                                {
+                                    "key": "field_tvbc_l_cards_i_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                },
+                                {
+                                    "key": "field_tvbc_l_cards_i_text",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 3,
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_tvbc_l_cards_i_flag",
+                                    "label": "Warning tag",
+                                    "name": "flag",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Optional. Use \"Not confirmed yet\" when the details are still open.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                },
+                                {
+                                    "key": "field_tvbc_l_cards_i_link_label",
+                                    "label": "Link text",
+                                    "name": "link_label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Optional.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                },
+                                {
+                                    "key": "field_tvbc_l_cards_i_link",
+                                    "label": "Link goes to",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "Pick a page or paste a web address.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_tvbc_people": {
+                    "key": "layout_tvbc_people",
+                    "name": "people",
+                    "label": "Coaches and staff",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tvbc_l_people_anchor",
+                            "label": "Link name",
+                            "name": "anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. Lowercase, no spaces, so a link can jump to this section (example: fees).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_people_bg",
+                            "label": "Background",
+                            "name": "bg",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Pick a colour band for this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "light": "Light",
+                                "sand": "Sand panel",
+                                "dark": "Dark green"
+                            },
+                            "default_value": "light",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_people_eyebrow",
+                            "label": "Small label above the heading",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. A few words, like \"Fees\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_people_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "One plain sentence that says what the reader gets.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_people_intro",
+                            "label": "Text under the heading",
+                            "name": "intro",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Optional. One or two short sentences.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_tvbc_l_people_source",
+                            "label": "Who to show",
+                            "name": "source",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "Choose first.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "all": "Everyone, in the order set under Coaches",
+                                "pick": "Pick people"
+                            },
+                            "default_value": "all",
+                            "layout": "vertical",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_people_pick",
+                            "label": "People",
+                            "name": "pick",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "Add them in the order you want them shown.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_tvbc_l_people_source",
+                                        "operator": "==",
+                                        "value": "pick"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "coach"
+                            ],
+                            "filters": [
+                                "search"
+                            ],
+                            "return_format": "id",
+                            "min": "",
+                            "max": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_tvbc_fact_table": {
+                    "key": "layout_tvbc_fact_table",
+                    "name": "fact_table",
+                    "label": "Facts table",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tvbc_l_fact_table_anchor",
+                            "label": "Link name",
+                            "name": "anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. Lowercase, no spaces, so a link can jump to this section (example: fees).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_facts_bg",
+                            "label": "Background",
+                            "name": "bg",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Pick a colour band for this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "light": "Light",
+                                "sand": "Sand panel",
+                                "dark": "Dark green"
+                            },
+                            "default_value": "light",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_facts_eyebrow",
+                            "label": "Small label above the heading",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. A few words, like \"Fees\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_facts_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "One plain sentence that says what the reader gets.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_facts_intro",
+                            "label": "Text under the heading",
+                            "name": "intro",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Optional. One or two short sentences.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_tvbc_l_facts_rows",
+                            "label": "Rows",
+                            "name": "rows",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Type [Fee: $TBC] style placeholders in square brackets where a detail is not confirmed. They show up highlighted.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "button_label": "Add row",
+                            "sub_fields": [
+                                {
+                                    "key": "field_tvbc_l_facts_r_label",
+                                    "label": "Question or label",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                },
+                                {
+                                    "key": "field_tvbc_l_facts_r_value",
+                                    "label": "Answer",
+                                    "name": "value",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 3,
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_tvbc_l_facts_r_note",
+                                    "label": "Small note",
+                                    "name": "note",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Optional.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_tvbc_key_dates": {
+                    "key": "layout_tvbc_key_dates",
+                    "name": "key_dates",
+                    "label": "Dates",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tvbc_l_key_dates_anchor",
+                            "label": "Link name",
+                            "name": "anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. Lowercase, no spaces, so a link can jump to this section (example: fees).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_dates_bg",
+                            "label": "Background",
+                            "name": "bg",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Pick a colour band for this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "light": "Light",
+                                "sand": "Sand panel",
+                                "dark": "Dark green"
+                            },
+                            "default_value": "light",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_dates_eyebrow",
+                            "label": "Small label above the heading",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. A few words, like \"Fees\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_dates_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "One plain sentence that says what the reader gets.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_dates_intro",
+                            "label": "Text under the heading",
+                            "name": "intro",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Optional. One or two short sentences.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_tvbc_l_dates_rows",
+                            "label": "Dates",
+                            "name": "rows",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "button_label": "Add date",
+                            "sub_fields": [
+                                {
+                                    "key": "field_tvbc_l_dates_r_date",
+                                    "label": "Date",
+                                    "name": "date",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "For example \"Sun, Oct 4\" or [Date TBC].",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                },
+                                {
+                                    "key": "field_tvbc_l_dates_r_title",
+                                    "label": "What happens",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                },
+                                {
+                                    "key": "field_tvbc_l_dates_r_text",
+                                    "label": "Details",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 2,
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_tvbc_faq": {
+                    "key": "layout_tvbc_faq",
+                    "name": "faq",
+                    "label": "Questions and answers",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tvbc_l_faq_anchor",
+                            "label": "Link name",
+                            "name": "anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. Lowercase, no spaces, so a link can jump to this section (example: fees).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_faq_bg",
+                            "label": "Background",
+                            "name": "bg",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Pick a colour band for this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "light": "Light",
+                                "sand": "Sand panel",
+                                "dark": "Dark green"
+                            },
+                            "default_value": "light",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_faq_eyebrow",
+                            "label": "Small label above the heading",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. A few words, like \"Fees\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_faq_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "One plain sentence that says what the reader gets.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_faq_intro",
+                            "label": "Text under the heading",
+                            "name": "intro",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Optional. One or two short sentences.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_tvbc_l_faq_collapse",
+                            "label": "Hide the answers until a question is clicked",
+                            "name": "collapse",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Leave off so parents can scan every answer.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "ui": 1,
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_tvbc_l_faq_items",
+                            "label": "Questions",
+                            "name": "items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "button_label": "Add question",
+                            "sub_fields": [
+                                {
+                                    "key": "field_tvbc_l_faq_i_question",
+                                    "label": "Question",
+                                    "name": "question",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                },
+                                {
+                                    "key": "field_tvbc_l_faq_i_answer",
+                                    "label": "Answer",
+                                    "name": "answer",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 4,
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_tvbc_news_list": {
+                    "key": "layout_tvbc_news_list",
+                    "name": "news_list",
+                    "label": "Latest news",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tvbc_l_news_list_anchor",
+                            "label": "Link name",
+                            "name": "anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. Lowercase, no spaces, so a link can jump to this section (example: fees).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_news_bg",
+                            "label": "Background",
+                            "name": "bg",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Pick a colour band for this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "light": "Light",
+                                "sand": "Sand panel",
+                                "dark": "Dark green"
+                            },
+                            "default_value": "light",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_news_eyebrow",
+                            "label": "Small label above the heading",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. A few words, like \"Fees\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_news_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "One plain sentence that says what the reader gets.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_news_count",
+                            "label": "How many posts",
+                            "name": "count",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 6,
+                            "min": 1,
+                            "max": 20
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_tvbc_callout": {
+                    "key": "layout_tvbc_callout",
+                    "name": "callout",
+                    "label": "Call to action",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tvbc_l_callout_anchor",
+                            "label": "Link name",
+                            "name": "anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. Lowercase, no spaces, so a link can jump to this section (example: fees).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_callout_style",
+                            "label": "Style",
+                            "name": "style",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "dark": "Dark green band",
+                                "sand": "Sand band",
+                                "helpline": "Helpline box"
+                            },
+                            "default_value": "dark",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_tvbc_l_callout_eyebrow",
+                            "label": "Small label above the heading",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. A few words, like \"Fees\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_callout_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "One plain sentence that says what the reader gets.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_callout_text",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_tvbc_l_callout_button_label",
+                            "label": "Button text",
+                            "name": "button_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_tvbc_l_callout_button_link",
+                            "label": "Button goes to",
+                            "name": "button_link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "Pick a page or paste a web address.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_tvbc_l_callout_detail",
+                            "label": "Big line",
+                            "name": "detail",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional. For example a phone number.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_tvbc_l_callout_style",
+                                        "operator": "==",
+                                        "value": "helpline"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add section",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790866241
+}

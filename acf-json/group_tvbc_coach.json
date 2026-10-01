@@ -1,0 +1,144 @@
+{
+    "key": "group_tvbc_coach",
+    "title": "Coach details",
+    "fields": [
+        {
+            "key": "field_tvbc_coach_role",
+            "label": "Role at the club",
+            "name": "role",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "For example \"President\" or \"Head coach, 14U girls\".",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_tvbc_coach_teams",
+            "label": "Teams",
+            "name": "teams",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional. Age groups this person coaches.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_tvbc_coach_photo",
+            "label": "Photo",
+            "name": "photo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "A cut-out (clear background) head and shoulders photo works best.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_tvbc_coach_summary",
+            "label": "Short summary",
+            "name": "summary",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Two sentences for the card on the Coaches page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_tvbc_coach_bio",
+            "label": "Full bio",
+            "name": "bio",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Shown on this coach's own page. Leave empty for a card with no link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_tvbc_coach_credentials",
+            "label": "Facts about this coach",
+            "name": "credentials",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "One line each. Only things the club has confirmed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "button_label": "Add line",
+            "sub_fields": [
+                {
+                    "key": "field_tvbc_coach_c_line",
+                    "label": "Line",
+                    "name": "line",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "coach"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790866241
+}

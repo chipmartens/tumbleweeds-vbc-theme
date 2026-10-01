@@ -1,0 +1,193 @@
+{
+    "key": "group_tvbc_settings",
+    "title": "Club settings",
+    "fields": [
+        {
+            "key": "field_tvbc_set_contact_email",
+            "label": "Club email",
+            "name": "contact_email",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "info@tumbleweedsvolleyball.com"
+        },
+        {
+            "key": "field_tvbc_set_instagram_handle",
+            "label": "Instagram handle",
+            "name": "instagram_handle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "@tumbleweedsvball"
+        },
+        {
+            "key": "field_tvbc_set_instagram_url",
+            "label": "Instagram link",
+            "name": "instagram_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https://www.instagram.com/tumbleweedsvball/"
+        },
+        {
+            "key": "field_tvbc_set_header_cta_label",
+            "label": "Header button text",
+            "name": "header_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Tryouts"
+        },
+        {
+            "key": "field_tvbc_set_header_cta_link",
+            "label": "Header button goes to",
+            "name": "header_cta_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_tvbc_set_footer_blurb",
+            "label": "Footer line",
+            "name": "footer_blurb",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "One or two sentences about the club.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_tvbc_set_helpline_name",
+            "label": "Helpline name",
+            "name": "helpline_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Abuse-Free Sport Helpline"
+        },
+        {
+            "key": "field_tvbc_set_helpline_phone",
+            "label": "Helpline phone",
+            "name": "helpline_phone",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "1-888-83SPORT (77678)"
+        },
+        {
+            "key": "field_tvbc_set_complaints_contact",
+            "label": "Club complaints contact",
+            "name": "complaints_contact",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Someone outside the coaching staff. Keep the brackets until it is confirmed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "[Complaints contact TBC]"
+        },
+        {
+            "key": "field_tvbc_set_practice_location",
+            "label": "Practice location",
+            "name": "practice_location",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Keep the brackets until it is confirmed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "[Practice location TBC]"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "club-settings"
+            }
+        ],
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790866241
+}

@@ -1,0 +1,158 @@
+{
+    "key": "group_tvbc_team",
+    "title": "Team details",
+    "fields": [
+        {
+            "key": "field_tvbc_team_age_group",
+            "label": "Age group",
+            "name": "age_group",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "12U": "12U",
+                "13U": "13U",
+                "14U": "14U",
+                "15U": "15U",
+                "16U": "16U",
+                "17U": "17U",
+                "18U": "18U"
+            },
+            "return_format": "value"
+        },
+        {
+            "key": "field_tvbc_team_gender",
+            "label": "Girls or boys",
+            "name": "gender",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "girls": "Girls",
+                "boys": "Boys",
+                "tbc": "Not confirmed yet"
+            },
+            "default_value": "tbc",
+            "return_format": "value"
+        },
+        {
+            "key": "field_tvbc_team_head_coach",
+            "label": "Head coach",
+            "name": "head_coach",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "coach"
+            ],
+            "return_format": "id",
+            "allow_null": 1
+        },
+        {
+            "key": "field_tvbc_team_practice",
+            "label": "Practice nights and place",
+            "name": "practice",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "For example Tuesday and Thursday evenings, plus the gym.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_tvbc_team_roster",
+            "label": "Roster",
+            "name": "roster",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Sample names only until families agree to be listed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "button_label": "Add athlete",
+            "sub_fields": [
+                {
+                    "key": "field_tvbc_team_r_name",
+                    "label": "Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_tvbc_team_r_number",
+                    "label": "Jersey number",
+                    "name": "number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "team"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790866241
+}
