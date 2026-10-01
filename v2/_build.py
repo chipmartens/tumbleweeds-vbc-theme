@@ -28,38 +28,40 @@ def shell(page):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(page["title"])}</title>
 <meta name="description" content="{html.escape(page["desc"])}">
-<link rel="icon" type="image/svg+xml" href="{r}img/tumbleweeds-mark.svg">
+<link rel="icon" type="image/svg+xml" href="{r}img/tumbleweeds-official-mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Figtree:wght@300;400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Figtree:wght@300;400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{r}assets/site.css">
+<link rel="stylesheet" href="{r}assets/inspo.css">
 </head>
 <body>
 
 <div class="ann">Info session for parents: Sunday, October 4, 7:00 to 8:30 pm, TRU Science Building S337. <a href="{ann_href}">Details</a></div>
 
 <nav class="nav" aria-label="Main">
-  <a class="nav__logo" href="{u("")}" aria-label="Tumbleweeds Volleyball Club home"><img src="{r}img/tumbleweeds-mark.svg" alt=""><span>Tumbleweeds</span></a>
+  <a class="nav__logo" href="{u("")}" aria-label="Tumbleweeds Volleyball Club home"><img src="{r}img/tumbleweeds-official-mark.svg" alt=""><span>Tumbleweeds</span></a>
   <div class="nav__links">{navlinks()}</div>
   <a class="btn btn--sun btn--sm" href="{u("tryouts/")}">Tryouts</a>
   <button class="nav__menu" aria-label="Open menu" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h14M2 12h14"/></svg></button>
 </nav>
 <div class="sheetmenu" id="menu" aria-hidden="true">
-  <div class="sheetmenu__top"><span class="nav__logo"><img src="{r}img/tumbleweeds-mark-reverse.svg" alt=""><span>Tumbleweeds</span></span><button class="nav__menu" style="display:flex" aria-label="Close menu" data-close><svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.5"><path d="M2 2l12 12M14 2L2 14"/></svg></button></div>
+  <div class="sheetmenu__top"><span class="nav__logo"><img src="{r}img/tumbleweeds-official-mark-reverse.svg" alt=""><span>Tumbleweeds</span></span><button class="nav__menu" style="display:flex" aria-label="Close menu" data-close><svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.5"><path d="M2 2l12 12M14 2L2 14"/></svg></button></div>
   <nav aria-label="Mobile">{navlinks()}<a href="{u("news/")}"{" aria-current=\"page\"" if active=="news" else ""}>News</a></nav>
   <a class="btn btn--sun" href="{u("tryouts/")}">Tryout details</a>
 </div>
 '''
     footer = f'''
+<div class="ridge{" ridge--flat" if not page.get("band") else ""}" aria-hidden="true"><svg viewBox="0 0 1600 200" preserveAspectRatio="none"><use href="{r}img/kamloops-ridge.svg#r"/></svg></div>
 <footer class="footer{" footer--flat" if not page.get("band") else ""}">
-  <img class="footer__wreath" src="{r}img/tumbleweeds-mark-reverse.svg" alt="">
+  <img class="footer__wreath" src="{r}img/tumbleweeds-official-mark-reverse.svg" alt="">
   <div class="footer__news">
     <h2 class="h3">Stay in the loop.</h2>
     <!-- Preview only: no backend. Opens the visitor's email app addressed to the club. -->
     <form onsubmit="location.href='mailto:{EMAIL}?subject='+encodeURIComponent('Add me to club updates')+'&amp;body='+encodeURIComponent('Please add '+this.email.value+' to club updates.');return false"><label class="sr" for="em" hidden>Email</label><input id="em" name="email" type="email" placeholder="Your email" required><button class="btn btn--light" type="submit">Sign up</button></form>
   </div>
   <div class="footer__cols">
-    <div><a href="{u("")}" style="display:flex;align-items:center;gap:12px;font:600 20px/24px Figtree;color:var(--sand-100)"><img src="{r}img/tumbleweeds-mark-reverse.svg" alt="" style="height:48px;width:48px">Tumbleweeds<br>Volleyball Club</a><p style="margin:16px 0 0;font-size:14px;line-height:22px;color:rgba(243,235,223,.75);max-width:30ch">Kamloops youth volleyball. Developing athletes from the ground up.</p></div>
+    <div><a href="{u("")}" aria-label="Tumbleweeds Volleyball Club home"><img src="{r}img/tumbleweeds-official-lockup-reverse.svg" alt="Tumbleweeds Volleyball Club, est. 2026" style="height:150px;width:auto"></a><p style="margin:16px 0 0;font-size:14px;line-height:22px;color:rgba(243,235,223,.75);max-width:30ch">Kamloops youth volleyball. Developing athletes from the ground up.</p></div>
     <div><h5>The club</h5><ul><li><a href="{u("our-coaches/")}">Coaches</a></li><li><a href="{u("programs/")}">Programs</a></li><li><a href="{u("tryouts/")}">Tryouts</a></li><li><a href="{u("fees-and-registration/")}">Fees and registration</a></li><li><a href="{u("for-parents/")}">For parents</a></li><li><a href="{u("sponsors/")}">Sponsors</a></li><li><a href="{u("news/")}">News</a></li></ul></div>
     <div><h5>Contact</h5><ul><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="{IG}">@tumbleweedsvball</a></li><li><a href="{u("contact/")}">Contact page</a></li><li>Kamloops, BC</li></ul></div>
     <div><h5>If something goes wrong</h5><ul><li>Abuse-Free Sport Helpline</li><li><a href="tel:18888377678">1-888-83SPORT (77678)</a></li><li>Club complaints contact: coming soon</li></ul></div>
@@ -261,7 +263,7 @@ def programs_body(u, r):
   <figure class="reveal"><img src="{r}img/tw-01-celebration-indoor-court.jpg" alt="Players celebrating a point" loading="lazy"></figure>
   <figure class="reveal"><img src="{r}img/tw-11-bump-wood-floor.jpg" alt="Player passing on a wood court" loading="lazy" style="object-position:30% 50%"></figure>
 </div>'''
-    st = '<section class="statement reveal"><img class="statement__mark" src="' + r + 'img/tumbleweeds-mark.svg" alt=""><p>Fundamentals <span class="accent">first.</span></p></section>'
+    st = '<section class="statement reveal"><img class="statement__mark" src="' + r + 'img/tumbleweeds-official-mark.svg" alt=""><p>Fundamentals <span class="accent">first.</span></p></section>'
     how = f'''<div class="split">
       <div class="reveal"><p class="eyebrow"><b>02</b>How we coach</p><h2 class="h2">The basics, in a set order.</h2><p class="lead" style="margin-top:20px">We teach the basics in a set order until they are automatic. Then we build on them.</p></div>
       <div class="reveal">{facts([("Coaching approach", "Fundamentals first, taught in a set order.", "", ""), ("Practices per week", "", "", "Coming soon"), ("Courts and athletes per team", "", "", "Coming soon")])}</div></div>'''
@@ -295,7 +297,7 @@ def faq(items, open_first=False, n=False):
     return out + "</div>"
 
 def tryouts_body(u, r):
-    ev = f'''<div class="events">
+    ev = f'''<div class="events events--gameday">
       <div class="event reveal"><span class="date">Sun, Oct 4</span><div><h3 class="h4">Parent info session</h3><p class="meta" style="margin:4px 0 0">7:00 to 8:30 pm, TRU Science Building, room S337. Free parking in S Lot. Can't make it? A Teams link goes up on our Instagram story that day.</p></div><a class="btn btn--outline btn--sm" href="{IG}">Follow on Instagram</a></div>
       <div class="event reveal"><span class="date">Before tryouts</span><div><h3 class="h4">Coaches announced</h3><p class="meta" style="margin:4px 0 0">A named coach for every team, with their background.</p></div>{soon()}</div>
       <div class="event reveal"><span class="date">Late Nov</span><div><h3 class="h4">Tryouts</h3><p class="meta" style="margin:4px 0 0">Held in the Volleyball BC tryout window. Dates and age groups coming soon.</p></div><a class="btn btn--outline btn--sm" href="mailto:{EMAIL}">Email the club</a></div>
