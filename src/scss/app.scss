@@ -177,6 +177,8 @@ html.lenis body { height: auto; }
 	--strip-drop: 64px;
 	--drawer-pad: 24px;
 	--blur: 12px;
+	--hero-fade-a: 160px;
+	--hero-fade-b: 260px;
 	--hero-page-h: clamp(520px, 60svh, 600px);
 	--col-date: 200px;
 	--col-label: 260px;
@@ -817,14 +819,14 @@ body.home .site-footer {
 		background: var(--global--color-pine-900);
 	}
 	&::before {
-		background: linear-gradient(to top, var(--global--color-pine-900-88) 0%, var(--global--color-pine-900-55) 48%, var(--global--color-pine-900-12) 78%), linear-gradient(to bottom, var(--global--color-pine-900-55), var(--global--color-pine-900-18) 160px, transparent 260px);
+		background: linear-gradient(to top, var(--global--color-pine-900-88) 0%, var(--global--color-pine-900-55) 48%, var(--global--color-pine-900-12) 78%), linear-gradient(to bottom, var(--global--color-pine-900-55), var(--global--color-pine-900-18) var(--hero-fade-a), transparent var(--hero-fade-b));
 		content: "";
 		inset: 0;
 		position: absolute;
 		z-index: 1;
 	}
 	&--home::before {
-		background: linear-gradient(to top, var(--global--color-pine-900-80) 0%, var(--global--color-pine-900-38) 42%, transparent 72%), linear-gradient(to bottom, var(--global--color-pine-900-55), var(--global--color-pine-900-18) 160px, transparent 260px);
+		background: linear-gradient(to top, var(--global--color-pine-900-80) 0%, var(--global--color-pine-900-38) 42%, transparent 72%), linear-gradient(to bottom, var(--global--color-pine-900-55), var(--global--color-pine-900-18) var(--hero-fade-a), transparent var(--hero-fade-b));
 	}
 	&__image {
 		animation: heroIn 1.2s var(--ease-out) forwards;

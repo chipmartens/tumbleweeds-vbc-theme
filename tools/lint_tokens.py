@@ -17,6 +17,8 @@ body = txt[i + 1:]
 hits = []
 for n, line in enumerate(txt[:i + 1].count("\n") + 1 and body.split("\n"), 1):
     code = line.split("//")[0]
+    if code.strip().startswith('--') or code.strip().startswith(('/*','*')):
+        continue
     if re.search(r"[^-\w](\d+(\.\d+)?px)", code) and not re.search(r"(^|[^\w-])(0|1|2)px", code.replace("1px solid", "").replace("2px", "")) is None:
         pass
     for m in re.finditer(r"(?<![\w.-])(-?\d+(?:\.\d+)?)px", code):

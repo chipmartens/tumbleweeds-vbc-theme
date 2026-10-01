@@ -94,6 +94,8 @@ Numbers are referenced by the review.
 
 ## 3. Where this theme deliberately differs (and why)
 
+- **No `section_padding` field or helper.** v2's sections have fixed, differing paddings, all taken from `--section-padding` and the surface tokens in `app.scss`, so a per-section padding switch would only let a volunteer break the design. Add it if a layout ever needs it.
+
 - **Menus:** `wp_nav_menu` on `header-menu` and `footer-menu` as Chez Koop do. Chip asked for the nav in Club settings; Club settings holds the button, the phone-only extra link and a pointer to Appearance, Menus, so a volunteer has one place to start. Putting the links themselves in a Club settings repeater is a one-hour change if preferred.
 - **Straight quotes:** `run_wptexturize` is off so text typed in a WYSIWYG box matches text typed in a plain box (and matches v2).
 - **News URLs:** permalinks are `/%postname%/` (a posts-only `/news/` prefix forces WordPress verbose page rules and makes unknown URLs fall back to the home page instead of a 404).
