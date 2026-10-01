@@ -43,7 +43,7 @@ a:hover .arrow{transform:translateX(2px)}
 .nav{position:fixed;top:40px;left:0;right:0;z-index:30;display:flex;align-items:center;gap:32px;height:72px;padding:0 48px;color:#fff;transition:background .25s var(--ease),color .25s var(--ease),top .25s var(--ease),height .25s var(--ease),box-shadow .25s var(--ease)}
 .nav.is-scrolled{top:0;height:64px;background:rgba(251,248,242,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--pine-900);box-shadow:0 1px 0 var(--line)}
 .nav__logo{flex:none;display:flex;align-items:center;gap:12px;font:600 17px/20px Figtree;letter-spacing:-.2px;white-space:nowrap}
-.nav__logo img{height:36px;width:36px;transition:filter .25s var(--ease)}
+.nav__logo img{height:40px;width:40px;transition:filter .25s var(--ease)}
 .nav:not(.is-scrolled) .nav__logo img{filter:brightness(0) invert(1)}
 .nav__links{display:flex;gap:28px;margin-left:auto;font:500 15px/20px Figtree;letter-spacing:0;white-space:nowrap}
 .nav__links a{position:relative;opacity:.9;transition:opacity .15s var(--ease)}
@@ -81,7 +81,7 @@ a:hover .arrow{transform:translateX(2px)}
 .ticker{background:var(--pine-900);color:var(--sand-100);overflow:hidden;height:64px;display:flex;align-items:center;position:relative;z-index:3}
 .ticker__track{display:flex;align-items:center;gap:28px;white-space:nowrap;animation:tick 48s linear infinite;padding-left:28px}
 .ticker span{font:600 22px/1 "Barlow Condensed",sans-serif;letter-spacing:.06em;text-transform:uppercase}
-.ticker img{width:22px;height:22px;filter:brightness(0) invert(.92) sepia(.2)}
+.ticker img{width:30px;height:30px;filter:brightness(0) invert(.92) sepia(.2)}
 .ticker:hover .ticker__track{animation-play-state:paused}
 @keyframes tick{to{transform:translateX(-50%)}}
 /* sheets */
