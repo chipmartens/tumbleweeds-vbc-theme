@@ -1,13 +1,15 @@
 // node tools/shots.js <base-url> <out-dir> [slug ...]
 // Full-length JPEGs of every page at 1440 and 390 (split into parts of 2400px), plus overflow, console and request checks.
 // Works on the WordPress site and on the static v2 site (same paths). Example:
-//   node tools/shots.js http://127.0.0.1:9410/ _qa/wp
+//   POSTBASE= node tools/shots.js http://127.0.0.1:9410/ _qa/wp
 //   node tools/shots.js http://localhost:8981/ _qa/v2
 const p = require('puppeteer-core'), fs = require('fs');
 const base = (process.argv[2] || 'http://127.0.0.1:9410/').replace(/\/?$/, '/');
 const out = process.argv[3] || '_qa/wp';
 const only = process.argv.slice(4);
-const pages = { home: '', coaches: 'our-coaches/', pat: 'coaches/pat-hennelly/', iuliia: 'coaches/iuliia-pakhomenko/', programs: 'programs/', tryouts: 'tryouts/', fees: 'fees-and-registration/', parents: 'for-parents/', sponsors: 'sponsors/', news: 'news/', 'news-post': 'news/what-we-will-publish-before-tryouts/', 'news-post2': 'news/info-session/', contact: 'contact/', e404: 'zzz-not-here/' };
+// WordPress keeps news posts at /<slug>/ (permalinks /%postname%/); the static v2 keeps them under /news/<slug>/. POSTBASE='' for WordPress.
+const postBase = process.env.POSTBASE === undefined ? 'news/' : process.env.POSTBASE;
+const pages = { home: '', coaches: 'our-coaches/', pat: 'coaches/pat-hennelly/', iuliia: 'coaches/iuliia-pakhomenko/', programs: 'programs/', tryouts: 'tryouts/', fees: 'fees-and-registration/', parents: 'for-parents/', sponsors: 'sponsors/', news: 'news/', 'news-post': postBase + 'what-we-will-publish-before-tryouts/', 'news-post2': postBase + 'info-session/', contact: 'contact/', e404: 'zzz-not-here/' };
 const chrome = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 (async () => {
   fs.mkdirSync(out, { recursive: true });

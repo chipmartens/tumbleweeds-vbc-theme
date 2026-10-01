@@ -184,6 +184,6 @@ update_option( 'blog_public', 0 );
 update_option( 'default_comment_status', 'closed' );
 update_option( 'uploads_use_yearmonth_folders', 1 );
 global $wp_rewrite;
-$wp_rewrite->set_permalink_structure( '/news/%postname%/' );
+$wp_rewrite->set_permalink_structure( '/%postname%/' );
 flush_rewrite_rules();
 $say( 'done' );

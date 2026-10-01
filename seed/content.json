@@ -59,6 +59,9 @@
    "title": "Home",
    "front_page": true,
    "hero": {
+    "hero_phone_focus": 1,
+    "hero_phone_x": 42,
+    "hero_phone_y": 30,
     "hero_layout": "home",
     "hero_image": "@img:tw-01",
     "hero_focus_x": 50,
@@ -311,6 +314,7 @@
    "title": "Our coaches",
    "menu": "Coaches",
    "hero": {
+    "hero_phone_focus": 0,
     "hero_layout": "page",
     "hero_image": "@img:tw-01",
     "hero_focus_x": 50,
@@ -440,6 +444,7 @@
    "title": "Programs",
    "menu": "Programs",
    "hero": {
+    "hero_phone_focus": 0,
     "hero_layout": "page",
     "hero_image": "@img:tw-10",
     "hero_focus_x": 50,
@@ -633,6 +638,7 @@
    "title": "Tryouts",
    "menu": "Tryouts",
    "hero": {
+    "hero_phone_focus": 0,
     "hero_layout": "page",
     "hero_image": "@img:tw-04",
     "hero_focus_x": 50,
@@ -800,6 +806,7 @@
    "menu": "Fees",
    "footer_menu": "Fees and registration",
    "hero": {
+    "hero_phone_focus": 0,
     "hero_layout": "page",
     "hero_image": "@img:tw-13",
     "hero_focus_x": 50,
@@ -1079,6 +1086,7 @@
    "title": "For parents",
    "menu": "For parents",
    "hero": {
+    "hero_phone_focus": 0,
     "hero_layout": "page",
     "hero_image": "@img:tw-11",
     "hero_focus_x": 40,
@@ -1246,6 +1254,7 @@
    "title": "Sponsors",
    "menu": "Sponsors",
    "hero": {
+    "hero_phone_focus": 0,
     "hero_layout": "page",
     "hero_image": "@img:tw-12",
     "hero_focus_x": 50,
@@ -1379,6 +1388,7 @@
    "posts_page": true,
    "footer_menu": "News",
    "hero": {
+    "hero_phone_focus": 0,
     "hero_layout": "page",
     "hero_image": "@img:tw-11",
     "hero_focus_x": 40,
@@ -1440,6 +1450,7 @@
    "menu": "Contact",
    "footer_menu": "",
    "hero": {
+    "hero_phone_focus": 0,
     "hero_layout": "page",
     "hero_image": "@img:tw-14",
     "hero_focus_x": 50,
@@ -1559,7 +1570,7 @@
     "coach_role": "President",
     "coach_summary": "TRU WolfPack men's head coach since 2005. 2024 U Sports Men's Volleyball Coach of the Year.",
     "coach_photo": "@img:pat",
-    "coach_bio": "<p>Pat Hennelly is the President of Tumbleweeds Volleyball Club.</p><p>He has coached university volleyball since 1995: at UBC, as an assistant at Northern Arizona University, and as head coach of the TRU WolfPack men's team since 2005.</p><p>In 2024 he was named U Sports Men's Volleyball Coach of the Year. He was also named 2024 Canada West Men's Volleyball Coach of the Year.</p>",
+    "coach_bio": "<p>Pat Hennelly is the President of Tumbleweeds Volleyball Club.</p><p>He has coached university volleyball since 1995: at UBC, as an assistant at Northern Arizona University, and as head coach of the TRU WolfPack men's team since 2005.</p><p>He was named the 2024 U Sports Men's Volleyball Coach of the Year. He was also named 2024 Canada West Men's Volleyball Coach of the Year.</p>",
     "coach_facts": [
      {
       "fact_label": "Experience",

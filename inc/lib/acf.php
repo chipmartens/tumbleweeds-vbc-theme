@@ -36,6 +36,21 @@ function my_toolbars( $toolbars ) {
 	return $toolbars;
 }
 
+// Flexible content: show each section's heading in its title bar, and start with the sections closed so a long page is a short list
+add_filter( 'acf/fields/flexible_content/layout_title/name=flex_content', 'tvbc_layout_title', 10, 4 );
+function tvbc_layout_title( $title, $field, $layout, $i ) {
+	$text = get_sub_field( 'section_heading' ) ?: ( get_sub_field( 'band_heading' ) ?: get_sub_field( 'section_eyebrow' ) );
+	return $text ? $title . ': <span class="tvbc-layout-preview">' . esc_html( wp_trim_words( $text, 8, '...' ) ) . '</span>' : $title;
+}
+add_action( 'admin_footer', function () {
+	$screen = get_current_screen();
+	if ( ! $screen || 'page' !== $screen->post_type ) {
+		return;
+	}
+	echo '<style>.tvbc-layout-preview{font-weight:400;opacity:.75}</style>';
+	echo '<script>if(window.acf){acf.addAction("ready",function(){jQuery(".acf-flexible-content .layout").each(function(){acf.getInstance&&jQuery(this).addClass("-collapsed")})})}</script>';
+} );
+
 // Settings value from the Club settings page ('' when the fields plugin is not active)
 function tvbc_opt( $name ) {
 	return function_exists( 'get_field' ) ? get_field( $name, 'option' ) : '';

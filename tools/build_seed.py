@@ -146,8 +146,9 @@ def band(img, heading, accent, b1, b2, size="standard"):
             "band_button_1": b1, "band_button_2": b2}
 
 
-def hero(img, x, y, tag, heading, accent="", sub="", b1=None, b2=None, layout="page"):
-    return {"hero_layout": layout, "hero_image": f"@img:{img}", "hero_focus_x": x, "hero_focus_y": y, "hero_tag": tag,
+def hero(img, x, y, tag, heading, accent="", sub="", b1=None, b2=None, layout="page", phone=None):
+    p = {"hero_phone_focus": 1, "hero_phone_x": phone[0], "hero_phone_y": phone[1]} if phone else {"hero_phone_focus": 0}
+    return {**p, "hero_layout": layout, "hero_image": f"@img:{img}", "hero_focus_x": x, "hero_focus_y": y, "hero_tag": tag,
             "hero_heading": heading, "hero_heading_accent": accent, "hero_subhead": sub,
             "hero_button_1": b1 or "", "hero_button_2": b2 or ""}
 
@@ -162,7 +163,7 @@ pages = []
 pages.append({"slug": "home", "title": "Home", "front_page": True,
   "hero": hero("tw-01", 50, 35, "Kamloops youth volleyball", "Developing athletes from the", "ground up.",
                "A new Kamloops club, led by Pat Hennelly, 2024 U Sports Men's Volleyball Coach of the Year.",
-               L("Tryout details", H + "tryouts/"), L("Meet the club", H + "our-coaches/"), layout="home"),
+               L("Tryout details", H + "tryouts/"), L("Meet the club", H + "our-coaches/"), layout="home", phone=(42, 30)),
   "flex": [
     ticker(),
     cards(head("What parents ask", "Who coaches. How they coach.", "What it costs.", side=("link", L("Read the parent questions", H + "for-parents/"))), [
@@ -365,7 +366,7 @@ coaches = [
    "fields": {"coach_role": "President",
               "coach_summary": "TRU WolfPack men's head coach since 2005. 2024 U Sports Men's Volleyball Coach of the Year.",
               "coach_photo": "@img:pat",
-              "coach_bio": "<p>Pat Hennelly is the President of Tumbleweeds Volleyball Club.</p><p>He has coached university volleyball since 1995: at UBC, as an assistant at Northern Arizona University, and as head coach of the TRU WolfPack men's team since 2005.</p><p>In 2024 he was named U Sports Men's Volleyball Coach of the Year. He was also named 2024 Canada West Men's Volleyball Coach of the Year.</p>",
+              "coach_bio": "<p>Pat Hennelly is the President of Tumbleweeds Volleyball Club.</p><p>He has coached university volleyball since 1995: at UBC, as an assistant at Northern Arizona University, and as head coach of the TRU WolfPack men's team since 2005.</p><p>He was named the 2024 U Sports Men's Volleyball Coach of the Year. He was also named 2024 Canada West Men's Volleyball Coach of the Year.</p>",
               "coach_facts": [
                   {"fact_label": "Experience", "fact_value": "University coach since 1995", "fact_tag": ""},
                   {"fact_label": "Current post", "fact_value": "TRU WolfPack men's volleyball head coach since 2005", "fact_tag": ""},

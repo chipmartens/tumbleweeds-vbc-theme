@@ -64,8 +64,12 @@ def rng(f, name, label, instr, **kw):
     return f("range", name, label, instr, default_value=50, min=0, max=100, step=1, prepend="", append="%", **kw)
 
 
-def repeater(f, name, label, instr, subs, button="Add row", layout="block", mn=0, mx=0, **kw):
-    return f("repeater", name, label, instr, sub_fields=subs, layout=layout, pagination=0, min=mn, max=mx, collapsed="", button_label=button, rows_per_page=20, **kw)
+def repeater(f, name, label, instr, subs, button="Add row", layout="block", mn=0, mx=0, collapsed=None, **kw):
+    # collapsed = name of the sub field whose value labels a closed row (rows then start closed, so long lists stay short)
+    key = ""
+    if collapsed:
+        key = next(x["key"] for x in subs if x["name"] == collapsed)
+    return f("repeater", name, label, instr, sub_fields=subs, layout=layout, pagination=0, min=mn, max=mx, collapsed=key, button_label=button, rows_per_page=20, **kw)
 
 
 def message(f, name, label, text_, **kw):
@@ -145,7 +149,7 @@ def layouts():
                 text(f, "date_title", "Title", "For example Tryouts.", show_if=("date_kind", "==", "custom")),
                 text(f, "date_line", "One line of detail", "For example In the Volleyball BC tryout window.", show_if=("date_kind", "==", "custom")),
                 link(f, "date_link", "Where it links", "Optional. The page this box opens."),
-            ], "Add a date", mn=0, mx=3, show_if=("cards_dates", "==", "1")),
+            ], "Add a date", mn=0, mx=3, collapsed="date_title", show_if=("cards_dates", "==", "1")),
             repeater(f, "cards", "Cards", "Two, three or five cards look best. Drag the row handle to reorder.", [
                 select(f, "card_colour", "Card colour", "The colour of the card.", {"sage": "Sage green", "sun": "Sun yellow", "sand": "Sand"}, default="sage"),
                 image(f, "card_image", "Photo", "Optional. Leave empty for a card without a photo."),
@@ -154,7 +158,7 @@ def layouts():
                 select(f, "card_foot", "Bottom of the card", "What goes at the bottom.", {"none": "Nothing", "tag": "A status tag (for example Coming soon)", "link": "A link", "button": "A button"}, default="none"),
                 text(f, "card_foot_tag", "Status tag", "For example Coming soon.", show_if=("card_foot", "==", "tag")),
                 link(f, "card_foot_link", "Link", "Pick the page or paste a web address, then write the words people click.", show_if=("card_foot", "any", None)),
-            ], "Add a card", mn=0, mx=5),
+            ], "Add a card", mn=0, mx=5, collapsed="card_title"),
         ]
     layout("section_cards", "Cards", cards)
 
@@ -181,7 +185,7 @@ def layouts():
                 select(f, "event_side", "Right-hand side of the row", "What sits at the right end.", {"none": "Nothing", "tag": "A status tag (for example Coming soon)", "button": "A button"}, default="none"),
                 text(f, "event_side_tag", "Status tag", "For example Coming soon.", show_if=("event_side", "==", "tag")),
                 link(f, "event_side_link", "Button", "Pick the page or paste a web address, then write the words on the button.", show_if=("event_side", "==", "button")),
-            ], "Add a row")]
+            ], "Add a row", collapsed="event_title")]
     layout("section_events", "Dates and events list", events)
 
     def faq(f):
@@ -193,8 +197,8 @@ def layouts():
                 text(f, "faq_anchor", "Link name (optional)", "One lowercase word that links can point to, for example training. Then #training opens this answer."),
                 select(f, "answer_kind", "Kind of answer", "Pick how the answer looks.", {"text": "Written answer", "facts": "A list of facts (label and answer rows)"}, default="text"),
                 wysiwyg(f, "answer_text", "Answer", "Write the answer. Use the link button to link to a page.", show_if=("answer_kind", "==", "text")),
-                repeater(f, "answer_facts", "Facts", "One row for each fact.", fact_fields(f), "Add a fact", show_if=("answer_kind", "==", "facts")),
-            ], "Add a question")]
+                repeater(f, "answer_facts", "Facts", "One row for each fact.", fact_fields(f), "Add a fact", collapsed="fact_label", show_if=("answer_kind", "==", "facts")),
+            ], "Add a question", collapsed="faq_question")]
     layout("section_faq", "Questions and answers", faq)
 
     def cta(f):
@@ -232,7 +236,7 @@ def layouts():
             area(f, "box_text", "Box: text", "One or two sentences.", rows=3, show_if=[("facts_layout", "==", "above"), ("facts_box", "==", "1")]),
             text(f, "box_tag", "Box: status tag", "Optional. For example Posting before tryouts.", show_if=[("facts_layout", "==", "above"), ("facts_box", "==", "1")]),
             repeater(f, "box_chips", "Box: small labels", "Short labels that sit in the box.", [text(f, "chip_text", "Label", "A word or two.")], "Add a label", layout="table", show_if=[("facts_layout", "==", "above"), ("facts_box", "==", "1")]),
-            repeater(f, "facts_rows", "Facts", "One row for each fact. Drag the row handle to reorder.", fact_fields(f), "Add a fact"),
+            repeater(f, "facts_rows", "Facts", "One row for each fact. Drag the row handle to reorder.", fact_fields(f), "Add a fact", collapsed="fact_label"),
         ]
         return out
     layout("section_facts", "Facts list", facts)
@@ -255,7 +259,7 @@ def layouts():
 
     def contact(f):
         return head(f, side=False, lede=True) + [
-            repeater(f, "contact_rows", "Contact details", "One row for each detail. Email and web addresses turn into links by themselves.", fact_fields(f), "Add a detail"),
+            repeater(f, "contact_rows", "Contact details", "One row for each detail. Email and web addresses turn into links by themselves.", fact_fields(f), "Add a detail", collapsed="fact_label"),
             text(f, "form_heading", "Form heading", "For example Send a message."),
             repeater(f, "form_topics", "What the message can be about", "The choices in the drop-down list.", [text(f, "topic_text", "Topic", "For example Coaches.")], "Add a topic", layout="table"),
             text(f, "form_note", "Small line under the button", "Optional. For example: This opens your email app with the message ready to send."),
@@ -303,6 +307,9 @@ def hero_group():
         image(f, "hero_image", "Hero photo", "A wide photo. A dark tint is added so the words can be read.", show_if=cond),
         rng(f, "hero_focus_x", "Keep this part in view: left to right", "Slide to choose which part of the photo stays visible when it is cropped. 0 is the left edge, 100 the right.", width="50", show_if=cond),
         rng(f, "hero_focus_y", "Keep this part in view: top to bottom", "0 is the top edge, 100 the bottom.", width="50", show_if=cond),
+        toggle(f, "hero_phone_focus", "Frame the photo differently on a phone", "A phone shows a tall slice of the photo. Switch this on to choose which part stays in view there.", show_if=cond),
+        rng(f, "hero_phone_x", "On a phone: left to right", "0 is the left edge, 100 the right.", width="50", show_if=[("hero_layout", "!=", "none"), ("hero_phone_focus", "==", "1")]),
+        rng(f, "hero_phone_y", "On a phone: top to bottom", "0 is the top edge, 100 the bottom.", width="50", show_if=[("hero_layout", "!=", "none"), ("hero_phone_focus", "==", "1")]),
         text(f, "hero_tag", "Small label in the pill", "A few words above the heading, for example Tryouts, late November.", show_if=cond),
         text(f, "hero_heading", "Heading", "The big line. Leave empty to use the page title.", show_if=cond),
         text(f, "hero_heading_accent", "Last words in italic (optional)", "Shown in the club's italic style at the end of the heading. Example: heading is Programs by, italic words are age group.", show_if=cond),
@@ -310,7 +317,9 @@ def hero_group():
         link(f, "hero_button_1", "Main button (white)", "Optional. Pick the page or paste a web address, then write the words on the button.", show_if=cond),
         link(f, "hero_button_2", "Second button (outline)", "Optional.", show_if=cond),
     ]
-    return group("group_tvbc_hero", "Hero Content", fields, [[{"param": "post_type", "operator": "==", "value": "page"}]], menu_order=0)
+    # Pages are built from the fields, so the empty text editor and other unused boxes are hidden from volunteers
+    hide = ["the_content", "excerpt", "discussion", "comments", "revisions", "author", "featured_image", "send-trackbacks", "custom_fields"]
+    return group("group_tvbc_hero", "Hero Content", fields, [[{"param": "post_type", "operator": "==", "value": "page"}]], menu_order=0, hide=hide)
 
 
 # ---------------------------------------------------------------- Coach Details (CPT coach)

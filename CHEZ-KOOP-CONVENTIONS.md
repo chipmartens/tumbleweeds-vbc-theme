@@ -78,7 +78,7 @@ Numbers are referenced by the review.
 11. BEM: one root block per layout (kebab noun), `block__element`, `block--modifier`; shared `.container-2xl`, `.content`, `.meta`, `.btn`, `.btn--<style>`; state classes `is-open`, `last-module`.
 12. `src/scss/app.scss` with the six-band index (00 Grid ... 05 Theme), partials `base/_variables, _mixins, _fonts, _animations`, `vendor/_reset, _bootstrap`; `:root` under `01. Base` with `--global--*`, `--grid--gutter*`, `--section-padding`, `--container-width` tokens and breakpoint overrides inside `:root`.
 13. Components consume tokens only: `@include text(step)`, `var(--section-padding)`, `var(--grid--gutter)`, `var(--global--border-radius-*)`, colour tokens. A literal value means the token is missing, so add the token.
-14. `section { padding-top: var(--section-padding) }`, `.last-module` bottom padding, `.meta`, `.section__heading`, `.section__subhead`, `.content` rich-text base.
+14. `section { position: relative }`, the `last-module` class on the last row, `.meta`, `.section__eyebrow/__heading/__subhead`, `.content` rich-text base. (Chez Koop's base `section { padding-top }` rule is not used: every layout here sets its own padding from `--section-padding`, because v2's sections differ.)
 15. Header `header.site-header > .container-2xl > .site-logo + nav.site-nav + .site-cta + .menu-toggle`; footer `footer.site-footer` with `footer__*` BEM; `html.scrolled` and `html.menu-open` state classes; `body_class` whitelist.
 16. Images through `section_image()` (lazysizes `data-src`/`data-srcset`/`data-sizes`, `data-aspectratio`, eager and `fetchpriority="high"` for the hero, filtered srcset, SVG inlined), alt text from the media library.
 17. Fonts via `<link>` Google Fonts with preconnect in `header.php`; `no-js` to `js` inline script on `<html>`.
@@ -93,6 +93,11 @@ Numbers are referenced by the review.
 22. Verify in the browser, not the shell; check the wp-admin edit screens, not only the front end.
 
 ## 3. Where this theme deliberately differs (and why)
+
+- **Menus:** `wp_nav_menu` on `header-menu` and `footer-menu` as Chez Koop do. Chip asked for the nav in Club settings; Club settings holds the button, the phone-only extra link and a pointer to Appearance, Menus, so a volunteer has one place to start. Putting the links themselves in a Club settings repeater is a one-hour change if preferred.
+- **Straight quotes:** `run_wptexturize` is off so text typed in a WYSIWYG box matches text typed in a plain box (and matches v2).
+- **News URLs:** permalinks are `/%postname%/` (a posts-only `/news/` prefix forces WordPress verbose page rules and makes unknown URLs fall back to the home page instead of a 404).
+- **Pages hide the empty text editor, Featured image, comments and other unused boxes** (`hide_on_screen` on the Hero Content group), so the edit screen is only the fields.
 
 - **Secure Custom Fields is the tested path**, ACF Pro is supported. Chez Koop bundles the Pro zip; this repo is public so it cannot. TGMPA points at wordpress.org instead.
 - **No Gravity Forms** (paid, zip cannot be committed). The contact form is the same mailto form as v2 and the footer sign-up takes an embed code from Club settings. See NEEDS-DECISION in the report.

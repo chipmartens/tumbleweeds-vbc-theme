@@ -239,10 +239,18 @@ function tvbc_heading( $main, $accent = '' ) {
 }
 
 // object-position value from two 0-100 slider values (which part of a cropped photo stays in view)
-function tvbc_focus( $x, $y ) {
-	$x = ( '' === $x || null === $x ) ? 50 : max( 0, min( 100, (int) $x ) );
-	$y = ( '' === $y || null === $y ) ? 50 : max( 0, min( 100, (int) $y ) );
-	return 'object-position:' . $x . '% ' . $y . '%';
+// $phone = optional array( x, y ) for a different framing on a phone (the CSS reads --focus and --focus-phone)
+function tvbc_focus( $x, $y, $phone = null ) {
+	$pos = function ( $a, $b ) {
+		$a = ( '' === $a || null === $a ) ? 50 : max( 0, min( 100, (int) $a ) );
+		$b = ( '' === $b || null === $b ) ? 50 : max( 0, min( 100, (int) $b ) );
+		return $a . '% ' . $b . '%';
+	};
+	$css = '--focus:' . $pos( $x, $y ) . ';';
+	if ( is_array( $phone ) ) {
+		$css .= '--focus-phone:' . $pos( $phone[0], $phone[1] ) . ';';
+	}
+	return $css;
 }
 
 // Phone number to a tel: value. Handles letters (1-888-83SPORT) and a trailing (77678) alias.

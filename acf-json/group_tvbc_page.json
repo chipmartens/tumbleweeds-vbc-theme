@@ -452,7 +452,7 @@
                             "pagination": 0,
                             "min": 0,
                             "max": 3,
-                            "collapsed": "",
+                            "collapsed": "field_tvbc_section_cards_date_title",
                             "button_label": "Add a date",
                             "rows_per_page": 20
                         },
@@ -655,7 +655,7 @@
                             "pagination": 0,
                             "min": 0,
                             "max": 5,
-                            "collapsed": "",
+                            "collapsed": "field_tvbc_section_cards_card_title",
                             "button_label": "Add a card",
                             "rows_per_page": 20
                         }
@@ -1480,7 +1480,7 @@
                             "pagination": 0,
                             "min": 0,
                             "max": 0,
-                            "collapsed": "",
+                            "collapsed": "field_tvbc_section_events_event_title",
                             "button_label": "Add a row",
                             "rows_per_page": 20
                         }
@@ -1915,7 +1915,7 @@
                                     "pagination": 0,
                                     "min": 0,
                                     "max": 0,
-                                    "collapsed": "",
+                                    "collapsed": "field_tvbc_section_faq_fact_label",
                                     "button_label": "Add a fact",
                                     "rows_per_page": 20
                                 }
@@ -1924,7 +1924,7 @@
                             "pagination": 0,
                             "min": 0,
                             "max": 0,
-                            "collapsed": "",
+                            "collapsed": "field_tvbc_section_faq_faq_question",
                             "button_label": "Add a question",
                             "rows_per_page": 20
                         }
@@ -2736,7 +2736,7 @@
                             "pagination": 0,
                             "min": 0,
                             "max": 0,
-                            "collapsed": "",
+                            "collapsed": "field_tvbc_section_facts_fact_label",
                             "button_label": "Add a fact",
                             "rows_per_page": 20
                         }
@@ -3463,7 +3463,7 @@
                             "pagination": 0,
                             "min": 0,
                             "max": 0,
-                            "collapsed": "",
+                            "collapsed": "field_tvbc_section_contact_fact_label",
                             "button_label": "Add a detail",
                             "rows_per_page": 20
                         },

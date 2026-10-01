@@ -14,6 +14,7 @@ $hero_accent  = '';
 $hero_subhead = '';
 $hero_btn_1   = null;
 $hero_btn_2   = null;
+$hero_phone   = null;
 
 if ( is_singular( 'coach' ) ) :
 	$coach_role   = get_field( 'coach_role', $post_id );
@@ -41,6 +42,7 @@ else :
 		$hero_subhead = get_field( 'hero_subhead', $post_id );
 		$hero_btn_1  = get_field( 'hero_button_1', $post_id );
 		$hero_btn_2  = get_field( 'hero_button_2', $post_id );
+		$hero_phone  = get_field( 'hero_phone_focus', $post_id ) ? array( get_field( 'hero_phone_x', $post_id ), get_field( 'hero_phone_y', $post_id ) ) : null;
 	}
 	if ( ! $hero_heading ) {
 		$hero_heading = get_the_title( $post_id );
@@ -58,7 +60,7 @@ $badge   = $is_home ? tvbc_opt( 'badge_text' ) : '';
 <header class="hero hero--<?php echo $is_home ? 'home' : 'page'; ?><?php echo $hero_image ? '' : ' hero--plain'; ?>">
 
 	<?php if ( $hero_image ) : ?>
-		<?php section_image( 'hero', $hero_image, 'hero__image', false, true, null, true, null, tvbc_focus( $hero_x, $hero_y ) ); ?>
+		<?php section_image( 'hero', $hero_image, 'hero__image', false, true, null, true, null, tvbc_focus( $hero_x, $hero_y, $hero_phone ) ); ?>
 	<?php endif; ?>
 
 	<div class="hero__inner">

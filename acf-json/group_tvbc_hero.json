@@ -121,6 +121,102 @@
             "append": "%"
         },
         {
+            "key": "field_tvbc_hero_hero_phone_focus",
+            "label": "Frame the photo differently on a phone",
+            "name": "hero_phone_focus",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "A phone shows a tall slice of the photo. Switch this on to choose which part stays in view there.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_tvbc_hero_hero_phone_x",
+            "label": "On a phone: left to right",
+            "name": "hero_phone_x",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "0 is the left edge, 100 the right.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    },
+                    {
+                        "field": "field_tvbc_hero_hero_phone_focus",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "prepend": "",
+            "append": "%"
+        },
+        {
+            "key": "field_tvbc_hero_hero_phone_y",
+            "label": "On a phone: top to bottom",
+            "name": "hero_phone_y",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "0 is the top edge, 100 the bottom.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    },
+                    {
+                        "field": "field_tvbc_hero_hero_phone_focus",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "prepend": "",
+            "append": "%"
+        },
+        {
             "key": "field_tvbc_hero_hero_tag",
             "label": "Small label in the pill",
             "name": "hero_tag",
@@ -295,7 +391,17 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [],
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "featured_image",
+        "send-trackbacks",
+        "custom_fields"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
