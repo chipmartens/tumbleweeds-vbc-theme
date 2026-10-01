@@ -499,11 +499,11 @@ html.scrolled .site-header {
 	top: 0;
 }
 /* Logged-in editors: sit below the WordPress admin bar */
-body.admin-bar { --adminbar-h: var(--space-32); }
-@media screen and (max-width: 782px) { body.admin-bar { --adminbar-h: var(--space-48); } }
-.admin-bar .site-header { top: var(--adminbar-h); }
-.admin-bar.has-announcement .site-header { top: calc(var(--ann-h) + var(--adminbar-h)); }
-html.scrolled .admin-bar .site-header { top: var(--adminbar-h); }
+body.admin-bar, body:has(#wpadminbar) { --adminbar-h: var(--space-32); }
+@media screen and (max-width: 782px) { body.admin-bar, body:has(#wpadminbar) { --adminbar-h: var(--space-48); } }
+body:has(#wpadminbar) .site-header { top: var(--adminbar-h); }
+body.has-announcement:has(#wpadminbar) .site-header { top: calc(var(--ann-h) + var(--adminbar-h)); }
+html.scrolled body:has(#wpadminbar) .site-header { top: var(--adminbar-h); }
 
 .site-logo {
 	align-items: center;
