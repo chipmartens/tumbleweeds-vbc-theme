@@ -17,6 +17,8 @@ for slug in ("pat-hennelly", "iuliia-pakhomenko"):
     if not src.exists():
         print("missing", src); continue
     im = Image.open(src).convert("RGBA")
+    if slug == "pat-hennelly":  # crop above the WolfPack collar text; flat bottom sits on the panel edge
+        im = im.crop((0, 0, im.width, int(im.height * 0.76)))
     im.thumbnail((900, 900))
     im.save(root / f"assets/img/people/{slug}.png", optimize=True)
 (root / "tokens").mkdir(exist_ok=True)

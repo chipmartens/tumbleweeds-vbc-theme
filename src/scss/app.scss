@@ -201,6 +201,10 @@ html.nav-open .site-header__nav { display: block; }
 .hero__photo { position: relative; align-self: end; justify-self: center; width: min(100%, calc(var(--max-width) * .46)); }
 .hero__img { width: 100%; height: auto; }
 @media (min-width: 900px) {
+  .hero--home .hero__photo { position: absolute; right: var(--gutter); bottom: 0; width: min(60vw, calc(var(--max-width) * .6)); }
+  .hero--home .hero__img { width: 100%; height: auto; }
+}
+@media (min-width: 900px) {
   .hero--home .hero__inner { grid-template-columns: 1.15fr .85fr; align-items: end; }
   .hero--home .hero__copy { padding-bottom: var(--section-pad); }
   .hero--home .hero__photo { justify-self: end; }
@@ -253,7 +257,7 @@ html.nav-open .site-header__nav { display: block; }
 .person__photo { position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--pine-700); border-radius: var(--radius-md); margin-bottom: var(--space-5);
   .person__pattern { color: var(--pine-500); width: 120%; left: -10%; top: 4%; }
 }
-.person__img { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: auto; max-height: 96%; object-fit: contain; object-position: center bottom; }
+.person__img { position: absolute; left: -15%; bottom: 0; width: 130%; max-width: none; height: auto; }
 .person--empty .person__photo { &::after { content: '[Photo TBC]'; position: absolute; left: var(--space-4); bottom: var(--space-4); @include text(eyebrow); color: var(--sage-300); } .person__pattern { width: 90%; left: 5%; top: 5%; } }
 .person__name { @include text(h3); font-size: var(--step-xl); }
 .person__role { @include text(body); font-weight: 600; margin-top: var(--space-1); }
@@ -319,7 +323,7 @@ html.nav-open .site-header__nav { display: block; }
 /* Coach page */
 .bio { display: grid; gap: var(--space-7); }
 .bio__photo { position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--pine-700); border-radius: var(--radius-md); .bio__pattern { color: var(--pine-500); width: 120%; left: -10%; top: 4%; } }
-.bio__img { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: auto; max-height: 96%; object-fit: contain; object-position: center bottom; }
+.bio__img { position: absolute; left: -15%; bottom: 0; width: 130%; max-width: none; height: auto; }
 @media (min-width: 900px) { .bio { grid-template-columns: 4fr 7fr; gap: var(--space-8); } }
 
 /* Footer */

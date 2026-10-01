@@ -67,39 +67,12 @@
       }
     },
     {
-      "slug": "coach-1",
-      "title": "[Coach name TBC]",
+      "slug": "coach-list",
+      "title": "[Coach list TBC]",
       "menu_order": 10,
       "fields": {
-        "role": "[Head coach, age group TBC]",
-        "summary": "[Coach bio TBC]"
-      }
-    },
-    {
-      "slug": "coach-2",
-      "title": "[Coach name TBC]",
-      "menu_order": 11,
-      "fields": {
-        "role": "[Head coach, age group TBC]",
-        "summary": "[Coach bio TBC]"
-      }
-    },
-    {
-      "slug": "coach-3",
-      "title": "[Coach name TBC]",
-      "menu_order": 12,
-      "fields": {
-        "role": "[Head coach, age group TBC]",
-        "summary": "[Coach bio TBC]"
-      }
-    },
-    {
-      "slug": "coach-4",
-      "title": "[Coach name TBC]",
-      "menu_order": 13,
-      "fields": {
-        "role": "[Head coach, age group TBC]",
-        "summary": "[Coach bio TBC]"
+        "role": "Every team's coach, with their background, will be named here before tryouts.",
+        "summary": ""
       }
     }
   ],
@@ -276,53 +249,32 @@
       },
       "flex": [
         {
-          "acf_fc_layout": "cards",
+          "acf_fc_layout": "fact_table",
           "bg": "light",
-          "columns": "3",
           "eyebrow": "Age groups",
-          "heading": "Age groups, as they are confirmed.",
-          "items": [
+          "heading": "Which teams run this season",
+          "rows": [
+            {
+              "label": "Age groups",
+              "value": "[Age groups TBC]",
+              "note": "Volleyball BC runs club teams from 12U to 18U."
+            },
             {
               "label": "12U",
-              "title": "[12U team offered: TBC]",
-              "text": "Ask us at the info session.",
-              "flag": "Open question"
+              "value": "[12U team offered: TBC]",
+              "note": "Open question. Ask us at the info session."
             },
             {
-              "label": "13U",
-              "title": "[Girls or boys: TBC]",
-              "text": "Practice nights: [TBC]\nCoach: [Coach TBC]",
-              "flag": "Not confirmed yet"
+              "label": "Girls and boys",
+              "value": "[TBC for each age group]"
             },
             {
-              "label": "14U",
-              "title": "[Girls or boys: TBC]",
-              "text": "Practice nights: [TBC]\nCoach: [Coach TBC]",
-              "flag": "Not confirmed yet"
+              "label": "Practice nights",
+              "value": "[TBC for each age group]"
             },
             {
-              "label": "15U",
-              "title": "[Girls or boys: TBC]",
-              "text": "Practice nights: [TBC]\nCoach: [Coach TBC]",
-              "flag": "Not confirmed yet"
-            },
-            {
-              "label": "16U",
-              "title": "[Girls or boys: TBC]",
-              "text": "Practice nights: [TBC]\nCoach: [Coach TBC]",
-              "flag": "Not confirmed yet"
-            },
-            {
-              "label": "17U",
-              "title": "[Girls or boys: TBC]",
-              "text": "Practice nights: [TBC]\nCoach: [Coach TBC]",
-              "flag": "Not confirmed yet"
-            },
-            {
-              "label": "18U",
-              "title": "[Girls or boys: TBC]",
-              "text": "Practice nights: [TBC]\nCoach: [Coach TBC]",
-              "flag": "Not confirmed yet"
+              "label": "Coaches",
+              "value": "[Coach list TBC]"
             }
           ]
         },
