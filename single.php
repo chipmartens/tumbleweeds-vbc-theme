@@ -26,7 +26,7 @@ get_header(); ?>
 
 				<div class="article__meta fade-up">
 					<span class="article__date"><?php echo esc_html( get_the_date( 'M j, Y' ) ); ?></span>
-					<p class="section__eyebrow"><b><?php echo esc_html( numbered_sections() ); ?></b><?php esc_html_e( 'News', 'tvbc' ); ?></p>
+					<p class="section__eyebrow"><b><?php echo esc_html( numbered_sections() ); ?></b><?php echo esc_html( tvbc_label( 'label_news', 'News' ) ); ?></p>
 					<a class="link" href="<?php echo esc_url( $list_url ); ?>"><?php echo esc_html( tvbc_ui( 'all_news' ) ); ?> <?php echo tvbc_icon( 'arrow' ); // phpcs:ignore ?></a>
 				</div>
 
@@ -41,7 +41,7 @@ get_header(); ?>
 		<section class="pager-section surface">
 			<div class="container-2xl">
 				<div class="pager fade-up">
-					<a class="pager__link" href="<?php echo esc_url( $list_url ); ?>"><span><span class="pager__label"><?php esc_html_e( 'News', 'tvbc' ); ?></span><strong class="pager__title"><?php echo esc_html( tvbc_ui( 'all_news' ) ); ?></strong></span><?php echo tvbc_icon( 'arrow' ); // phpcs:ignore ?></a>
+					<a class="pager__link" href="<?php echo esc_url( $list_url ); ?>"><span><span class="pager__label"><?php echo esc_html( tvbc_label( 'label_news', 'News' ) ); ?></span><strong class="pager__title"><?php echo esc_html( tvbc_ui( 'all_news' ) ); ?></strong></span><?php echo tvbc_icon( 'arrow' ); // phpcs:ignore ?></a>
 					<?php if ( $next_id && $next_id !== $post_id ) : ?>
 					<a class="pager__link" href="<?php echo esc_url( get_permalink( $next_id ) ); ?>"><span><span class="pager__label"><?php echo esc_html( tvbc_ui( 'next' ) ); ?></span><strong class="pager__title"><?php echo esc_html( get_the_title( $next_id ) ); ?></strong></span><?php echo tvbc_icon( 'arrow' ); // phpcs:ignore ?></a>
 					<?php endif; ?>

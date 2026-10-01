@@ -49,28 +49,6 @@ function extra_body_classes( $classes ) {
 	return $classes;
 }
 
-// Meta description from what the editor already wrote: hero intro, coach summary or post excerpt
-add_action( 'wp_head', 'tvbc_meta_description', 5 );
-function tvbc_meta_description() {
-	if ( ! function_exists( 'get_field' ) ) {
-		return;
-	}
-	$id = tvbc_context_id();
-	if ( is_singular( 'coach' ) ) {
-		$d = get_field( 'coach_summary', $id );
-	} elseif ( is_singular( 'post' ) ) {
-		$d = get_the_excerpt( $id );
-	} elseif ( $id ) {
-		$d = get_field( 'hero_subhead', $id );
-	} else {
-		$d = '';
-	}
-	$d = $d ? $d : get_bloginfo( 'description' );
-	if ( $d ) {
-		echo '<meta name="description" content="' . esc_attr( wp_strip_all_tags( $d ) ) . '">' . "\n";
-	}
-}
-
 // Straight quotes everywhere, so editor-typed text in a WYSIWYG box looks the same as text in a plain box
 add_filter( 'run_wptexturize', '__return_false' );
 
@@ -307,19 +285,9 @@ function tvbc_mark( $reverse = false, $class = '', $size = 40 ) {
 		$src   = $custom['url'];
 		$class = trim( $class . ( $reverse ? ' is-tinted' : '' ) );
 	} else {
-		$src = tvbc_theme_img( $reverse ? 'tumbleweeds-mark-reverse.svg' : 'tumbleweeds-mark.svg' );
+		$src = tvbc_theme_img( $reverse ? 'tumbleweeds-official-mark-reverse.svg' : 'tumbleweeds-official-mark.svg' );
 	}
 	return '<img' . ( $class ? ' class="' . esc_attr( $class ) . '"' : '' ) . ' src="' . esc_url( $src ) . '" alt="" width="' . (int) $size . '" height="' . (int) $size . '">';
-}
-
-// Browser tab icon: the one set in Club settings, else the Site Icon from the Customizer, else the club mark
-function tvbc_favicon() {
-	$fav = function_exists( 'tvbc_opt' ) ? tvbc_opt( 'favicon' ) : '';
-	if ( ! empty( $fav['url'] ) ) {
-		echo '<link rel="icon" href="' . esc_url( $fav['url'] ) . '">' . "\n";
-	} elseif ( ! has_site_icon() ) {
-		echo '<link rel="icon" type="image/svg+xml" href="' . esc_url( tvbc_theme_img( 'tumbleweeds-mark.svg' ) ) . '">' . "\n";
-	}
 }
 
 // ACF link array to a button: <a class="btn btn--style">Label</a>. '' when the link is empty.

@@ -18,6 +18,10 @@ You do not need to know code. Everything on the site is a box you fill in.
 | Add a coach | Coaches, Add New |
 | Write a news post | Posts, Add New. Set a Featured image and a short Excerpt. |
 | Change the menu links | Appearance, Menus |
+| Turn on Google Analytics | Club settings, tab Sharing and analytics, paste the G- measurement ID. Empty means no tracking. |
+| Send registration buttons to TeamSnap or Volleyball BC | Club settings, tab Registration, paste the link |
+| Change the footer headings or the word News | Club settings, tabs Footer and Other wording |
+| Change a page's Google title and description | The Yoast SEO box at the bottom of the page |
 | Mark something "Coming soon" | In any fact row, write Coming soon in Status tag. Clear it when the answer is ready. |
 
 ## Good to know

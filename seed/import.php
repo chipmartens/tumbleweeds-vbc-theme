@@ -62,7 +62,8 @@ foreach ( $data['pages'] as $p ) {
 	$page_ids[ $p['slug'] ] = $upsert( 'page', $p['slug'], array( 'post_title' => $p['title'], 'post_content' => '' ) );
 }
 
-$resolve = function ( $v, $k = '' ) use ( &$resolve, &$img, &$page_ids, $home ) {
+$form_codes = array();
+$resolve = function ( $v, $k = '' ) use ( &$resolve, &$img, &$page_ids, &$form_codes, $home ) {
 	if ( is_array( $v ) ) {
 		$o = array();
 		foreach ( $v as $kk => $vv ) {
@@ -77,6 +78,9 @@ $resolve = function ( $v, $k = '' ) use ( &$resolve, &$img, &$page_ids, $home ) 
 	if ( is_string( $v ) ) {
 		if ( 0 === strpos( $v, '@img:' ) ) {
 			return $img[ substr( $v, 5 ) ] ?? 0;
+		}
+		if ( 0 === strpos( $v, '@form:' ) ) {
+			return $form_codes[ substr( $v, 6 ) ] ?? '';
 		}
 		if ( 0 === strpos( $v, '@page:' ) ) {
 			return $page_ids[ substr( $v, 6 ) ] ?? 0;
@@ -100,8 +104,34 @@ $prefix = function ( $kind, $name ) {
 	return 'field_tvbc_news_';
 };
 
+/* 2b. Contact Form 7 forms (only when the plugin is active). Club settings holds each form's shortcode. */
+if ( class_exists( 'WPCF7_ContactForm' ) ) {
+	foreach ( $data['forms'] as $key => $spec ) {
+		$found = get_posts( array( 'post_type' => 'wpcf7_contact_form', 'title' => $spec['title'], 'post_status' => 'any', 'posts_per_page' => 1, 'fields' => 'ids' ) );
+		$cf    = $found ? wpcf7_contact_form( $found[0] ) : WPCF7_ContactForm::get_template( array( 'title' => $spec['title'], 'locale' => 'en_US' ) );
+		$mail  = array_merge( $cf->prop( 'mail' ), array(
+			'subject'            => $spec['subject'],
+			'sender'             => 'Tumbleweeds website <wordpress@tumbleweedsvolleyball.com>',
+			'recipient'          => $spec['to'],
+			'body'               => $spec['body'],
+			'additional_headers' => 'Reply-To: [your-email]',
+		) );
+		$cf->set_properties( array( 'form' => $spec['form'], 'mail' => $mail ) );
+		$cf->save();
+		$form_codes[ $key ] = $cf->shortcode();
+		$say( "form: $key -> " . $form_codes[ $key ] );
+	}
+}
+$set_seo = function ( $id, $seo ) {
+	if ( $seo ) {
+		update_post_meta( $id, '_yoast_wpseo_title', $seo['title'] );
+		update_post_meta( $id, '_yoast_wpseo_metadesc', $seo['desc'] );
+	}
+};
+
 foreach ( $data['pages'] as $p ) {
 	$id = $page_ids[ $p['slug'] ];
+	$set_seo( $id, $p['seo'] ?? null );
 	foreach ( $resolve( $p['hero'] ) as $name => $val ) {
 		update_field( $prefix( 'page', $name ) . $name, $val, $id );
 	}
@@ -121,6 +151,7 @@ $coach_ids = array();
 foreach ( $data['coaches'] as $c ) {
 	$id = $upsert( 'coach', $c['slug'], array( 'post_title' => $c['title'], 'menu_order' => $c['menu_order'] ) );
 	$coach_ids[ $c['slug'] ] = $id;
+	$set_seo( $id, $c['seo'] ?? null );
 	foreach ( $resolve( $c['fields'] ) as $name => $val ) {
 		update_field( $prefix( 'coach', $name ) . $name, $val, $id );
 	}
@@ -131,12 +162,13 @@ foreach ( $data['coaches'] as $c ) {
 foreach ( $data['posts'] as $po ) {
 	$id = $upsert( 'post', $po['slug'], array( 'post_title' => $po['title'], 'post_content' => $po['content'], 'post_excerpt' => $po['excerpt'], 'post_date' => $po['date'], 'post_date_gmt' => get_gmt_from_date( $po['date'] ) ) );
 	set_post_thumbnail( $id, $img[ $po['thumb'] ] );
+	$set_seo( $id, $po['seo'] ?? null );
 	foreach ( $resolve( $po['fields'] ) as $name => $val ) {
 		update_field( $prefix( 'post', $name ) . $name, $val, $id );
 	}
 	$say( "post: {$po['slug']} -> $id" );
 }
-foreach ( array( 'hello-world' => 'post', 'sample-page' => 'page', 'privacy-policy' => 'page' ) as $slug => $type ) {
+foreach ( array( 'hello-world' => 'post', 'sample-page' => 'page' ) as $slug => $type ) {
 	foreach ( get_posts( array( 'post_type' => $type, 'name' => $slug, 'post_status' => 'any', 'posts_per_page' => 1, 'fields' => 'ids' ) ) as $del ) {
 		wp_delete_post( $del, true );
 	}
@@ -147,6 +179,25 @@ foreach ( $resolve( $data['settings'] ) as $name => $val ) {
 	update_field( 'field_tvbc_set_' . $name, $val, 'option' );
 }
 $say( 'settings -> Club settings' );
+
+/* 5b. Privacy policy page (WordPress Settings, Privacy points at it; the footer link uses that) and Yoast SEO defaults */
+if ( isset( $page_ids['privacy-policy'] ) ) {
+	update_option( 'wp_page_for_privacy_policy', $page_ids['privacy-policy'] );
+}
+if ( class_exists( 'WPSEO_Options' ) ) {
+	WPSEO_Options::set( 'company_or_person', 'company' );
+	WPSEO_Options::set( 'company_name', 'Tumbleweeds Volleyball Club' );
+	WPSEO_Options::set( 'website_name', 'Tumbleweeds Volleyball Club' );
+	WPSEO_Options::set( 'opengraph', true );
+	WPSEO_Options::set( 'twitter', true );
+	if ( ! empty( $img['og'] ) ) {
+		WPSEO_Options::set( 'og_default_image', wp_get_attachment_url( $img['og'] ) );
+		WPSEO_Options::set( 'og_default_image_id', $img['og'] );
+	}
+	WPSEO_Options::set( 'show_onboarding_notice', false );
+	WPSEO_Options::set( 'dismiss_configuration_workout_notice', true );
+	$say( 'Yoast SEO defaults set' );
+}
 
 /* 6. Menus: Header Menu and Footer Menu (Appearance, Menus) */
 $make_menu = function ( $name, $items ) use ( $page_ids ) {

@@ -5,7 +5,7 @@ Object: Header (header.php)
 Text Domain: tvbc
 */
 $ann       = tvbc_announcement();
-$cta_link  = tvbc_opt( 'header_cta' );
+$cta_link  = tvbc_or_registration( tvbc_opt( 'header_cta' ), tvbc_opt( 'header_register' ) );
 $logo_text = tvbc_opt( 'logo_text' ) ?: 'Tumbleweeds';
 $extra     = tvbc_opt( 'phone_menu_link' );
 $extra_li  = ( ! empty( $extra['url'] ) ) ? '<li class="menu-item menu-item--extra"><a href="' . esc_url( $extra['url'] ) . '">' . esc_html( $extra['title'] ) . '</a></li>' : '';
@@ -23,7 +23,7 @@ $extra_li  = ( ! empty( $extra['url'] ) ) ? '<li class="menu-item menu-item--ext
 
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Figtree:wght@300;400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Figtree:wght@300;400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
 
 	<script>
 		document.documentElement.className = document.documentElement.className.replace("no-js", "js");

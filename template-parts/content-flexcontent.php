@@ -83,7 +83,7 @@ if( have_rows('flex_content', $flex_post_id) ):
 						<div class="card__media"><?php section_image( 'sheet-sm', $card['card_image'], 'card__image', false, true ); ?></div>
 						<?php endif; ?>
 						<div class="card__body">
-							<?php if ( $show_numbers ) : ?><span class="card__num"><?php echo esc_html( sprintf( '%02d', $ci + 1 ) ); ?></span><?php endif; ?>
+							<?php if ( $show_numbers ) : ?><span class="card__num" aria-hidden="true"><?php echo esc_html( sprintf( '%02d', $ci + 1 ) ); ?></span><?php endif; ?>
 							<h3 class="card__title"><?php echo esc_html( $card['card_title'] ); ?></h3>
 							<?php if ( $card['card_text'] ) : ?><p class="card__text"><?php echo esc_html( $card['card_text'] ); ?></p><?php endif; ?>
 							<?php if ( 'tag' === $foot && $card['card_foot_tag'] ) : ?>
@@ -111,7 +111,7 @@ if( have_rows('flex_content', $flex_post_id) ):
 		?>
 
 		<?php if ( $strip_photos ) : ?>
-		<section id="<?php section_id($i); ?>" class="strip<?php is_last_row($i,$total_rows); ?>" aria-label="<?php esc_attr_e( 'Photos', 'tvbc' ); ?>">
+		<section id="<?php section_id($i); ?>" class="strip<?php is_last_row($i,$total_rows); ?>" role="group" tabindex="0" aria-label="<?php esc_attr_e( 'Photos', 'tvbc' ); ?>">
 
 			<?php foreach ( $strip_photos as $photo ) : ?>
 			<figure class="strip__item fade-up">
@@ -190,7 +190,7 @@ if( have_rows('flex_content', $flex_post_id) ):
 				<?php section_head(); ?>
 
 				<?php if ( $events ) : ?>
-				<div class="events__list">
+				<div class="events__list<?php echo ( 'gameday' === get_sub_field( 'events_display' ) ) ? ' events__list--gameday' : ''; ?>">
 					<?php foreach ( $events as $ev ) :
 						if ( 'info_session' === $ev['event_kind'] ) {
 							if ( ! $info ) { continue; }
@@ -281,7 +281,7 @@ if( have_rows('flex_content', $flex_post_id) ):
 						<p class="section__eyebrow"><?php echo $cta_num ? '<b>' . esc_html( $cta_num ) . '</b>' : ''; ?><?php echo esc_html( get_sub_field( 'section_eyebrow' ) ); ?></p>
 						<h2 class="cta__title"><?php echo esc_html( get_sub_field( 'section_heading' ) ); ?></h2>
 						<?php if ( get_sub_field( 'section_lede' ) ) : ?>
-						<p class="section__subhead"><?php echo esc_html( get_sub_field( 'section_lede' ) ); ?> <?php echo tvbc_tag( get_sub_field( 'cta_tag' ) ); // phpcs:ignore ?></p>
+						<p class="section__subhead"><?php echo esc_html( get_sub_field( 'section_lede' ) ); ?> <?php echo ( get_sub_field( 'cta_use_registration' ) && tvbc_registration() ) ? '' : tvbc_tag( get_sub_field( 'cta_tag' ) ); // phpcs:ignore ?></p>
 						<?php endif; ?>
 					</div>
 					<?php section_cta( 'btn--dark' ); ?>
@@ -410,6 +410,7 @@ if( have_rows('flex_content', $flex_post_id) ):
 		elseif (get_row_layout() == 'section_contact'):
 			$topics = get_sub_field( 'form_topics' );
 			$mail   = tvbc_opt( 'contact_email' );
+			$cf7    = tvbc_form( tvbc_opt( 'contact_form' ) );
 		?>
 
 		<section id="<?php section_id($i); ?>" class="contact surface<?php section_bg_color(); is_last_row($i,$total_rows); ?>">
@@ -422,6 +423,10 @@ if( have_rows('flex_content', $flex_post_id) ):
 				</div>
 
 				<div class="contact__panel fade-up">
+					<?php if ( $cf7 ) : ?>
+					<h3 class="form__title"><?php echo esc_html( get_sub_field( 'form_heading' ) ); ?></h3>
+					<?php echo $cf7; // phpcs:ignore -- Contact Form 7 output, set up under Contact, Contact Forms ?>
+					<?php else : ?>
 					<!-- No form plugin: submit opens the visitor's email app with the message filled in. -->
 					<form class="form" data-mailto-form data-mailto="<?php echo esc_attr( $mail ); ?>" action="mailto:<?php echo esc_attr( $mail ); ?>" method="post" enctype="text/plain">
 						<h3 class="form__title"><?php echo esc_html( get_sub_field( 'form_heading' ) ); ?></h3>
@@ -438,7 +443,26 @@ if( have_rows('flex_content', $flex_post_id) ):
 						<button class="btn btn--dark" type="submit"><?php echo esc_html( tvbc_ui( 'form_send' ) ); ?></button>
 						<?php if ( get_sub_field( 'form_note' ) ) : ?><p class="form__note"><?php echo esc_html( get_sub_field( 'form_note' ) ); ?></p><?php endif; ?>
 					</form>
+					<?php endif; ?>
 				</div>
+
+			</div>
+
+		</section>
+
+		<?php
+
+		// Layout for "Section Text" layout type (plain written page, for example the privacy policy)
+		elseif (get_row_layout() == 'section_text'):
+		?>
+
+		<section id="<?php section_id($i); ?>" class="textpage surface<?php section_bg_color(); is_last_row($i,$total_rows); ?>">
+
+			<div class="container-2xl">
+
+				<?php section_head(); ?>
+
+				<div class="textpage__body content fade-up"><?php echo get_sub_field( 'section_text' ); // phpcs:ignore -- WYSIWYG, filtered by WordPress on save ?></div>
 
 			</div>
 

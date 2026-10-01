@@ -9,7 +9,7 @@ npm run build        # sass -> assets/css/app.min.css (+ map), webpack -> dist/j
 npx @wp-playground/cli@latest server --blueprint seed/blueprint.json \
   --mount "$(pwd)":/wordpress/wp-content/themes/tumbleweeds-vbc --port 9400 --login
 ```
-Open http://127.0.0.1:9400 (admin: `admin` / `password`, Playground's default). The blueprint installs Secure Custom Fields and Classic Editor, activates the theme, and runs `seed/import.php`, which rebuilds all 13 pages of v2 (home, coaches, 2 coach bios, programs, tryouts, fees, for parents, sponsors, news, 2 news posts, contact) plus Club settings and both menus. The import is re-runnable: pages, coaches, posts and images are matched by slug.
+Open http://127.0.0.1:9400 (admin: `admin` / `password`, Playground's default). The blueprint installs Secure Custom Fields, Classic Editor, Contact Form 7 and Yoast SEO, activates the theme, and runs `seed/import.php`, which rebuilds all 13 pages of v2 plus a draft privacy policy, the contact and sign-up forms, search titles and descriptions (home, coaches, 2 coach bios, programs, tryouts, fees, for parents, sponsors, news, 2 news posts, contact) plus Club settings and both menus. The import is re-runnable: pages, coaches, posts and images are matched by slug.
 
 On a real WordPress: activate the theme, accept the TGMPA prompt (Secure Custom Fields from wordpress.org, or ACF Pro if you own it, in which case nothing is installed), then `wp eval-file wp-content/themes/<theme>/seed/import.php`. The import refuses nothing and overwrites seeded content, so run it on a fresh site only.
 
@@ -36,6 +36,9 @@ Nothing is typed into a template. Where a box needs one extra word of choice (Ki
 ## Words and facts
 No em dashes. The award is always "2024 U Sports Men's Volleyball Coach of the Year". No TRU or WolfPack logos. Unconfirmed facts are a status tag (Coming soon), never an invented number. Placeholder photography is Unsplash until club photo day.
 
+## Launching
+[`docs/launch-guide.md`](docs/launch-guide.md) (and `launch-guide.pdf`): host, theme zip, plugins, seed, DNS from Squarespace, SSL, backups, checklist. Brand assets (share picture, favicons) are made by `node tools/make_brand_assets.js`; the accessibility check is `node tools/axe.js <url>`.
+
 ## Not included on purpose
 - No ACF Pro zip (public repository). Secure Custom Fields is the tested path.
-- No Gravity Forms. The contact form and footer sign-up open the visitor's email app (as v2 does). The footer takes an embed code from Club settings when the club picks a mail service.
+- No Gravity Forms (paid). Forms use Contact Form 7. Without the plugin, the contact form and sign-up fall back to opening the visitor's email app (as v2 does). The footer also takes a Mailchimp or Flodesk embed code from Club settings.

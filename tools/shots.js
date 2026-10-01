@@ -9,7 +9,7 @@ const out = process.argv[3] || '_qa/wp';
 const only = process.argv.slice(4);
 // WordPress keeps news posts at /<slug>/ (permalinks /%postname%/); the static v2 keeps them under /news/<slug>/. POSTBASE='' for WordPress.
 const postBase = process.env.POSTBASE === undefined ? 'news/' : process.env.POSTBASE;
-const pages = { home: '', coaches: 'our-coaches/', pat: 'coaches/pat-hennelly/', iuliia: 'coaches/iuliia-pakhomenko/', programs: 'programs/', tryouts: 'tryouts/', fees: 'fees-and-registration/', parents: 'for-parents/', sponsors: 'sponsors/', news: 'news/', 'news-post': postBase + 'what-we-will-publish-before-tryouts/', 'news-post2': postBase + 'info-session/', contact: 'contact/', e404: 'zzz-not-here/' };
+const pages = { home: '', coaches: 'our-coaches/', pat: 'coaches/pat-hennelly/', iuliia: 'coaches/iuliia-pakhomenko/', programs: 'programs/', tryouts: 'tryouts/', fees: 'fees-and-registration/', parents: 'for-parents/', sponsors: 'sponsors/', news: 'news/', 'news-post': postBase + 'what-we-will-publish-before-tryouts/', 'news-post2': postBase + 'info-session/', contact: 'contact/', privacy: 'privacy-policy/', e404: 'zzz-not-here/' };
 const chrome = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 (async () => {
   fs.mkdirSync(out, { recursive: true });

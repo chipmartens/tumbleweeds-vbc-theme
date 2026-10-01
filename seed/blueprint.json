@@ -5,6 +5,8 @@
   "steps": [
     { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "secure-custom-fields" }, "options": { "activate": true } },
     { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "classic-editor" }, "options": { "activate": true } },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "contact-form-7" }, "options": { "activate": true } },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "wordpress-seo" }, "options": { "activate": true } },
     { "step": "activateTheme", "themeFolderName": "tumbleweeds-vbc" },
     { "step": "runPHP", "code": "<?php require_once '/wordpress/wp-load.php'; $GLOBALS['argv']=[]; include '/wordpress/wp-content/themes/tumbleweeds-vbc/seed/import.php';" }
   ]

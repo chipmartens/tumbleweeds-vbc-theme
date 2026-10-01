@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "axe-core": "^4.13.0",
     "browser-sync": "^2.27.11",
     "dotenv": "^16.4.5",
     "gulp-autoprefixer": "^8.0.0",

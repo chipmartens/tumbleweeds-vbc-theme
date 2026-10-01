@@ -57,7 +57,7 @@ get_header(); ?>
 		<section class="pager-section surface">
 			<div class="container-2xl">
 				<div class="pager fade-up">
-					<a class="pager__link" href="<?php echo esc_url( $list_url ); ?>"><span><span class="pager__label"><?php esc_html_e( 'The club', 'tvbc' ); ?></span><strong class="pager__title"><?php echo esc_html( tvbc_ui( 'all_coaches' ) ); ?></strong></span><?php echo tvbc_icon( 'arrow' ); // phpcs:ignore ?></a>
+					<a class="pager__link" href="<?php echo esc_url( $list_url ); ?>"><span><span class="pager__label"><?php echo esc_html( tvbc_label( 'label_club', 'The club' ) ); ?></span><strong class="pager__title"><?php echo esc_html( tvbc_ui( 'all_coaches' ) ); ?></strong></span><?php echo tvbc_icon( 'arrow' ); // phpcs:ignore ?></a>
 					<?php if ( $next_id && $next_id !== $coach_id ) : ?>
 					<a class="pager__link" href="<?php echo esc_url( get_permalink( $next_id ) ); ?>"><span><span class="pager__label"><?php echo esc_html( tvbc_ui( 'next' ) ); ?></span><strong class="pager__title"><?php echo esc_html( get_the_title( $next_id ) ); ?></strong></span><?php echo tvbc_icon( 'arrow' ); // phpcs:ignore ?></a>
 					<?php endif; ?>

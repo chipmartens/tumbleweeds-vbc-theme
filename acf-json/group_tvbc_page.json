@@ -1272,6 +1272,32 @@
                             "placeholder": ""
                         },
                         {
+                            "key": "field_tvbc_section_events_events_display",
+                            "label": "Display",
+                            "name": "events_display",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Pick how the dates look.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "rows": "Plain rows",
+                                "gameday": "Game-day bars (dark rounded cards with big dates)"
+                            },
+                            "default_value": "rows",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_tvbc_section_events_events",
                             "label": "Dates and events",
                             "name": "events",
@@ -2123,6 +2149,26 @@
                                 "id": ""
                             },
                             "return_format": "array"
+                        },
+                        {
+                            "key": "field_tvbc_section_cta_cta_use_registration",
+                            "label": "Button is the registration button",
+                            "name": "cta_use_registration",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Switch on to send this button to the registration link set in Club settings, tab Registration. Until that link is filled in, the button above is used.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Yes",
+                            "ui_off_text": "No"
                         }
                     ],
                     "min": "",
@@ -3493,7 +3539,7 @@
                             "name": "form_topics",
                             "aria-label": "",
                             "type": "repeater",
-                            "instructions": "The choices in the drop-down list.",
+                            "instructions": "The choices in the drop-down list of the simple form. The Contact Form 7 form has its own list, edited under Contact, Contact Forms.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -3537,7 +3583,7 @@
                             "name": "form_note",
                             "aria-label": "",
                             "type": "text",
-                            "instructions": "Optional. For example: This opens your email app with the message ready to send.",
+                            "instructions": "Optional. Shown under the simple form that opens the email app. The Contact Form 7 form (Club settings, Contact and social) shows its own messages.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -3550,6 +3596,144 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_tvbc_section_text": {
+                    "key": "layout_tvbc_section_text",
+                    "name": "section_text",
+                    "label": "Text page",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tvbc_section_text_section_anchor",
+                            "label": "Link name (optional)",
+                            "name": "section_anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "One lowercase word that links can point to. For example coming-up makes the link #coming-up. Leave empty if nothing links here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_tvbc_section_text_section_eyebrow",
+                            "label": "Small label above the heading",
+                            "name": "section_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "A few words, for example Fees. Optional.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_tvbc_section_text_section_heading",
+                            "label": "Heading",
+                            "name": "section_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "The big line of the section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_tvbc_section_text_section_heading_accent",
+                            "label": "Last words in italic (optional)",
+                            "name": "section_heading_accent",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Shown in the club's italic style at the end of the heading. Example: heading is Fundamentals, italic words are first. Leave empty for none.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_tvbc_section_text_section_bg_color",
+                            "label": "Background colour",
+                            "name": "section_bg_color",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "White paper is the normal look. Pick a colour only when you want this section to stand out.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "White paper",
+                                "sage": "Sage green",
+                                "sun": "Sun yellow",
+                                "sand": "Sand"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_tvbc_section_text_section_text",
+                            "label": "Text",
+                            "name": "section_text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "Write the page. Use the bold, italic, link and bullet buttons. Short paragraphs read best.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "minimal",
+                            "media_upload": 0,
+                            "delay": 0
                         }
                     ],
                     "min": "",

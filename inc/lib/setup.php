@@ -67,6 +67,16 @@ function register_required_plugins() {
 			'is_callable' => 'acf_add_local_field_group',
 		),
 		array(
+			'name'     => 'Contact Form 7',
+			'slug'     => 'contact-form-7',
+			'required' => false,
+		),
+		array(
+			'name'     => 'Yoast SEO',
+			'slug'     => 'wordpress-seo',
+			'required' => false,
+		),
+		array(
 			'name'     => 'Classic Editor',
 			'slug'     => 'classic-editor',
 			'required' => false,

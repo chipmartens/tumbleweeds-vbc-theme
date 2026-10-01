@@ -177,6 +177,7 @@ def layouts():
 
     def events(f):
         return head(f, side=True) + [
+            select(f, "events_display", "Display", "Pick how the dates look.", {"rows": "Plain rows", "gameday": "Game-day bars (dark rounded cards with big dates)"}, default="rows"),
             repeater(f, "events", "Dates and events", "One row for each thing that is coming up.", [
                 select(f, "event_kind", "Kind", "Pick what this row is.", {"info_session": "The info session (comes from Club settings)", "other": "Something else"}, default="other"),
                 text(f, "event_date", "Date or time", "For example Late Nov.", show_if=("event_kind", "==", "other")),
@@ -211,6 +212,7 @@ def layouts():
             area(f, "section_lede", "Text under the heading", "One or two sentences.", rows=3, show_if=("cta_style", "==", "highlight")),
             text(f, "cta_tag", "Status tag", "Optional. For example Coming soon.", show_if=("cta_style", "==", "highlight")),
             link(f, "section_cta", "Button", "Pick the page or paste a web address, then write the words on the button."),
+            toggle(f, "cta_use_registration", "Button is the registration button", "Switch on to send this button to the registration link set in Club settings, tab Registration. Until that link is filled in, the button above is used.", default=0),
         ]
     layout("section_cta", "Call to action", cta)
 
@@ -261,10 +263,13 @@ def layouts():
         return head(f, side=False, lede=True) + [
             repeater(f, "contact_rows", "Contact details", "One row for each detail. Email and web addresses turn into links by themselves.", fact_fields(f), "Add a detail", collapsed="fact_label"),
             text(f, "form_heading", "Form heading", "For example Send a message."),
-            repeater(f, "form_topics", "What the message can be about", "The choices in the drop-down list.", [text(f, "topic_text", "Topic", "For example Coaches.")], "Add a topic", layout="table"),
-            text(f, "form_note", "Small line under the button", "Optional. For example: This opens your email app with the message ready to send."),
+            repeater(f, "form_topics", "What the message can be about", "The choices in the drop-down list of the simple form. The Contact Form 7 form has its own list, edited under Contact, Contact Forms.", [text(f, "topic_text", "Topic", "For example Coaches.")], "Add a topic", layout="table"),
+            text(f, "form_note", "Small line under the button", "Optional. Shown under the simple form that opens the email app. The Contact Form 7 form (Club settings, Contact and social) shows its own messages."),
         ]
     layout("section_contact", "Contact details and form", contact)
+
+    layout("section_text", "Text page", lambda f: head(f, side=False, lede=False, number=False) + [
+        wysiwyg(f, "section_text", "Text", "Write the page. Use the bold, italic, link and bullet buttons. Short paragraphs read best.")])
 
     layout("section_news", "Latest news", lambda f: head(f, side=True) + [
         f("number", "news_count", "How many posts to show", "Newest first. Posts are written under Posts in the left menu.", default_value=12, min=1, max=50, step=1, placeholder="", prepend="", append="")])
@@ -315,6 +320,7 @@ def hero_group():
         text(f, "hero_heading_accent", "Last words in italic (optional)", "Shown in the club's italic style at the end of the heading. Example: heading is Programs by, italic words are age group.", show_if=cond),
         area(f, "hero_subhead", "Short text under the heading", "One or two sentences. Optional.", rows=3, show_if=cond),
         link(f, "hero_button_1", "Main button (white)", "Optional. Pick the page or paste a web address, then write the words on the button.", show_if=cond),
+        toggle(f, "hero_register", "Main button is the registration button", "Switch on to send the main button to the registration link set in Club settings, tab Registration. Until that link is filled in, the button above is used.", show_if=cond),
         link(f, "hero_button_2", "Second button (outline)", "Optional.", show_if=cond),
     ]
     # Pages are built from the fields, so the empty text editor and other unused boxes are hidden from volunteers
@@ -379,9 +385,14 @@ def settings_group():
         image(f, "logo_mark", "Logo (optional)", "Leave empty to use the club's tumbleweed mark. To change it, upload a one-colour logo with a transparent background (SVG or PNG)."),
         image(f, "favicon", "Tab icon (optional)", "The tiny icon in the browser tab. Leave empty to use the tumbleweed mark. A square PNG, at least 64 by 64."),
         link(f, "header_cta", "Yellow button in the menu", "Pick the page, then write the words on the button, for example Tryouts."),
+        toggle(f, "header_register", "Menu button is the registration button", "Switch on to send the yellow button to the registration link (tab Registration). Until that link is filled in, the button above is used."),
         link(f, "phone_menu_link", "Extra link on the phone menu only", "Optional. A page that shows in the full-screen menu on phones but not in the bar on a computer, for example News."),
         f("post_object", "coaches_page", "Page that lists the coaches", "So Coaches stays lit in the menu on a coach's page.", post_type=["page"], return_format="object", multiple=0, allow_null=1, ui=1),
         message(f, "menu_note", "The menu links", "The links in the menu and in the footer are set under <strong>Appearance, Menus</strong> (Header Menu and Footer Menu)."),
+
+        tab(f, "tab_registration", "Registration"),
+        f("url", "registration_url", "Registration link", "Where families register, for example the club's TeamSnap or Volleyball BC registration page. Leave empty until registration opens: the buttons switched on for registration then keep their normal link.", default_value="", placeholder="https://"),
+        text(f, "registration_label", "Words on the registration buttons", "For example Register now.", default_value="Register now"),
 
         tab(f, "tab_info", "Info session"),
         text(f, "info_title", "Name of the event", "For example Parent info session.", default_value="Parent info session"),
@@ -399,6 +410,7 @@ def settings_group():
         tab(f, "tab_contact", "Contact and social"),
         text(f, "contact_email", "Club email", "Where messages from the contact form go."),
         text(f, "club_location", "Town", "For example Kamloops, BC."),
+        text(f, "contact_form", "Contact form (shortcode or number)", "The form on the Contact page. In the left menu open Contact, Contact Forms, then copy the shortcode (looks like [contact-form-7 id=\"123\"]) or just the number. Leave empty to use the simple form that opens the visitor's email app."),
         link(f, "footer_contact_link", "Link to the contact page", "Pick the contact page, then write the words, for example Contact page."),
         repeater(f, "socials", "Social media", "One row for each account.", [
             select(f, "social_network", "Network", "Which site.", {"instagram": "Instagram", "facebook": "Facebook", "tiktok": "TikTok", "youtube": "YouTube"}, default="instagram"),
@@ -413,10 +425,26 @@ def settings_group():
 
         tab(f, "tab_footer", "Footer"),
         area(f, "footer_blurb", "Short line about the club", "Shown under the logo in the footer.", rows=2),
+        text(f, "footer_title_club", "Footer heading: club links", "Above the links from Appearance, Menus, Footer Menu.", default_value="The club", width="33"),
+        text(f, "footer_title_contact", "Footer heading: contact", "Above the email and social links.", default_value="Contact", width="33"),
+        text(f, "footer_title_help", "Footer heading: helpline", "Above the helpline details.", default_value="If something goes wrong", width="33"),
         text(f, "footer_signup_title", "Sign-up heading", "For example Stay in the loop."),
-        area(f, "footer_signup_code", "Sign-up form code (optional)", "If you have a sign-up form from your email service, paste its embed code here. Leave empty to use the simple form that opens the visitor's email app.", rows=4),
+        text(f, "footer_signup_form", "Sign-up form (shortcode or number)", "A Contact Form 7 form for the footer sign-up (Contact, Contact Forms). It emails the club each time someone signs up. Used when the embed code below is empty."),
+        area(f, "footer_signup_code", "Sign-up embed code from Mailchimp or Flodesk (optional)", "Paste the embed code from your email service. It replaces the sign-up form above. If both are empty, a simple form opens the visitor's email app.", rows=4),
         text(f, "footer_status_line", "Line after the copyright", "For example A Volleyball BC member club (new club), Zone 2 Thompson-Okanagan."),
         text(f, "footer_small_print", "Small print", "Optional. For example the photo credit."),
+        text(f, "footer_privacy_label", "Privacy policy link words", "The link next to the copyright. It goes to the page chosen under Settings, Privacy.", default_value="Privacy policy"),
+
+        tab(f, "tab_wording", "Other wording"),
+        message(f, "wording_note", "Small words used in a few places", "Leave these as they are unless the club wants different words."),
+        text(f, "label_news", "Name of the news section", "Shown above every news article and on its Next and Back links.", default_value="News"),
+        text(f, "label_club", "Name of the club section", "Shown on a coach's page on the link back to the coaches list.", default_value="The club"),
+        text(f, "label_complaints", "Words before the complaints contact", "Shown in the footer.", default_value="Club complaints contact"),
+
+        tab(f, "tab_seo", "Sharing and analytics"),
+        image(f, "social_image", "Sharing picture (optional)", "The picture that shows when a page is shared on Facebook, Instagram or in a message. 1200 by 630 pixels. Leave empty to use the club's own picture. The Yoast SEO plugin, when active, has its own setting under SEO, Settings, Social."),
+        text(f, "ga4_id", "Google Analytics measurement ID", "Looks like G-ABC123XYZ. Leave empty to run no analytics at all: nothing loads and nothing is tracked.", placeholder="G-"),
+        toggle(f, "ga4_cookies", "Allow analytics cookies", "Off (the default): Google Analytics runs without cookies and only counts visits. Switch on only if the club adds a cookie notice, then update the Privacy policy page."),
     ]
     return group("group_tvbc_settings", "Club Settings", fields, [[{"param": "options_page", "operator": "==", "value": "club-settings"}]], menu_order=0)
 

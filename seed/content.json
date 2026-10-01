@@ -4,21 +4,13 @@
    "file": "seed/img/tw-01-celebration-indoor-court.jpg",
    "alt": "Volleyball players celebrating a point on an indoor court"
   },
-  "tw-02": {
-   "file": "seed/img/tw-02-club-match-net-action.jpg",
-   "alt": "Club match at the net"
-  },
-  "tw-03": {
-   "file": "seed/img/tw-03-club-match-spike.jpg",
-   "alt": "Club match, attack and block at the net"
-  },
   "tw-04": {
    "file": "seed/img/tw-04-gym-spike-wide.jpg",
    "alt": "Players at the net in a large indoor gym"
   },
-  "tw-09": {
-   "file": "seed/img/tw-09-low-light-ready-position.jpg",
-   "alt": "Players in ready position"
+  "tw-09b": {
+   "file": "seed/img/tw-09b-ready-position-crop.jpg",
+   "alt": "Player in ready position"
   },
   "tw-10": {
    "file": "seed/img/tw-10-wood-court-sunbeam.jpg",
@@ -38,11 +30,15 @@
   },
   "tw-14": {
    "file": "seed/img/tw-14-net-texture-detail.jpg",
-   "alt": "Volleyball net close up"
+   "alt": "Volleyball net up close"
   },
   "tw-15": {
    "file": "seed/img/tw-15-silhouette-gym-ball.jpg",
-   "alt": "Player holding a volleyball in a dim gym"
+   "alt": "Player holding a ball in a gym"
+  },
+  "og": {
+   "file": "assets/img/tumbleweeds-social.jpg",
+   "alt": "Tumbleweeds Volleyball Club. Developing athletes from the ground up."
   },
   "pat": {
    "file": "seed/img/pat-hennelly-headshoulders.png",
@@ -100,7 +96,7 @@
      "cards": [
       {
        "card_colour": "sage",
-       "card_image": "@img:tw-03",
+       "card_image": "@img:tw-15",
        "card_title": "Who coaches your kid",
        "card_text": "Every team will have a named coach, posted with their background before tryouts. Pat Hennelly is our President. Iuliia Pakhomenko runs operations.",
        "card_foot": "tag",
@@ -164,7 +160,7 @@
      "acf_fc_layout": "section_strip",
      "strip_photos": [
       {
-       "strip_image": "@img:tw-02",
+       "strip_image": "@img:tw-14",
        "focus_x": 50,
        "focus_y": 50
       },
@@ -179,7 +175,7 @@
        "focus_y": 50
       },
       {
-       "strip_image": "@img:tw-09",
+       "strip_image": "@img:tw-09b",
        "focus_x": 55,
        "focus_y": 50
       }
@@ -240,7 +236,8 @@
         "url": "mailto:info@tumbleweedsvolleyball.com"
        }
       }
-     ]
+     ],
+     "events_display": "gameday"
     },
     {
      "acf_fc_layout": "section_faq",
@@ -307,7 +304,11 @@
       "url": "mailto:info@tumbleweedsvolleyball.com"
      }
     }
-   ]
+   ],
+   "seo": {
+    "title": "Tumbleweeds Volleyball Club | Kamloops youth volleyball",
+    "desc": "A new Kamloops youth volleyball club led by Pat Hennelly, 2024 U Sports Men's Volleyball Coach of the Year. Developing athletes from the ground up."
+   }
   },
   {
    "slug": "our-coaches",
@@ -437,7 +438,11 @@
       "url": "mailto:info@tumbleweedsvolleyball.com"
      }
     }
-   ]
+   ],
+   "seo": {
+    "title": "Our coaches | Tumbleweeds Volleyball Club",
+    "desc": "Who runs Tumbleweeds Volleyball Club in Kamloops, and who coaches. Team coaches are named before tryouts."
+   }
   },
   {
    "slug": "programs",
@@ -631,7 +636,11 @@
       "url": "mailto:info@tumbleweedsvolleyball.com"
      }
     }
-   ]
+   ],
+   "seo": {
+    "title": "Programs | Tumbleweeds Volleyball Club",
+    "desc": "Club volleyball programs by age group in Kamloops, built on fundamentals taught in a set order."
+   }
   },
   {
    "slug": "tryouts",
@@ -654,7 +663,8 @@
     "hero_button_2": {
      "title": "Meet the coaches",
      "url": "{home}our-coaches/"
-    }
+    },
+    "hero_register": 1
    },
    "flex": [
     {
@@ -705,7 +715,8 @@
        "event_side_tag": "Dates coming soon",
        "event_side_link": ""
       }
-     ]
+     ],
+     "events_display": "gameday"
     },
     {
      "acf_fc_layout": "section_facts",
@@ -798,7 +809,11 @@
       "url": "mailto:info@tumbleweedsvolleyball.com"
      }
     }
-   ]
+   ],
+   "seo": {
+    "title": "Tryouts | Tumbleweeds Volleyball Club",
+    "desc": "Tryout dates, location and what to bring for Tumbleweeds Volleyball Club, posted as the club confirms them."
+   }
   },
   {
    "slug": "fees-and-registration",
@@ -1062,7 +1077,8 @@
      "section_cta": {
       "title": "Email the club",
       "url": "mailto:info@tumbleweedsvolleyball.com"
-     }
+     },
+     "cta_use_registration": 1
     },
     {
      "acf_fc_layout": "section_band",
@@ -1079,7 +1095,11 @@
       "url": "{home}for-parents/"
      }
     }
-   ]
+   ],
+   "seo": {
+    "title": "Fees and registration | Tumbleweeds Volleyball Club",
+    "desc": "Every cost of the club season, line by line, plus what is included and the refund policy."
+   }
   },
   {
    "slug": "for-parents",
@@ -1247,7 +1267,11 @@
       "url": "{home}#coming-up"
      }
     }
-   ]
+   ],
+   "seo": {
+    "title": "For parents | Tumbleweeds Volleyball Club",
+    "desc": "The questions every parent should ask a club, answered: coaches, cost, travel and safety."
+   }
   },
   {
    "slug": "sponsors",
@@ -1380,7 +1404,11 @@
       "url": "{home}our-coaches/"
      }
     }
-   ]
+   ],
+   "seo": {
+    "title": "Sponsors | Tumbleweeds Volleyball Club",
+    "desc": "Put your name behind Kamloops kids. Become a founding sponsor of Tumbleweeds Volleyball Club."
+   }
   },
   {
    "slug": "news",
@@ -1442,7 +1470,11 @@
       "url": "mailto:info@tumbleweedsvolleyball.com"
      }
     }
-   ]
+   ],
+   "seo": {
+    "title": "News | Tumbleweeds Volleyball Club",
+    "desc": "News from Tumbleweeds Volleyball Club: info sessions, coach announcements and tryout updates."
+   }
   },
   {
    "slug": "contact",
@@ -1558,7 +1590,47 @@
       "url": "mailto:info@tumbleweedsvolleyball.com"
      }
     }
-   ]
+   ],
+   "seo": {
+    "title": "Contact | Tumbleweeds Volleyball Club",
+    "desc": "Email the club about coaches, fees, tryouts or sponsoring. Tumbleweeds Volleyball Club, Kamloops, BC."
+   }
+  },
+  {
+   "slug": "privacy-policy",
+   "title": "Privacy policy",
+   "menu": "",
+   "footer_menu": "",
+   "hero": {
+    "hero_phone_focus": 0,
+    "hero_layout": "page",
+    "hero_image": "@img:tw-14",
+    "hero_focus_x": 50,
+    "hero_focus_y": 50,
+    "hero_tag": "Club to review",
+    "hero_heading": "Privacy",
+    "hero_heading_accent": "policy.",
+    "hero_subhead": "What this website collects, why, and your choices.",
+    "hero_button_1": "",
+    "hero_button_2": ""
+   },
+   "flex": [
+    {
+     "acf_fc_layout": "section_text",
+     "section_anchor": "policy",
+     "section_eyebrow": "The short version",
+     "show_number": 0,
+     "section_heading": "We collect only what we need to answer you.",
+     "section_heading_accent": "",
+     "section_bg_color": "",
+     "section_side": "none",
+     "section_text": "<p><strong>Club to review.</strong> This is a plain-language draft written from what the website does today. Someone on the club's board should read it, fix anything that is not true for the club, and then remove this paragraph.</p>\n<p>Last updated: October 2026.</p>\n<h2>Who we are</h2>\n<p>Tumbleweeds Volleyball Club is a registered non-profit volleyball club in Kamloops, BC, and a Volleyball BC member club. This page explains what this website collects and what we do with it. Questions about it go to <a href=\"mailto:info@tumbleweedsvolleyball.com\">info@tumbleweedsvolleyball.com</a>.</p>\n<h2>What the website collects</h2>\n<ul>\n<li><strong>The contact form.</strong> Your name, your email address, the topic you pick and your message. It is emailed to the club so we can answer you. It is not stored on the website.</li>\n<li><strong>The sign-up form in the footer.</strong> Your email address, so we can send club news such as tryout dates and coach announcements.</li>\n<li><strong>Visit counts (only if the club turns analytics on).</strong> Google Analytics counts visits: which pages are opened, what kind of device and an approximate location. By default it runs without cookies and does not identify you.</li>\n<li><strong>Technical logs.</strong> Like every website, our web host keeps basic logs (your IP address, the page asked for, the time) for security and to keep the site running.</li>\n</ul>\n<h2>What we do with it</h2>\n<ul>\n<li>Answer your message.</li>\n<li>Send club news to people who signed up. Every email has an unsubscribe link, and you can also ask us to remove you.</li>\n<li>Understand which pages families use, so we can improve the site.</li>\n</ul>\n<p>We do not sell or rent your information, and we do not show ads.</p>\n<h2>Who else sees it</h2>\n<p>Club volunteers who answer email and send news. Our email service (club to confirm which one, for example Mailchimp or Flodesk) holds the sign-up list. Google receives visit counts if analytics is on. Our web host stores the website itself.</p>\n<h2>Registration and children</h2>\n<p>This website is written for parents and guardians. We do not ask children for personal information on it. Registering an athlete happens on a separate registration service (club to confirm: TeamSnap or Volleyball BC), which has its own privacy policy.</p>\n<h2>How long we keep it</h2>\n<p>We keep messages as long as we need to answer them and follow up. We keep the sign-up list until you unsubscribe. (Club to confirm these.)</p>\n<h2>Your choices</h2>\n<p>You can ask what we have about you, ask us to correct it, or ask us to delete it. Email us at the address above. In British Columbia, privacy in non-profit organizations is covered by the Personal Information Protection Act, and you can also contact the Office of the Information and Privacy Commissioner for BC.</p>\n<h2>Changes</h2>\n<p>If we change what the website collects, we will update this page and the date at the top.</p>"
+    }
+   ],
+   "seo": {
+    "title": "Privacy policy | Tumbleweeds Volleyball Club",
+    "desc": "What the Tumbleweeds Volleyball Club website collects, why, and your choices."
+   }
   }
  ],
  "coaches": [
@@ -1607,6 +1679,10 @@
      "title": "Email the club",
      "url": "mailto:info@tumbleweedsvolleyball.com"
     }
+   },
+   "seo": {
+    "title": "Pat Hennelly | Tumbleweeds Volleyball Club",
+    "desc": "Pat Hennelly, President of Tumbleweeds Volleyball Club and TRU WolfPack men's head coach since 2005."
    }
   },
   {
@@ -1649,6 +1725,10 @@
      "title": "Email the club",
      "url": "mailto:info@tumbleweedsvolleyball.com"
     }
+   },
+   "seo": {
+    "title": "Iuliia Pakhomenko | Tumbleweeds Volleyball Club",
+    "desc": "Iuliia Pakhomenko, Manager of Operations at Tumbleweeds Volleyball Club."
    }
   }
  ],
@@ -1674,6 +1754,10 @@
      "title": "Email the club",
      "url": "mailto:info@tumbleweedsvolleyball.com"
     }
+   },
+   "seo": {
+    "title": "Info session for new families | Tumbleweeds Volleyball Club",
+    "desc": "Come meet Pat Hennelly and Iuliia Pakhomenko, and ask anything about coaches, fees and Safe Sport."
    }
   },
   {
@@ -1697,6 +1781,10 @@
      "title": "Email the club",
      "url": "mailto:info@tumbleweedsvolleyball.com"
     }
+   },
+   "seo": {
+    "title": "What we will publish before tryouts | Tumbleweeds Volleyball Club",
+    "desc": "A new club owes parents straight answers. Here is what we will post, and when."
    }
   }
  ],
@@ -1761,7 +1849,38 @@
   "footer_signup_title": "Stay in the loop.",
   "footer_signup_code": "",
   "footer_status_line": "A Volleyball BC member club (new club), Zone 2 Thompson-Okanagan.",
-  "footer_small_print": "Placeholder photography: Unsplash. Club photo day to come."
+  "footer_small_print": "Placeholder photography: Unsplash. Club photo day to come.",
+  "footer_privacy_label": "Privacy policy",
+  "footer_title_club": "The club",
+  "footer_title_contact": "Contact",
+  "footer_title_help": "If something goes wrong",
+  "label_news": "News",
+  "label_club": "The club",
+  "label_complaints": "Club complaints contact",
+  "header_register": 1,
+  "registration_url": "",
+  "registration_label": "Register now",
+  "contact_form": "@form:contact",
+  "footer_signup_form": "@form:signup",
+  "social_image": "@img:og",
+  "ga4_id": "",
+  "ga4_cookies": 0
+ },
+ "forms": {
+  "contact": {
+   "title": "Contact form",
+   "to": "info@tumbleweedsvolleyball.com",
+   "subject": "[your-topic] from [your-name]",
+   "body": "From: [your-name] <[your-email]>\nTopic: [your-topic]\n\n[your-message]\n\n-- \nSent from the contact form on [_site_url]",
+   "form": "<label>Your name [text* your-name autocomplete:name]</label>\n<label>Your email [email* your-email autocomplete:email]</label>\n<label>What is it about [select your-topic \"Coaches\" \"Fees\" \"Tryouts\" \"Sponsoring\" \"Something else\"]</label>\n<label>Message [textarea* your-message]</label>\n[submit class:btn class:btn--dark \"Send message\"]"
+  },
+  "signup": {
+   "title": "Newsletter sign-up",
+   "to": "info@tumbleweedsvolleyball.com",
+   "subject": "Add me to club updates",
+   "body": "Please add [your-email] to club updates.\n\n-- \nSent from the footer sign-up on [_site_url]",
+   "form": "<label class=\"screen-reader-text\" for=\"signup-email\">Your email</label>[email* your-email id:signup-email autocomplete:email placeholder \"Your email\"][submit class:btn class:btn--light \"Sign up\"]"
+  }
  },
  "header_menu": [
   "coaches",

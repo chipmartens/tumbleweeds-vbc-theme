@@ -19,16 +19,15 @@ def L(title, url):
 # ------------------------------------------------------------------ images
 IMAGES = {
     "tw-01": ("tw-01-celebration-indoor-court.jpg", "Volleyball players celebrating a point on an indoor court"),
-    "tw-02": ("tw-02-club-match-net-action.jpg", "Club match at the net"),
-    "tw-03": ("tw-03-club-match-spike.jpg", "Club match, attack and block at the net"),
     "tw-04": ("tw-04-gym-spike-wide.jpg", "Players at the net in a large indoor gym"),
-    "tw-09": ("tw-09-low-light-ready-position.jpg", "Players in ready position"),
+    "tw-09b": ("tw-09b-ready-position-crop.jpg", "Player in ready position"),
     "tw-10": ("tw-10-wood-court-sunbeam.jpg", "Players running a passing drill on a wooden court"),
     "tw-11": ("tw-11-bump-wood-floor.jpg", "Player passing on a wood court"),
     "tw-12": ("tw-12-sports-hall-wide.jpg", "Rally in an indoor sports hall"),
     "tw-13": ("tw-13-ball-on-floor-detail.jpg", "Volleyball resting on a gym floor"),
-    "tw-14": ("tw-14-net-texture-detail.jpg", "Volleyball net close up"),
-    "tw-15": ("tw-15-silhouette-gym-ball.jpg", "Player holding a volleyball in a dim gym"),
+    "tw-14": ("tw-14-net-texture-detail.jpg", "Volleyball net up close"),
+    "tw-15": ("tw-15-silhouette-gym-ball.jpg", "Player holding a ball in a gym"),
+    "og": ("tumbleweeds-social.jpg", "Tumbleweeds Volleyball Club. Developing athletes from the ground up."),
     "pat": ("pat-hennelly-headshoulders.png", "Pat Hennelly"),
     "iuliia": ("iuliia-pakhomenko-headshoulders.png", "Iuliia Pakhomenko"),
 }
@@ -98,7 +97,7 @@ def event(date, title, text, side="none", tag="", link=None):
 
 
 def events(h, rows):
-    return {"acf_fc_layout": "section_events", **h, "events": rows}
+    return {"acf_fc_layout": "section_events", **h, "events": rows, "events_display": "gameday"}
 
 
 def faq(h, items, numbered=False, open_first=True):
@@ -167,7 +166,7 @@ pages.append({"slug": "home", "title": "Home", "front_page": True,
   "flex": [
     ticker(),
     cards(head("What parents ask", "Who coaches. How they coach.", "What it costs.", side=("link", L("Read the parent questions", H + "for-parents/"))), [
-        card("sage", "Who coaches your kid", "Every team will have a named coach, posted with their background before tryouts. Pat Hennelly is our President. Iuliia Pakhomenko runs operations.", "tw-03", "tag", "Coach list coming soon"),
+        card("sage", "Who coaches your kid", "Every team will have a named coach, posted with their background before tryouts. Pat Hennelly is our President. Iuliia Pakhomenko runs operations.", "tw-15", "tag", "Coach list coming soon"),
         card("sun", "How we coach", "Fundamentals first. The basics, taught in a set order, until they're automatic. Then we build on them.", "tw-10", "link", link=L("See the programs", H + "programs/")),
         card("sand", "What you're signing up for", "The whole season on one page: the total cost with coach and travel fees, the schedule, and who to call outside the club.", "tw-13", "tag", "Posting before tryouts"),
       ], dates=[
@@ -175,7 +174,7 @@ pages.append({"slug": "home", "title": "Home", "front_page": True,
         {"date_kind": "custom", "date_label": "Before tryouts", "date_title": "Coaches announced", "date_line": "A named coach for every team", "date_link": L("Coaches announced", H + "tryouts/")},
         {"date_kind": "custom", "date_label": "Late November", "date_title": "Tryouts", "date_line": "In the Volleyball BC tryout window", "date_link": L("Tryouts", H + "tryouts/")},
       ]),
-    strip([("tw-02", 50, 50), ("tw-11", 30, 50), ("tw-12", 50, 50), ("tw-09", 55, 50)]),
+    strip([("tw-14", 50, 50), ("tw-11", 30, 50), ("tw-12", 50, 50), ("tw-09b", 55, 50)]),
     people(head("The club", "The people who run the club.", anchor="people", side=("text", "Coaches for each team are announced before tryouts."))),
     statement("Your kid's first club season starts", "here."),
     events(head("Coming up", "Come meet us before tryouts.", anchor="coming-up"), [
@@ -283,7 +282,7 @@ pages.append({"slug": "fees-and-registration", "title": "Fees and registration",
         qf("Safe Sport", [fact("Screening", "Volleyball BC requires every person in authority to pass a criminal record check every 3 years, file an annual Screening Disclosure, and complete Safe Sport training."), fact("Open and Observable", tag="Coming soon"), fact("Boundaries", "One-on-one time and boundaries policy.", tag="Coming soon"), fact("Overnight travel", tag="Coming soon"), fact("Helpline", "Abuse-Free Sport Helpline: 1-888-83SPORT (77678)")], "safe-sport"),
       ], numbered=True),
     {"acf_fc_layout": "section_cta", "cta_style": "highlight", "section_anchor": "registration", "section_eyebrow": "Registration", "show_number": 1,
-     "section_heading": "Register for tryouts.", "section_lede": "Registration opens before tryouts. We will post the link and opening date here.", "cta_tag": "Coming soon", "section_cta": EMAIL_BTN},
+     "section_heading": "Register for tryouts.", "section_lede": "Registration opens before tryouts. We will post the link and opening date here.", "cta_tag": "Coming soon", "section_cta": EMAIL_BTN, "cta_use_registration": 1},
     band("tw-10", "Questions before you", "register?", EMAIL_BTN, L("For parents", H + "for-parents/")),
   ]})
 
@@ -354,6 +353,43 @@ pages.append({"slug": "contact", "title": "Contact", "menu": "Contact", "footer_
      "form_topics": [{"topic_text": t} for t in ("Coaches", "Fees", "Tryouts", "Sponsoring", "Something else")],
      "form_note": "This opens your email app with the message ready to send to the club."},
     band("tw-12", "See you at", "tryouts.", TRYOUT_BTN, EMAIL_BTN),
+  ]})
+
+
+# ------------------------------------------------------------------ PRIVACY POLICY (draft, the club reviews it)
+PRIVACY = """<p><strong>Club to review.</strong> This is a plain-language draft written from what the website does today. Someone on the club's board should read it, fix anything that is not true for the club, and then remove this paragraph.</p>
+<p>Last updated: October 2026.</p>
+<h2>Who we are</h2>
+<p>Tumbleweeds Volleyball Club is a registered non-profit volleyball club in Kamloops, BC, and a Volleyball BC member club. This page explains what this website collects and what we do with it. Questions about it go to <a href="mailto:info@tumbleweedsvolleyball.com">info@tumbleweedsvolleyball.com</a>.</p>
+<h2>What the website collects</h2>
+<ul>
+<li><strong>The contact form.</strong> Your name, your email address, the topic you pick and your message. It is emailed to the club so we can answer you. It is not stored on the website.</li>
+<li><strong>The sign-up form in the footer.</strong> Your email address, so we can send club news such as tryout dates and coach announcements.</li>
+<li><strong>Visit counts (only if the club turns analytics on).</strong> Google Analytics counts visits: which pages are opened, what kind of device and an approximate location. By default it runs without cookies and does not identify you.</li>
+<li><strong>Technical logs.</strong> Like every website, our web host keeps basic logs (your IP address, the page asked for, the time) for security and to keep the site running.</li>
+</ul>
+<h2>What we do with it</h2>
+<ul>
+<li>Answer your message.</li>
+<li>Send club news to people who signed up. Every email has an unsubscribe link, and you can also ask us to remove you.</li>
+<li>Understand which pages families use, so we can improve the site.</li>
+</ul>
+<p>We do not sell or rent your information, and we do not show ads.</p>
+<h2>Who else sees it</h2>
+<p>Club volunteers who answer email and send news. Our email service (club to confirm which one, for example Mailchimp or Flodesk) holds the sign-up list. Google receives visit counts if analytics is on. Our web host stores the website itself.</p>
+<h2>Registration and children</h2>
+<p>This website is written for parents and guardians. We do not ask children for personal information on it. Registering an athlete happens on a separate registration service (club to confirm: TeamSnap or Volleyball BC), which has its own privacy policy.</p>
+<h2>How long we keep it</h2>
+<p>We keep messages as long as we need to answer them and follow up. We keep the sign-up list until you unsubscribe. (Club to confirm these.)</p>
+<h2>Your choices</h2>
+<p>You can ask what we have about you, ask us to correct it, or ask us to delete it. Email us at the address above. In British Columbia, privacy in non-profit organizations is covered by the Personal Information Protection Act, and you can also contact the Office of the Information and Privacy Commissioner for BC.</p>
+<h2>Changes</h2>
+<p>If we change what the website collects, we will update this page and the date at the top.</p>"""
+
+pages.append({"slug": "privacy-policy", "title": "Privacy policy", "menu": "", "footer_menu": "",
+  "hero": hero("tw-14", 50, 50, "Club to review", "Privacy", "policy.", "What this website collects, why, and your choices."),
+  "flex": [
+    {"acf_fc_layout": "section_text", **head("The short version", "We collect only what we need to answer you.", number=False, anchor="policy"), "section_text": PRIVACY},
   ]})
 
 # ------------------------------------------------------------------ COACHES (CPT)
@@ -434,10 +470,50 @@ settings = {
   "footer_signup_code": "",
   "footer_status_line": "A Volleyball BC member club (new club), Zone 2 Thompson-Okanagan.",
   "footer_small_print": "Placeholder photography: Unsplash. Club photo day to come.",
+  "footer_privacy_label": "Privacy policy",
+  "footer_title_club": "The club", "footer_title_contact": "Contact", "footer_title_help": "If something goes wrong",
+  "label_news": "News", "label_club": "The club", "label_complaints": "Club complaints contact",
+  "header_register": 1, "registration_url": "", "registration_label": "Register now",
+  "contact_form": "@form:contact", "footer_signup_form": "@form:signup",
+  "social_image": "@img:og", "ga4_id": "", "ga4_cookies": 0,
 }
 
-data = {"images": {k: {"file": "seed/img/" + f, "alt": a} for k, (f, a) in IMAGES.items()},
-        "pages": pages, "coaches": coaches, "posts": posts, "settings": settings,
+# Contact Form 7 forms the import creates (when the plugin is active). Tags are CF7 syntax: [text* name].
+FORMS = {
+  "contact": {"title": "Contact form", "to": EMAIL, "subject": "[your-topic] from [your-name]",
+    "body": "From: [your-name] <[your-email]>\nTopic: [your-topic]\n\n[your-message]\n\n-- \nSent from the contact form on [_site_url]",
+    "form": '<label>Your name [text* your-name autocomplete:name]</label>\n<label>Your email [email* your-email autocomplete:email]</label>\n<label>What is it about [select your-topic "Coaches" "Fees" "Tryouts" "Sponsoring" "Something else"]</label>\n<label>Message [textarea* your-message]</label>\n[submit class:btn class:btn--dark "Send message"]'},
+  "signup": {"title": "Newsletter sign-up", "to": EMAIL, "subject": "Add me to club updates",
+    "body": "Please add [your-email] to club updates.\n\n-- \nSent from the footer sign-up on [_site_url]",
+    "form": '<label class="screen-reader-text" for="signup-email">Your email</label>[email* your-email id:signup-email autocomplete:email placeholder "Your email"][submit class:btn class:btn--light "Sign up"]'},
+}
+
+# Search results text for every page, coach and post (Yoast SEO reads these as the page's own title and description)
+SEO = {
+  "home": ("Tumbleweeds Volleyball Club | Kamloops youth volleyball", "A new Kamloops youth volleyball club led by Pat Hennelly, 2024 U Sports Men's Volleyball Coach of the Year. Developing athletes from the ground up."),
+  "our-coaches": ("Our coaches | Tumbleweeds Volleyball Club", "Who runs Tumbleweeds Volleyball Club in Kamloops, and who coaches. Team coaches are named before tryouts."),
+  "programs": ("Programs | Tumbleweeds Volleyball Club", "Club volleyball programs by age group in Kamloops, built on fundamentals taught in a set order."),
+  "tryouts": ("Tryouts | Tumbleweeds Volleyball Club", "Tryout dates, location and what to bring for Tumbleweeds Volleyball Club, posted as the club confirms them."),
+  "fees-and-registration": ("Fees and registration | Tumbleweeds Volleyball Club", "Every cost of the club season, line by line, plus what is included and the refund policy."),
+  "for-parents": ("For parents | Tumbleweeds Volleyball Club", "The questions every parent should ask a club, answered: coaches, cost, travel and safety."),
+  "sponsors": ("Sponsors | Tumbleweeds Volleyball Club", "Put your name behind Kamloops kids. Become a founding sponsor of Tumbleweeds Volleyball Club."),
+  "news": ("News | Tumbleweeds Volleyball Club", "News from Tumbleweeds Volleyball Club: info sessions, coach announcements and tryout updates."),
+  "contact": ("Contact | Tumbleweeds Volleyball Club", "Email the club about coaches, fees, tryouts or sponsoring. Tumbleweeds Volleyball Club, Kamloops, BC."),
+  "privacy-policy": ("Privacy policy | Tumbleweeds Volleyball Club", "What the Tumbleweeds Volleyball Club website collects, why, and your choices."),
+  "pat-hennelly": ("Pat Hennelly | Tumbleweeds Volleyball Club", "Pat Hennelly, President of Tumbleweeds Volleyball Club and TRU WolfPack men's head coach since 2005."),
+  "iuliia-pakhomenko": ("Iuliia Pakhomenko | Tumbleweeds Volleyball Club", "Iuliia Pakhomenko, Manager of Operations at Tumbleweeds Volleyball Club."),
+  "info-session": ("Info session for new families | Tumbleweeds Volleyball Club", "Come meet Pat Hennelly and Iuliia Pakhomenko, and ask anything about coaches, fees and Safe Sport."),
+  "what-we-will-publish-before-tryouts": ("What we will publish before tryouts | Tumbleweeds Volleyball Club", "A new club owes parents straight answers. Here is what we will post, and when."),
+}
+for _item in pages + coaches + posts:
+    if _item["slug"] in SEO:
+        _item["seo"] = {"title": SEO[_item["slug"]][0], "desc": SEO[_item["slug"]][1]}
+for _pg in pages:
+    if _pg["slug"] == "tryouts":
+        _pg["hero"]["hero_register"] = 1
+
+data = {"images": {k: {"file": ("assets/img/" if k == "og" else "seed/img/") + f, "alt": a} for k, (f, a) in IMAGES.items()},
+        "pages": pages, "coaches": coaches, "posts": posts, "settings": settings, "forms": FORMS,
         "header_menu": ["coaches", "programs", "tryouts", "fees", "parents", "sponsors", "contact"]}
 OUT.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n")
 print("seed written:", len(pages), "pages,", len(coaches), "coaches,", len(posts), "posts")

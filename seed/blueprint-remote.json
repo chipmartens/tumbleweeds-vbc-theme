@@ -2,7 +2,7 @@
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
     "title": "Tumbleweeds Volleyball Club: WordPress theme demo",
-    "description": "The Tumbleweeds club site as a real WordPress install: the theme from GitHub, Secure Custom Fields, all pages, coaches and news seeded, logged in as admin so you can open the editor and Club settings.",
+    "description": "The Tumbleweeds club site as a real WordPress install: the theme from GitHub, Secure Custom Fields, Contact Form 7, Yoast SEO, all pages, coaches and news seeded, logged in as admin so you can open the editor and Club settings.",
     "author": "Chip Martens",
     "categories": ["Showcase"]
   },
@@ -13,6 +13,8 @@
     { "step": "login", "username": "admin", "password": "password" },
     { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "secure-custom-fields" }, "options": { "activate": true } },
     { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "classic-editor" }, "options": { "activate": true } },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "contact-form-7" }, "options": { "activate": true } },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "wordpress-seo" }, "options": { "activate": true } },
     {
       "step": "installTheme",
       "themeData": { "resource": "url", "url": "https://github.com/chipmartens/tumbleweeds-vbc-theme/archive/refs/heads/main.zip?v=ff99620" },

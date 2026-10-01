@@ -41,3 +41,5 @@
 .events--gameday .event{background:var(--pine-900) url(../img/tex-pine.jpg) center/cover}
 .footer::before{content:"";position:absolute;inset:0;background:url(../img/tex-pine.jpg) center/cover;opacity:.7;pointer-events:none}
 .footer > *:not(.footer__wreath){position:relative}
+/* bigger ball in the badge (Chip, 2026-10-01) */
+.badge img{inset:38px;width:108px;height:108px}

@@ -230,6 +230,26 @@
             "return_format": "array"
         },
         {
+            "key": "field_tvbc_set_header_register",
+            "label": "Menu button is the registration button",
+            "name": "header_register",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Switch on to send the yellow button to the registration link (tab Registration). Until that link is filled in, the button above is used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
             "key": "field_tvbc_set_phone_menu_link",
             "label": "Extra link on the phone menu only",
             "name": "phone_menu_link",
@@ -284,6 +304,60 @@
             "message": "The links in the menu and in the footer are set under <strong>Appearance, Menus</strong> (Header Menu and Footer Menu).",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_tvbc_set_tab_registration",
+            "label": "Registration",
+            "name": "tab_registration",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_tvbc_set_registration_url",
+            "label": "Registration link",
+            "name": "registration_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Where families register, for example the club's TeamSnap or Volleyball BC registration page. Leave empty until registration opens: the buttons switched on for registration then keep their normal link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https://"
+        },
+        {
+            "key": "field_tvbc_set_registration_label",
+            "label": "Words on the registration buttons",
+            "name": "registration_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "For example Register now.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Register now",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_tvbc_set_tab_info",
@@ -556,6 +630,26 @@
             "append": ""
         },
         {
+            "key": "field_tvbc_set_contact_form",
+            "label": "Contact form (shortcode or number)",
+            "name": "contact_form",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The form on the Contact page. In the left menu open Contact, Contact Forms, then copy the shortcode (looks like [contact-form-7 id=\"123\"]) or just the number. Leave empty to use the simple form that opens the visitor's email app.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_tvbc_set_footer_contact_link",
             "label": "Link to the contact page",
             "name": "footer_contact_link",
@@ -775,6 +869,66 @@
             "new_lines": ""
         },
         {
+            "key": "field_tvbc_set_footer_title_club",
+            "label": "Footer heading: club links",
+            "name": "footer_title_club",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Above the links from Appearance, Menus, Footer Menu.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "The club",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_footer_title_contact",
+            "label": "Footer heading: contact",
+            "name": "footer_title_contact",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Above the email and social links.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Contact",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_footer_title_help",
+            "label": "Footer heading: helpline",
+            "name": "footer_title_help",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Above the helpline details.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "If something goes wrong",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_tvbc_set_footer_signup_title",
             "label": "Sign-up heading",
             "name": "footer_signup_title",
@@ -795,12 +949,32 @@
             "append": ""
         },
         {
+            "key": "field_tvbc_set_footer_signup_form",
+            "label": "Sign-up form (shortcode or number)",
+            "name": "footer_signup_form",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "A Contact Form 7 form for the footer sign-up (Contact, Contact Forms). It emails the club each time someone signs up. Used when the embed code below is empty.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_tvbc_set_footer_signup_code",
-            "label": "Sign-up form code (optional)",
+            "label": "Sign-up embed code from Mailchimp or Flodesk (optional)",
             "name": "footer_signup_code",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "If you have a sign-up form from your email service, paste its embed code here. Leave empty to use the simple form that opens the visitor's email app.",
+            "instructions": "Paste the embed code from your email service. It replaces the sign-up form above. If both are empty, a simple form opens the visitor's email app.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -853,6 +1027,203 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_tvbc_set_footer_privacy_label",
+            "label": "Privacy policy link words",
+            "name": "footer_privacy_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The link next to the copyright. It goes to the page chosen under Settings, Privacy.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Privacy policy",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_tab_wording",
+            "label": "Other wording",
+            "name": "tab_wording",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_tvbc_set_wording_note",
+            "label": "Small words used in a few places",
+            "name": "wording_note",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Leave these as they are unless the club wants different words.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_tvbc_set_label_news",
+            "label": "Name of the news section",
+            "name": "label_news",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown above every news article and on its Next and Back links.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "News",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_label_club",
+            "label": "Name of the club section",
+            "name": "label_club",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown on a coach's page on the link back to the coaches list.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "The club",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_label_complaints",
+            "label": "Words before the complaints contact",
+            "name": "label_complaints",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown in the footer.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Club complaints contact",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_tab_seo",
+            "label": "Sharing and analytics",
+            "name": "tab_seo",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_tvbc_set_social_image",
+            "label": "Sharing picture (optional)",
+            "name": "social_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "The picture that shows when a page is shared on Facebook, Instagram or in a message. 1200 by 630 pixels. Leave empty to use the club's own picture. The Yoast SEO plugin, when active, has its own setting under SEO, Settings, Social.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_tvbc_set_ga4_id",
+            "label": "Google Analytics measurement ID",
+            "name": "ga4_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Looks like G-ABC123XYZ. Leave empty to run no analytics at all: nothing loads and nothing is tracked.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "G-",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tvbc_set_ga4_cookies",
+            "label": "Allow analytics cookies",
+            "name": "ga4_cookies",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Off (the default): Google Analytics runs without cookies and only counts visits. Switch on only if the club adds a cookie notice, then update the Privacy policy page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
         }
     ],
     "location": [

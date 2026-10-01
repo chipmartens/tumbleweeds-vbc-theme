@@ -130,7 +130,11 @@ function section_text( $pre = null, $post = null, $field = 'section_text' ) {
 
 // Get 'Section CTA' link and output as a button
 function section_cta( $classes = 'btn--dark', $field = 'section_cta', $arrow = false ) {
-	echo tvbc_btn( get_sub_field( $field ), $classes . ' fade-up', $arrow );
+	$link = get_sub_field( $field );
+	if ( 'section_cta' === $field ) {
+		$link = tvbc_or_registration( $link, get_sub_field( 'cta_use_registration' ) );
+	}
+	echo tvbc_btn( $link, $classes . ' fade-up', $arrow );
 }
 
 // Fact rows: label, answer, small note, status tag. $rows = array of [fact_label, fact_value, fact_note, fact_tag]

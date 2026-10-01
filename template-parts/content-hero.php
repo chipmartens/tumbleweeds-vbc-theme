@@ -40,7 +40,7 @@ else :
 		$hero_heading = get_field( 'hero_heading', $post_id );
 		$hero_accent = get_field( 'hero_heading_accent', $post_id );
 		$hero_subhead = get_field( 'hero_subhead', $post_id );
-		$hero_btn_1  = get_field( 'hero_button_1', $post_id );
+		$hero_btn_1  = tvbc_or_registration( get_field( 'hero_button_1', $post_id ), get_field( 'hero_register', $post_id ) );
 		$hero_btn_2  = get_field( 'hero_button_2', $post_id );
 		$hero_phone  = get_field( 'hero_phone_focus', $post_id ) ? array( get_field( 'hero_phone_x', $post_id ), get_field( 'hero_phone_y', $post_id ) ) : null;
 	}

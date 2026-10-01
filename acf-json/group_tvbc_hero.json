@@ -353,6 +353,34 @@
             "return_format": "array"
         },
         {
+            "key": "field_tvbc_hero_hero_register",
+            "label": "Main button is the registration button",
+            "name": "hero_register",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Switch on to send the main button to the registration link set in Club settings, tab Registration. Until that link is filled in, the button above is used.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_tvbc_hero_hero_layout",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
             "key": "field_tvbc_hero_hero_button_2",
             "label": "Second button (outline)",
             "name": "hero_button_2",

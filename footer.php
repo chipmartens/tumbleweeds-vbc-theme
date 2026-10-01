@@ -19,7 +19,11 @@ $helpline_name  = tvbc_opt( 'helpline_name' );
 $helpline_phone = tvbc_opt( 'helpline_phone' );
 $complaints     = tvbc_opt( 'complaints_contact' );
 $logo_text      = tvbc_opt( 'logo_text' ) ?: 'Tumbleweeds';
+$signup_form    = tvbc_form( tvbc_opt( 'footer_signup_form' ) );
+$privacy_url    = get_privacy_policy_url();
 ?>
+
+<div class="ridge" aria-hidden="true"><svg viewBox="0 0 1600 200" preserveAspectRatio="none"><use href="<?php echo esc_url( tvbc_theme_img( 'kamloops-ridge.svg' ) ); ?>#r"/></svg></div>
 
 <footer class="site-footer">
 
@@ -33,6 +37,8 @@ $logo_text      = tvbc_opt( 'logo_text' ) ?: 'Tumbleweeds';
 			<?php endif; ?>
 			<?php if ( $signup_code ) : ?>
 			<div class="newsletter__form"><?php echo $signup_code; // phpcs:ignore -- embed code pasted by an admin in Club settings ?></div>
+			<?php elseif ( $signup_form ) : ?>
+			<div class="newsletter__form newsletter__form--cf7"><?php echo $signup_form; // phpcs:ignore -- Contact Form 7 output ?></div>
 			<?php elseif ( $email ) : ?>
 			<!-- No sign-up form code in Club settings: opens the visitor's email app addressed to the club. -->
 			<form class="newsletter__form" data-mailto-form data-mailto="<?php echo esc_attr( $email ); ?>" data-subject="Add me to club updates" action="mailto:<?php echo esc_attr( $email ); ?>" method="post" enctype="text/plain">
@@ -46,14 +52,18 @@ $logo_text      = tvbc_opt( 'logo_text' ) ?: 'Tumbleweeds';
 		<div class="footer__columns">
 
 			<div class="footer__column footer__brand">
+				<?php if ( tvbc_opt( 'logo_mark' ) ) : // a club-uploaded logo replaces the official lockup ?>
 				<a class="footer__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo tvbc_mark( true, '', 48 ); // phpcs:ignore ?><?php echo wp_kses( preg_replace( '/ /', '<br>', esc_html( get_bloginfo( 'name', 'display' ) ), 1 ), array( 'br' => array() ) ); ?></a>
+				<?php else : ?>
+				<a class="footer__logo footer__logo--lockup" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>, home"><img src="<?php echo esc_url( tvbc_theme_img( 'tumbleweeds-official-lockup-reverse.svg' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
+				<?php endif; ?>
 				<?php if ( $blurb ) : ?>
 				<p class="footer__blurb"><?php echo esc_html( $blurb ); ?></p>
 				<?php endif; ?>
 			</div>
 
 			<div class="footer__column">
-				<h3 class="footer__title"><?php esc_html_e( 'The club', 'tvbc' ); ?></h3>
+				<h3 class="footer__title"><?php echo esc_html( tvbc_label( 'footer_title_club', 'The club' ) ); ?></h3>
 				<?php wp_nav_menu( array(
 					'theme_location' => 'footer-menu',
 					'container'      => false,
@@ -64,7 +74,7 @@ $logo_text      = tvbc_opt( 'logo_text' ) ?: 'Tumbleweeds';
 			</div>
 
 			<div class="footer__column">
-				<h3 class="footer__title"><?php esc_html_e( 'Contact', 'tvbc' ); ?></h3>
+				<h3 class="footer__title"><?php echo esc_html( tvbc_label( 'footer_title_contact', 'Contact' ) ); ?></h3>
 				<ul class="menu">
 					<?php if ( $email ) : ?><li><a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a></li><?php endif; ?>
 					<?php if ( is_array( $socials ) ) : foreach ( $socials as $s ) : if ( empty( $s['social_url'] ) ) { continue; } ?>
@@ -76,11 +86,11 @@ $logo_text      = tvbc_opt( 'logo_text' ) ?: 'Tumbleweeds';
 			</div>
 
 			<div class="footer__column">
-				<h3 class="footer__title"><?php esc_html_e( 'If something goes wrong', 'tvbc' ); ?></h3>
+				<h3 class="footer__title"><?php echo esc_html( tvbc_label( 'footer_title_help', 'If something goes wrong' ) ); ?></h3>
 				<ul class="menu">
 					<?php if ( $helpline_name ) : ?><li><?php echo esc_html( $helpline_name ); ?></li><?php endif; ?>
 					<?php if ( $helpline_phone ) : ?><li><a href="tel:<?php echo esc_attr( tvbc_tel( $helpline_phone ) ); ?>"><?php echo esc_html( $helpline_phone ); ?></a></li><?php endif; ?>
-					<?php if ( $complaints ) : ?><li><?php echo esc_html( 'Club complaints contact: ' . $complaints ); ?></li><?php endif; ?>
+					<?php if ( $complaints ) : ?><li><?php echo esc_html( tvbc_label( 'label_complaints', 'Club complaints contact' ) . ': ' . $complaints ); ?></li><?php endif; ?>
 				</ul>
 			</div>
 
@@ -88,6 +98,7 @@ $logo_text      = tvbc_opt( 'logo_text' ) ?: 'Tumbleweeds';
 
 		<div class="footer__copyright">
 			<span class="copyright__text">&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php echo esc_html( get_bloginfo( 'name', 'display' ) ); ?>. <?php echo esc_html( $status_line ); ?></span>
+			<?php if ( $privacy_url ) : ?><a class="copyright__link" href="<?php echo esc_url( $privacy_url ); ?>"><?php echo esc_html( tvbc_label( 'footer_privacy_label', 'Privacy policy' ) ); ?></a><?php endif; ?>
 			<?php if ( $small_print ) : ?><span class="copyright__small"><?php echo esc_html( $small_print ); ?></span><?php endif; ?>
 		</div>
 

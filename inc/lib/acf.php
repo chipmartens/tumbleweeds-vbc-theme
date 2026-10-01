@@ -56,6 +56,27 @@ function tvbc_opt( $name ) {
 	return function_exists( 'get_field' ) ? get_field( $name, 'option' ) : '';
 }
 
+// Small wording from Club settings with the built-in text as the default
+function tvbc_label( $name, $default ) {
+	$v = trim( (string) tvbc_opt( $name ) );
+	return '' !== $v ? $v : $default;
+}
+
+// Registration link from Club settings as an ACF-style link array, or null until the club has one
+function tvbc_registration() {
+	$url = trim( (string) tvbc_opt( 'registration_url' ) );
+	if ( '' === $url ) {
+		return null;
+	}
+	return array( 'url' => $url, 'title' => tvbc_label( 'registration_label', 'Register now' ), 'target' => '_blank' );
+}
+
+// $use true and a registration link set: the registration link, else the button's own link
+function tvbc_or_registration( $link, $use ) {
+	$reg = $use ? tvbc_registration() : null;
+	return $reg ? $reg : $link;
+}
+
 // The post ID that holds the flexible content for this request (the posts page when on News)
 function tvbc_context_id() {
 	if ( is_home() ) {
