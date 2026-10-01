@@ -6,13 +6,17 @@
  *
  * Needs the theme active and Secure Custom Fields (or ACF Pro) active. Reads seed/content.json (written by
  * tools/build_seed.py). Changes only this site's content: never touches users or plugins.
- * Safety: refuses to run when the site is not a fresh or staging copy unless TVBC_SEED_FORCE is defined.
+ * Safety: once it has run, it refuses to run again on a site that is open to search engines (a launched site)
+ * unless TVBC_SEED_FORCE is defined, because it overwrites pages, menus and every Club settings field.
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 if ( ! function_exists( 'update_field' ) ) {
 	wp_die( 'Activate Secure Custom Fields (or ACF Pro) first.' );
+}
+if ( get_option( 'tvbc_seeded' ) && get_option( 'blog_public' ) && ! defined( 'TVBC_SEED_FORCE' ) ) {
+	wp_die( 'The seed has already run on this site and the site is live. Running it again overwrites pages, menus and Club settings. Define TVBC_SEED_FORCE to run it anyway.' );
 }
 require_once ABSPATH . 'wp-admin/includes/file.php';
 require_once ABSPATH . 'wp-admin/includes/media.php';
@@ -237,4 +241,5 @@ update_option( 'uploads_use_yearmonth_folders', 1 );
 global $wp_rewrite;
 $wp_rewrite->set_permalink_structure( '/%postname%/' );
 flush_rewrite_rules();
+update_option( 'tvbc_seeded', 1 );
 $say( 'done' );

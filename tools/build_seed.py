@@ -371,12 +371,12 @@ PRIVACY = """<p><strong>Club to review.</strong> This is a plain-language draft 
 <h2>What we do with it</h2>
 <ul>
 <li>Answer your message.</li>
-<li>Send club news to people who signed up. Every email has an unsubscribe link, and you can also ask us to remove you.</li>
+<li>Send club news to people who signed up. News sent through an email service has an unsubscribe link, and you can always ask us to remove you.</li>
 <li>Understand which pages families use, so we can improve the site.</li>
 </ul>
 <p>We do not sell or rent your information, and we do not show ads.</p>
 <h2>Who else sees it</h2>
-<p>Club volunteers who answer email and send news. Our email service (club to confirm which one, for example Mailchimp or Flodesk) holds the sign-up list. Google receives visit counts if analytics is on. Our web host stores the website itself.</p>
+<p>Club volunteers who answer email and send news. Our email service (club to confirm which one, for example Mailchimp or Flodesk) holds the sign-up list. Google receives visit counts if analytics is on, and Google Fonts (which loads the website's typefaces) sees your IP address when a page opens. Our web host stores the website itself.</p>
 <h2>Registration and children</h2>
 <p>This website is written for parents and guardians. We do not ask children for personal information on it. Registering an athlete happens on a separate registration service (club to confirm: TeamSnap or Volleyball BC), which has its own privacy policy.</p>
 <h2>How long we keep it</h2>

@@ -36,6 +36,11 @@ Nothing is typed into a template. Where a box needs one extra word of choice (Ki
 ## Words and facts
 No em dashes. The award is always "2024 U Sports Men's Volleyball Coach of the Year". No TRU or WolfPack logos. Unconfirmed facts are a status tag (Coming soon), never an invented number. Placeholder photography is Unsplash until club photo day.
 
+## Known accessibility exceptions
+`node tools/axe.js <url>` ran on every page at 1440 and 390: **58 serious/critical nodes before, 28 after** (full output in `docs/axe-2026-10-01.txt`). Fixed without changing the look: footer link contrast, focusable photo strip, form fields. The 28 left are contrast on the approved visual layer and need a design decision:
+- Card numerals (01, 02, 03) in sage-600 at 50% opacity on the sage and sun cards: ratio about 1.9 (needs 3 for large text). Proposed: opacity .75 or sage-700.
+- Eyebrow number pill, sage-600 on sun-100 (Fees page): 4.44, needs 4.5. Proposed: sage-700 on sun backgrounds.
+
 ## Launching
 [`docs/launch-guide.md`](docs/launch-guide.md) (and `launch-guide.pdf`): host, theme zip, plugins, seed, DNS from Squarespace, SSL, backups, checklist. Brand assets (share picture, favicons) are made by `node tools/make_brand_assets.js`; the accessibility check is `node tools/axe.js <url>`.
 

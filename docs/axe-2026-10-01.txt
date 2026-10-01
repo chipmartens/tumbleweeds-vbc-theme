@@ -1,0 +1,49 @@
+axe-core, serious and critical, every page at 1440 and 390, local Playground, 2026-10-01
+
+== BEFORE (58 nodes)
+home @1440 serious color-contrast x4: .card--sage > .card__body > .card__num | .card--sun > .card__body > .card__num
+home @390 serious color-contrast x4: .card--sage > .card__body > .card__num | .card--sun > .card__body > .card__num
+home @390 serious scrollable-region-focusable x1: #section-3
+our-coaches/ @1440 serious color-contrast x3: .card--sage > .card__body > .card__num | .card--sun > .card__body > .card__num
+our-coaches/ @390 serious color-contrast x3: .card--sage > .card__body > .card__num | .card--sun > .card__body > .card__num
+coaches/pat-hennelly/ @1440 serious color-contrast x1: .copyright__small:nth-child(2)
+coaches/pat-hennelly/ @390 serious color-contrast x1: .copyright__small:nth-child(2)
+coaches/iuliia-pakhomenko/ @1440 serious color-contrast x1: .copyright__small:nth-child(2)
+coaches/iuliia-pakhomenko/ @390 serious color-contrast x1: .copyright__small:nth-child(2)
+programs/ @1440 serious color-contrast x1: .copyright__small:nth-child(2)
+programs/ @390 serious color-contrast x1: .copyright__small:nth-child(2)
+programs/ @390 serious scrollable-region-focusable x1: #section-2
+tryouts/ @1440 serious color-contrast x1: .copyright__small:nth-child(2)
+tryouts/ @390 serious color-contrast x1: .copyright__small:nth-child(2)
+fees-and-registration/ @1440 serious color-contrast x1: .copyright__small:nth-child(2)
+fees-and-registration/ @390 serious color-contrast x1: .copyright__small:nth-child(2)
+for-parents/ @1440 serious color-contrast x6: .card--sage:nth-child(1) > .card__body > .card__num | .card--sun:nth-child(2) > .card__body > .card__num
+for-parents/ @390 serious color-contrast x6: .card--sage:nth-child(1) > .card__body > .card__num | .card--sun:nth-child(2) > .card__body > .card__num
+sponsors/ @1440 serious color-contrast x4: .card--sage > .card__body > .card__num | .card--sun > .card__body > .card__num
+sponsors/ @390 serious color-contrast x4: .card--sage > .card__body > .card__num | .card--sun > .card__body > .card__num
+news/ @1440 serious color-contrast x1: .copyright__small:nth-child(2)
+news/ @390 serious color-contrast x1: .copyright__small:nth-child(2)
+what-we-will-publish-before-tryouts/ @1440 serious color-contrast x1: .copyright__small:nth-child(2)
+what-we-will-publish-before-tryouts/ @390 serious color-contrast x1: .copyright__small:nth-child(2)
+info-session/ @1440 serious color-contrast x1: .copyright__small:nth-child(2)
+info-session/ @390 serious color-contrast x1: .copyright__small:nth-child(2)
+contact/ @1440 serious color-contrast x1: .copyright__small:nth-child(2)
+contact/ @390 serious color-contrast x1: .copyright__small:nth-child(2)
+privacy-policy/ @1440 serious color-contrast x1: .copyright__small:nth-child(2)
+privacy-policy/ @390 serious color-contrast x1: .copyright__small:nth-child(2)
+zzz-not-here/ @1440 serious color-contrast x1: .copyright__small:nth-child(2)
+zzz-not-here/ @390 serious color-contrast x1: .copyright__small:nth-child(2)
+SERIOUS+CRITICAL nodes: 58
+
+== AFTER, with the approved visual layer (28 nodes)
+home @1440 serious color-contrast x3: .card--sage > .card__body > .card__num[aria-hidden="true"] | .card--sun > .card__body > .card__num[aria-hidden="true"]
+home @390 serious color-contrast x3: .card--sage > .card__body > .card__num[aria-hidden="true"] | .card--sun > .card__body > .card__num[aria-hidden="true"]
+our-coaches/ @1440 serious color-contrast x2: .card--sage > .card__body > .card__num[aria-hidden="true"] | .card--sun > .card__body > .card__num[aria-hidden="true"]
+our-coaches/ @390 serious color-contrast x2: .card--sage > .card__body > .card__num[aria-hidden="true"] | .card--sun > .card__body > .card__num[aria-hidden="true"]
+fees-and-registration/ @1440 serious color-contrast x1: #registration > .container-2xl > .surface__head.fade-up > .meta > .section__eyebrow > b
+fees-and-registration/ @390 serious color-contrast x1: #registration > .container-2xl > .surface__head.fade-up > .meta > .section__eyebrow > b
+for-parents/ @1440 serious color-contrast x5: .card--sage:nth-child(1) > .card__body > .card__num[aria-hidden="true"] | .card--sun:nth-child(2) > .card__body > .card__num[aria-hidden="true"]
+for-parents/ @390 serious color-contrast x5: .card--sage:nth-child(1) > .card__body > .card__num[aria-hidden="true"] | .card--sun:nth-child(2) > .card__body > .card__num[aria-hidden="true"]
+sponsors/ @1440 serious color-contrast x3: .card--sage > .card__body > .card__num[aria-hidden="true"] | .card--sun > .card__body > .card__num[aria-hidden="true"]
+sponsors/ @390 serious color-contrast x3: .card--sage > .card__body > .card__num[aria-hidden="true"] | .card--sun > .card__body > .card__num[aria-hidden="true"]
+SERIOUS+CRITICAL nodes: 28

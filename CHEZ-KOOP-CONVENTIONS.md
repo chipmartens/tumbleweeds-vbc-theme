@@ -102,7 +102,7 @@ Numbers are referenced by the review.
 - **Pages hide the empty text editor, Featured image, comments and other unused boxes** (`hide_on_screen` on the Hero Content group), so the edit screen is only the fields.
 
 - **Secure Custom Fields is the tested path**, ACF Pro is supported. Chez Koop bundles the Pro zip; this repo is public so it cannot. TGMPA points at wordpress.org instead.
-- **No Gravity Forms** (paid, zip cannot be committed). The contact form is the same mailto form as v2 and the footer sign-up takes an embed code from Club settings. See NEEDS-DECISION in the report.
+- **Contact Form 7 instead of Gravity Forms** (paid, zip cannot be committed). The contact form and footer sign-up render CF7 forms (shortcode in Club settings, styled with theme tokens, plugin CSS off). Without the plugin they fall back to the mailto form, and the footer also takes a Mailchimp or Flodesk embed code.
 - **Hero images use soft-cropped sizes** and CSS `object-position` from a focus slider, instead of the hard-crop `hero` 1920x1080, so the v2 framing survives.
 - **Smooth scroll:** Lenis is loaded as Chez Koop does, but it is skipped under `prefers-reduced-motion`.
 - **Typekit** is replaced by the three Google Fonts v2 already uses.

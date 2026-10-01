@@ -34,7 +34,7 @@ Prices and data centre lists change, so confirm both on the host's own page. For
 
 ## 3. Load the starting content (the seed)
 
-The seed builds all pages, the two coach pages, two news posts, both menus, Club settings and the contact form. Run it **once, on a fresh site**. It overwrites seeded content.
+The seed builds all pages, the two coach pages, two news posts, both menus, Club settings and the contact form. Run it **once, on a fresh site**. It overwrites seeded content, and it refuses to run again on a site that is open to search engines.
 
 - With the host's SSH or WP-CLI (ask Chez Koop, 5 minutes): `wp eval-file wp-content/themes/tumbleweeds-vbc/seed/import.php`
 - Without SSH: ask Chez Koop to run it. It cannot be run from the WordPress screens.
@@ -45,9 +45,9 @@ After it runs, open **Club settings** and check every tab. Then follow section 6
 
 Do this in a quiet hour, not on a tryout or info-session day. Nothing is lost if you do it in the order below.
 
-1. **Write down what is there first.** In Squarespace, open **Domains**, click tumbleweedsvolleyball.com, then **DNS Settings**. Take a screenshot of every record. Keep the **MX** records (email) and any **TXT** records (Google email verification, SPF, DKIM). These must still be there at the end.
+1. **Write down what is there first.** In Squarespace, open **Domains**, click tumbleweedsvolleyball.com, then **DNS Settings**. Take a screenshot of every record. Keep the **MX** records (email) and any **TXT** records (Google email verification, SPF, and a DKIM key if the club set one up). These must still be there at the end.
 2. **Get the host's address.** Your host shows an **IP address** for the site (an A record) or a hostname (a CNAME). Kinsta, WP Engine and others call it "DNS records" in the site's domain screen.
-3. **Disconnect the domain from the Squarespace "Coming soon" site.** In Squarespace, open the website's **Settings, Domains** and disconnect or remove tumbleweedsvolleyball.com from the site (the domain itself stays registered with Squarespace). If you skip this, Squarespace keeps serving the parking page.
+3. **Disconnect the domain from the Squarespace "Coming soon" site.** In Squarespace, open the website's **Settings, Domains** and disconnect or remove tumbleweedsvolleyball.com from the site (if the domain is registered through Squarespace, as it appears to be, it stays registered there; check under Domains). If you skip this, Squarespace keeps serving the parking page.
 4. **Edit the DNS records** (Squarespace, Domains, DNS Settings):
    - Delete the Squarespace default `A` records for `@` (the four `198.x.x.x` addresses) and the `CNAME` for `www` that points to `ext-sq.squarespace.com`.
    - Add an **A record**: Host `@`, value = the host's IP address.
@@ -91,6 +91,7 @@ Managed hosts issue the free certificate (Let's Encrypt) by themselves once the 
   3. If both are empty, a simple form opens the visitor's email app.
   
   Canadian anti-spam law (CASL) needs permission before sending club news. A Mailchimp or Flodesk form handles consent and unsubscribe properly, so use one once the list grows.
+- **Without the plugin**, the contact form and sign-up only open the visitor's email app. They are not real forms, so install Contact Form 7 before launch.
 - **Spam.** Contact Form 7 supports reCAPTCHA or Cloudflare Turnstile (**Contact, Integration**) if spam shows up.
 
 ## 9. Registration (TeamSnap or Volleyball BC)
@@ -108,7 +109,7 @@ Then edit the words around the buttons (for example "Registration opens before t
 
 ## 10. Privacy policy
 
-A plain-language draft is on the site at **/privacy-policy/** and linked in the footer. It is marked **Club to review**. A board member should read it, fix anything untrue (which email service, how long messages are kept, whether analytics is on), and then delete the "Club to review" paragraph and the "Club to review" label in the page's top section. It is not legal advice.
+A plain-language draft is on the site at **/privacy-policy/** and linked in the footer. It is marked **Club to review**. A board member should read it, fix anything untrue (which email service, how long messages are kept, whether analytics is on), and then delete the "Club to review" paragraph and the "Club to review" label in the page's top section. Update the "Last updated" date whenever the text changes. It is not legal advice.
 
 ## 11. Backups
 
