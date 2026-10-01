@@ -36,3 +36,22 @@ add_action( 'wp_head', function () {
 		echo '<meta name="description" content="' . esc_attr( wp_strip_all_tags( $d ) ) . '">' . "\n";
 	}
 } );
+
+/** Small fixed UI strings, in one place. Page content never goes here. */
+function tvbc_ui( $key ) {
+	static $ui = array(
+		'read_bio'      => 'Read the bio',
+		'all_coaches'   => 'All coaches',
+		'all_news'      => 'All news',
+		'no_news'       => 'No news yet.',
+		'skip'          => 'Skip to content',
+		'foot_club'     => 'The club',
+		'foot_contact'  => 'Contact',
+		'foot_help'     => 'If something goes wrong',
+		'foot_complaint'=> 'Club complaints contact:',
+		'e404_title'    => 'That page is not here.',
+		'e404_text'     => 'Try the menu above, or head back to the home page.',
+		'e404_btn'      => 'Back home',
+	);
+	return isset( $ui[ $key ] ) ? $ui[ $key ] : '';
+}

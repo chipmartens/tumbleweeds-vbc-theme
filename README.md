@@ -19,4 +19,6 @@ Open http://127.0.0.1:9400. The blueprint installs Secure Custom Fields and Clas
 - `tools/sync-brand-assets.py`: re-copy logo SVGs and cutouts from the project folders.
 - `tools/shots.js` screenshots every page at 390 and 1440. `tools/export_static.py` writes `preview/` (static, relative links).
 
+Club settings: with Secure Custom Fields 6.9 (tested) a **Club settings** item appears in the admin menu and holds the header button, email, Instagram, info session date and place (pages say `{info_date}` and `{info_details}`, so you change it once and clear it after the event), footer status line and complaints contact. If a site has a fields plugin without options pages, the theme falls back to reading the same fields from the front page edit screen (code path present, not tested).
+
 Editing: Pages have "Top of page" and "Page sections". Coaches have their own menu. Club email, Instagram, header button, complaints contact live in "Club settings" (on the front page edit screen when using the free fields plugin).

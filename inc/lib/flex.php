@@ -7,9 +7,21 @@ function tvbc_ph( $html ) {
 	return preg_replace( '/\[([^\[\]<>]{1,90})\]/u', '<mark class="ph">[$1]</mark>', $html );
 }
 
+/** Swap {info_date} and {info_details} for the Club settings values (one place to update after the event). */
+function tvbc_tokens( $s ) {
+	if ( false === strpos( (string) $s, '{info_' ) ) {
+		return $s;
+	}
+	return strtr( $s, array(
+		'{info_date}'    => tvbc_opt( 'info_session_date' ) ?: '[Info session date TBC]',
+		'{info_details}' => tvbc_opt( 'info_session_details' ) ?: '[Info session details TBC]',
+	) );
+}
+add_filter( 'the_content', 'tvbc_tokens', 9 );
+
 /** One line of plain text, escaped, placeholders highlighted. */
 function tvbc_inline( $s ) {
-	return tvbc_ph( esc_html( (string) $s ) );
+	return tvbc_ph( esc_html( tvbc_tokens( (string) $s ) ) );
 }
 
 /** Phone number to a tel: value. Handles letters (1-888-83SPORT) and a trailing (77678) alias. */
@@ -33,7 +45,7 @@ function tvbc_tel( $s ) {
 
 /** Paragraph text: escaped, links and emails clickable, phone numbers as tel: links, placeholders highlighted, wpautop. */
 function tvbc_rich( $s ) {
-	$s = trim( (string) $s );
+	$s = trim( tvbc_tokens( (string) $s ) );
 	if ( '' === $s ) {
 		return '';
 	}
@@ -56,6 +68,10 @@ function tvbc_opt( $name ) {
 		'complaints_contact' => '[Complaints contact TBC]',
 		'practice_location'  => '[Practice location TBC]',
 		'footer_blurb'       => '',
+		'info_session_date'    => 'Sunday, October 4',
+		'info_session_details' => '7:00 to 8:30 pm, TRU Science Building S337',
+		'status_line'          => 'A Volleyball BC member club in good standing (new club), Zone 2 Thompson-Okanagan.',
+		'location_line'        => 'Kamloops, BC',
 	);
 	if ( ! function_exists( 'get_field' ) ) {
 		return isset( $defaults[ $name ] ) ? $defaults[ $name ] : '';

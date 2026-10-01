@@ -129,7 +129,7 @@ if ( function_exists( 'have_rows' ) && have_rows( 'flex_content', $flex_post_id 
 									<p class="person__role"><?php echo tvbc_inline( get_field( 'role' ) ); ?></p>
 									<?php if ( $teams ) : ?><p class="person__teams"><?php echo tvbc_inline( $teams ); ?></p><?php endif; ?>
 									<?php if ( $summary ) : ?><div class="person__summary"><?php echo tvbc_rich( $summary ); // phpcs:ignore ?></div><?php endif; ?>
-									<?php if ( $bio ) : ?><p class="person__link"><a class="btn btn--plain" href="<?php the_permalink(); ?>">Read the bio</a></p><?php endif; ?>
+									<?php if ( $bio ) : ?><p class="person__link"><a class="btn btn--plain" href="<?php the_permalink(); ?>"><?php echo esc_html( tvbc_ui( 'read_bio' ) ); ?></a></p><?php endif; ?>
 								</li>
 							<?php endwhile; wp_reset_postdata(); ?>
 						</ul>
@@ -228,7 +228,7 @@ if ( function_exists( 'have_rows' ) && have_rows( 'flex_content', $flex_post_id 
 							<?php endwhile; wp_reset_postdata(); ?>
 						</ul>
 					<?php else : ?>
-						<p class="news__empty">No news yet.</p>
+						<p class="news__empty"><?php echo esc_html( tvbc_ui( 'no_news' ) ); ?></p>
 					<?php endif; ?>
 				</div>
 			</section>

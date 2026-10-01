@@ -17,7 +17,7 @@ $cta_link  = function_exists( 'get_field' ) ? ( function_exists( 'acf_add_option
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main"><?php echo esc_html( tvbc_ui( 'skip' ) ); ?></a>
 
 <header class="site-header">
 	<div class="container site-header__inner">

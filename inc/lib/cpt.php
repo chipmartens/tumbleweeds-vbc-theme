@@ -15,7 +15,7 @@ add_action( 'init', function () {
 		'labels'             => array( 'name' => 'Teams', 'singular_name' => 'Team', 'add_new_item' => 'Add team', 'edit_item' => 'Edit team', 'all_items' => 'All teams' ),
 		'public'             => false,
 		'publicly_queryable' => false,
-		'show_ui'            => true,
+		'show_ui'            => false, // ponytail: rosters are not wired to any page yet. Set true when a layout reads them.
 		'menu_icon'          => 'dashicons-flag',
 		'menu_position'      => 22,
 		'supports'           => array( 'title', 'page-attributes' ),

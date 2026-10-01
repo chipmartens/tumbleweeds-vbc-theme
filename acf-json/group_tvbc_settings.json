@@ -51,6 +51,70 @@
             "default_value": "https://www.instagram.com/tumbleweedsvball/"
         },
         {
+            "key": "field_tvbc_set_info_session_date",
+            "label": "Info session date",
+            "name": "info_session_date",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown wherever a page says {info_date}. Clear this box and the one below after the session is over.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Sunday, October 4"
+        },
+        {
+            "key": "field_tvbc_set_info_session_details",
+            "label": "Info session time and place",
+            "name": "info_session_details",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown wherever a page says {info_details}.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "7:00 to 8:30 pm, TRU Science Building S337"
+        },
+        {
+            "key": "field_tvbc_set_status_line",
+            "label": "Footer status line",
+            "name": "status_line",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Appears at the very bottom of every page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "A Volleyball BC member club in good standing (new club), Zone 2 Thompson-Okanagan."
+        },
+        {
+            "key": "field_tvbc_set_location_line",
+            "label": "Footer location",
+            "name": "location_line",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Kamloops, BC"
+        },
+        {
             "key": "field_tvbc_set_header_cta_label",
             "label": "Header button text",
             "name": "header_cta_label",
@@ -189,5 +253,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1790866241
+    "modified": 1790867066
 }

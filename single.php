@@ -18,7 +18,7 @@ while ( have_posts() ) :
 	<section class="section section--light">
 		<div class="container">
 			<article class="prose"><?php the_content(); ?></article>
-			<p class="prose__back"><a class="btn btn--plain" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>">All news</a></p>
+			<p class="prose__back"><a class="btn btn--plain" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>"><?php echo esc_html( tvbc_ui( 'all_news' ) ); ?></a></p>
 		</div>
 	</section>
 	<?php

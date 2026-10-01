@@ -193,7 +193,7 @@ html.nav-open .site-header__nav { display: block; }
 .hero--home { background: var(--pine-700); color: var(--white); padding-bottom: 0;
   .hero__title { @include text(display); max-width: 11em; }
   .hero__text { color: var(--sand-200); }
-  .hero__note { color: var(--sage-300); }
+  .hero__note { color: var(--sand-200); }
   .eyebrow { color: var(--sage-300); }
   .hero__pattern { color: var(--pine-500); width: 110vw; max-width: var(--max-width); top: auto; bottom: calc(var(--space-9) * -1); right: calc(var(--space-9) * -1); }
   .hero__copy { padding-bottom: var(--space-2); }

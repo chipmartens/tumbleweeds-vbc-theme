@@ -20,7 +20,11 @@
     "helpline_name": "Abuse-Free Sport Helpline",
     "helpline_phone": "1-888-83SPORT (77678)",
     "complaints_contact": "[Complaints contact TBC]",
-    "practice_location": "[Practice location TBC]"
+    "practice_location": "[Practice location TBC]",
+    "info_session_date": "Sunday, October 4",
+    "info_session_details": "7:00 to 8:30 pm, TRU Science Building S337",
+    "status_line": "A Volleyball BC member club in good standing (new club), Zone 2 Thompson-Okanagan.",
+    "location_line": "Kamloops, BC"
   },
   "coaches": [
     {
@@ -81,7 +85,7 @@
       "slug": "info-session-sunday-october-4",
       "title": "Info session: Sunday, October 4",
       "date": "2026-09-30 09:00:00",
-      "content": "<p>Come meet Pat Hennelly and Iuliia Pakhomenko, and ask anything about coaches, fees, and how the club keeps kids safe.</p><p>When: Sunday, October 4, 7:00 to 8:30 pm<br>Where: TRU Science Building S337</p><p>A Teams link is on our Instagram story, @tumbleweedsvball.</p>"
+      "content": "<p>Come meet Pat Hennelly and Iuliia Pakhomenko, and ask anything about coaches, fees, and Safe Sport.</p><p>When: {info_date}, {info_details}</p><p>A Teams link is on our Instagram story, @tumbleweedsvball.</p>"
     },
     {
       "slug": "what-we-will-publish-before-tryouts",
@@ -111,7 +115,7 @@
             "link": "{home}our-coaches/"
           }
         ],
-        "hero_note": "Info session: Sunday, October 4, 7:00 to 8:30 pm, TRU Science Building S337.",
+        "hero_note": "Info session: {info_date}, {info_details}.",
         "hero_photo": "@img:pat-hennelly"
       },
       "flex": [
@@ -129,13 +133,13 @@
             },
             {
               "title": "How we coach",
-              "text": "Fundamentals first, in a set order. Every team will follow one coaching plan, and every athlete gets coached at every practice.",
+              "text": "Developing athletes from the ground up. [Coaching plan: club to confirm wording]",
               "link_label": "See the programs",
               "link": "{home}programs/"
             },
             {
               "title": "What you are signing up for",
-              "text": "Every coach, the total cost with coach and travel fees included, the schedule, who to call outside the club, and how we keep kids safe. All on one page, before tryouts. [Season total: $TBC]",
+              "text": "Before tryouts we will post every coach, the total cost with coach and travel fees, the schedule, who to call outside the club, and how Safe Sport works. [Season total: $TBC]",
               "link_label": "Fees and registration",
               "link": "{home}fees-and-registration/"
             }
@@ -160,9 +164,9 @@
           "heading": "Come meet us before tryouts.",
           "rows": [
             {
-              "date": "Sun, Oct 4",
+              "date": "{info_date}",
               "title": "Info session",
-              "text": "7:00 to 8:30 pm, TRU Science Building S337. Ask about coaches, fees, and safety."
+              "text": "{info_details}. Ask about coaches, fees, and safety."
             },
             {
               "date": "[Date TBC]",
@@ -179,8 +183,8 @@
         {
           "acf_fc_layout": "callout",
           "style": "dark",
-          "heading": "Know what you are signing up for before you sign.",
-          "text": "The whole season on one page: coaches, total cost, schedule, who to call, and Safe Sport.",
+          "heading": "Before tryouts we will post the whole season.",
+          "text": "Coaches, total cost, schedule, who to call, and Safe Sport. [Date TBC]",
           "button_label": "Fees and registration",
           "button_link": "{home}fees-and-registration/"
         }
@@ -290,7 +294,8 @@
             },
             {
               "label": "Provincials",
-              "value": "Volleyball BC provincials run over four weekends in April and May. [Which Tumbleweeds teams attend: TBC]"
+              "value": "Volleyball BC provincials run over four weekends in April and May. [Which Tumbleweeds teams attend: TBC]",
+              "note": "Not confirmed yet. Ask us at the info session."
             },
             {
               "label": "Practices",
@@ -306,7 +311,7 @@
           "acf_fc_layout": "callout",
           "style": "dark",
           "heading": "Questions about a team?",
-          "text": "Ask at the info session on Sunday, October 4, or email us.",
+          "text": "Ask at the info session on {info_date}, or email us.",
           "button_label": "Tryout details",
           "button_link": "{home}tryouts/"
         }
@@ -323,11 +328,11 @@
         "hero_text": "Tryout dates, locations, and what to bring will be posted here. Nothing is final until we say so.",
         "hero_buttons": [
           {
-            "label": "Register for tryouts",
-            "link": "{home}fees-and-registration/#registration"
+            "label": "Email the club",
+            "link": "mailto:info@tumbleweedsvolleyball.com"
           }
         ],
-        "hero_note": "Info session: Sunday, October 4, 7:00 to 8:30 pm, TRU Science Building S337."
+        "hero_note": "Info session: {info_date}, {info_details}."
       },
       "flex": [
         {
@@ -337,9 +342,9 @@
           "heading": "What happens, and when",
           "rows": [
             {
-              "date": "Sun, Oct 4",
+              "date": "{info_date}",
               "title": "Info session",
-              "text": "7:00 to 8:30 pm, TRU Science Building S337. A Teams link is on our Instagram story."
+              "text": "{info_details}. A Teams link is on our Instagram story."
             },
             {
               "date": "[Date TBC]",
@@ -421,11 +426,11 @@
         "hero_style": "page",
         "hero_eyebrow": "Fees and registration",
         "hero_heading": "What the season costs, in total.",
-        "hero_text": "Club fee, coach and travel fees, what is included, and the refund policy. Plus who coaches, who to call, and how we keep kids safe. Anything not confirmed yet is marked like this: [Fee: $TBC]",
+        "hero_text": "Club fee, coach and travel fees, what is included, and the refund policy. Plus who coaches, who to call, and Safe Sport. Anything not confirmed yet is marked like this: [Fee: $TBC]",
         "hero_buttons": [
           {
-            "label": "Register for tryouts",
-            "link": "#registration"
+            "label": "Email the club",
+            "link": "mailto:info@tumbleweedsvolleyball.com"
           }
         ]
       },
@@ -479,7 +484,7 @@
             {
               "label": "Coaching approach",
               "value": "Fundamentals first, in a set order. Every athlete gets direct feedback at every practice.",
-              "note": "[Club to confirm wording]"
+              "note": "Draft wording. [Club to confirm before this page goes live]"
             },
             {
               "label": "Who coaches each team",
@@ -509,7 +514,7 @@
             {
               "label": "Values",
               "value": "Fundamentals first. Everyone gets coached. Open book. Safe, always. Played in Kamloops.",
-              "note": "[Club leadership to confirm]"
+              "note": "Draft values. [Club leadership to confirm before this page goes live]"
             },
             {
               "label": "Athletes who come back",
@@ -555,7 +560,7 @@
           "bg": "light",
           "anchor": "safe-sport",
           "eyebrow": "Safe Sport",
-          "heading": "How the club keeps kids safe",
+          "heading": "Safe Sport at the club",
           "rows": [
             {
               "label": "Screening",
@@ -613,7 +618,7 @@
             },
             {
               "question": "You are brand new. Why risk a season?",
-              "answer": "You are right, this is our first season. So we are putting the facts up front: who coaches, what it costs, and how we keep kids safe. You can decide with everything in front of you. New clubs also serve a one-year probation with Volleyball BC. [Date the coach list and fees are posted: TBC]"
+              "answer": "You are right, this is our first season. Before tryouts we will post who coaches, what the season costs, and how Safe Sport works, so you can decide with everything in front of you. New clubs also serve a one-year probation with Volleyball BC. [Date the coach list and fees are posted: TBC]"
             },
             {
               "question": "What does it cost, really?",
@@ -819,7 +824,7 @@
             },
             {
               "label": "Info session",
-              "value": "Sunday, October 4, 7:00 to 8:30 pm, TRU Science Building S337"
+              "value": "{info_date}, {info_details}"
             },
             {
               "label": "Practice location",

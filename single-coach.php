@@ -34,7 +34,7 @@ while ( have_posts() ) :
 						<?php foreach ( $creds as $c ) : ?><li><?php echo tvbc_inline( $c['line'] ); ?></li><?php endforeach; ?>
 					</ul>
 				<?php endif; ?>
-				<p><a class="btn btn--plain" href="<?php echo esc_url( home_url( '/our-coaches/' ) ); ?>">All coaches</a></p>
+				<p><a class="btn btn--plain" href="<?php echo esc_url( home_url( '/our-coaches/' ) ); ?>"><?php echo esc_html( tvbc_ui( 'all_coaches' ) ); ?></a></p>
 			</div>
 		</div>
 	</section>

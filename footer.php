@@ -20,7 +20,7 @@ $blurb = tvbc_opt( 'footer_blurb' );
 			</div>
 
 			<nav class="site-footer__col" aria-label="Footer">
-				<h2 class="site-footer__title">The club</h2>
+				<h2 class="site-footer__title"><?php echo esc_html( tvbc_ui( 'foot_club' ) ); ?></h2>
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
@@ -33,23 +33,23 @@ $blurb = tvbc_opt( 'footer_blurb' );
 			</nav>
 
 			<div class="site-footer__col">
-				<h2 class="site-footer__title">Contact</h2>
+				<h2 class="site-footer__title"><?php echo esc_html( tvbc_ui( 'foot_contact' ) ); ?></h2>
 				<ul class="site-footer__list">
 					<?php if ( $email ) : ?><li><a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a></li><?php endif; ?>
 					<?php if ( $ig ) : ?><li><a href="<?php echo esc_url( $igurl ); ?>" rel="noopener"><?php echo esc_html( $ig ); ?> on Instagram</a></li><?php endif; ?>
-					<li>Kamloops, BC</li>
+					<?php if ( tvbc_opt( 'location_line' ) ) : ?><li><?php echo esc_html( tvbc_opt( 'location_line' ) ); ?></li><?php endif; ?>
 				</ul>
 			</div>
 
 			<div class="site-footer__col">
-				<h2 class="site-footer__title">If something goes wrong</h2>
+				<h2 class="site-footer__title"><?php echo esc_html( tvbc_ui( 'foot_help' ) ); ?></h2>
 				<p class="site-footer__text"><?php echo esc_html( tvbc_opt( 'helpline_name' ) ); ?><br><a href="tel:<?php echo esc_attr( tvbc_tel( tvbc_opt( 'helpline_phone' ) ) ); ?>"><?php echo esc_html( tvbc_opt( 'helpline_phone' ) ); ?></a></p>
-				<p class="site-footer__text">Club complaints contact: <?php echo tvbc_inline( tvbc_opt( 'complaints_contact' ) ); ?></p>
+				<p class="site-footer__text"><?php echo esc_html( tvbc_ui( 'foot_complaint' ) ); ?> <?php echo tvbc_inline( tvbc_opt( 'complaints_contact' ) ); ?></p>
 			</div>
 		</div>
 
 		<div class="site-footer__base">
-			<p>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> Tumbleweeds Volleyball Club. A Volleyball BC member club, Zone 2 Thompson-Okanagan.</p>
+			<p>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> Tumbleweeds Volleyball Club. <?php echo tvbc_inline( tvbc_opt( 'status_line' ) ); ?></p>
 		</div>
 	</div>
 </footer>
