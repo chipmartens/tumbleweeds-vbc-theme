@@ -72,8 +72,8 @@ a:hover .arrow{transform:translateX(2px)}
 .hero__ctas{display:flex;gap:12px;margin-top:32px}
 .badge{position:relative;width:184px;height:184px;flex:none}
 .badge svg.ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 28s linear infinite}
-.badge text{font:600 13px "Barlow Condensed",sans-serif;letter-spacing:.32em;text-transform:uppercase;fill:#fff}
-.badge img{position:absolute;inset:44px;width:96px;height:96px;filter:brightness(0) invert(1)}
+.badge text{font:600 13px "Barlow Condensed",sans-serif;letter-spacing:0;text-transform:uppercase;fill:#fff}
+.badge img{position:absolute;inset:56px;width:72px;height:72px;filter:brightness(0) invert(1)}
 @keyframes spin{to{transform:rotate(360deg)}}
 .rail{position:absolute;z-index:2;left:120px;right:120px;bottom:-1px;display:none}
 

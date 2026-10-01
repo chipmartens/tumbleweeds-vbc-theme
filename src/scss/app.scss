@@ -102,7 +102,7 @@ html.lenis body { height: auto; }
 	--global--letter-spacing-label: 0.08em;
 	--global--letter-spacing-tag: 0.06em;
 	--global--letter-spacing-number: 0.04em;
-	--global--letter-spacing-badge: 0.32em;
+	--global--letter-spacing-badge: 0;
 
 	/* Border radius */
 	--global--border-radius-xs: 4px;
@@ -161,7 +161,7 @@ html.lenis body { height: auto; }
 	--field-h: 52px;
 	--field-pad: 22px;
 	--badge-size: 184px;
-	--badge-mark: 96px;
+	--badge-mark: 72px;
 	--logo-mark: 40px;
 	--ticker-mark: 30px;
 	--mark-big: 720px;
@@ -187,7 +187,7 @@ html.lenis body { height: auto; }
 	--wreath-size: 560px;
 	--wreath-drop: -140px;
 	--wreath-out: -120px;
-	--badge-inset: var(--badge-inset);
+	--badge-inset: 56px;
 	--ring-text: 13px;
 	--min-textarea: 160px;
 	--measure-photo: 520px;

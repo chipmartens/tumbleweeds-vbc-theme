@@ -90,7 +90,7 @@ $badge   = $is_home ? tvbc_opt( 'badge_text' ) : '';
 
 			<?php if ( $badge ) : ?>
 			<div class="hero__badge" aria-hidden="true">
-				<svg class="hero__ring" viewBox="0 0 184 184"><defs><path id="badge-circle" d="M92,92 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs><text><textPath href="#badge-circle"><?php echo esc_html( $badge ); ?></textPath></text></svg>
+				<svg class="hero__ring" viewBox="0 0 184 184"><defs><path id="badge-circle" d="M92,92 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs><text><textPath href="#badge-circle" textLength="472" lengthAdjust="spacing"><?php echo esc_html( $badge ); ?></textPath></text></svg>
 				<?php echo tvbc_mark( false, '', 96 ); // phpcs:ignore ?>
 			</div>
 			<?php endif; ?>
